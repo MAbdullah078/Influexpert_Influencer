@@ -1,0 +1,80 @@
+<div class="container">
+
+  <div class="name">
+    <h2> EMPLOYMENT STATUS
+    </h2>
+  </div>
+
+  <div class="one">
+    <div class="float-left">
+      <h4 class="fa fa-user"> CONTACT INFORMATION</h4>
+    </div>
+    <br>
+    <br>
+    <hr>
+  </div>
+
+
+  <form name="emp_form" [formGroup]="demographic_group" (ngSubmit)="demographic_group.valid && submit_employee_info(emp_form)" #emp_form="ngForm">
+
+    <div class="row">
+
+      <div class="col-lg-5">
+
+
+        <mat-select name="employment_status" [ngModelOptions]="{standalone: true}" [(ngModel)]="currentUser.employment_status" placeholder="Employment status"
+                   style="width: 100%;">
+          <mat-option *ngFor="let choice of Accolade" [value]="choice.code">{{ choice.name }}</mat-option>
+        </mat-select>
+        <br><br>
+        <!--<mat-form-field  class="example-full-width">
+          <input matInput placeholder="CONNECT WITH LINKEDIN" name="linked_in_url" [(ngModel)]="currentUser.linked_in_url" (click)="connect_linkedin()" formControlName="linked_in_url">
+          <mat-errot *ngIf="demographic_group.hasError('required', ['linked_in_url'])">
+            LinkedIn Profile is <strong>required</strong>
+          </mat-errot>
+        </mat-form-field>-->
+
+      <button mat-button (click)="connect_linkedin()" style="background-color: blue ; color: white"  >CONNECT WITH LINKEDIN</button>
+        
+        <br />
+
+        <br />
+
+      </div>
+      <div class="col-sm-12">
+        <div class="detail-holder">
+          <div class="detail">
+            <h3 class="title">Linkedin Information</h3>
+            <p>{{currentUser.linkedin.first_name}}</p>
+            <p>{{currentUser.linkedin.last_name}}</p>
+            <p>{{currentUser.linkedin.email_address}}</p>
+            <p>{{currentUser.linkedin.industry}}</p>
+            <p>{{currentUser.linkedin.public_profile_url}}</p>
+            <!--<p>{{currentUser.values.summary}}</p>-->
+            <!--<div *ngFor="let val of currentUser.positions.values">-->
+              <!--<p>{{currentUser.linkedintitle}}</p>-->
+              <!--<p>{{val.company.name}}</p>
+              <p>{{val.summary}}</p>-->
+            </div>
+            <!--<p>{{currentUser.values[0].summary}}</p>-->
+
+
+        <!--</div>-->
+        <div class="img-holder">
+            <img mat-card-image src="{{currentUser.linkedin.picture_url}}" style="width: 118px;height: 138px" alt="Image">
+
+          </div>
+          </div>
+          
+        </div>
+      </div>
+      
+
+
+      <button mat-button style="background-color: blue ; color: white">Submit</button>
+      <button mat-button style="background-color: red; color: white; margin-left: 5px">Cancel</button>
+
+    <!--</div>-->
+
+  </form>
+</div>

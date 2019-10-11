@@ -1,0 +1,69 @@
+@import "scss/mixins/material-palette";
+@import "scss/mixins/skinning";
+@import "scss/variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "scss/theming";
+@import "scss/custom-bootstrap";
+@import "scss/core";
+
+.btn {
+  cursor: pointer;
+}
+.mat-dialog-content {
+  .mat-form-field {
+    width: 100%;
+  }
+}
+.button-row {
+  overflow: hidden;
+  padding: 0 0 10px;
+}
+.app-inner {
+  -webkit-transition: 0.2s ease all 0s;
+  -moz-transition: 0.2s ease all 0s;
+  -ms-transition: 0.2s ease all 0s;
+  -o-transition: 0.2s ease all 0s;
+  transition: 0.2s ease all 0s;
+}
+.custom-navbar .navbar-nav .dropdown-menu.notifications .notifications-wrapper .time {
+  margin: 5px 0 0;
+}
+.msg-area {
+  overflow: hidden;
+  > * {
+    float: left;
+  }
+  textarea#sendMsg {
+    height: 70px !important;
+    border: 1px solid #ccc;
+    border-right: none;
+    font-size: 16px;
+    padding: 10px;
+    resize: none;
+    width: calc(100% - 150px);
+    &:focus {
+      outline: none;
+    }
+  }
+  .btn {
+    height: 70px;
+    width: 150px;
+    font-size: 16px;
+  }
+}
+
+.messages-holder {
+  font-size: 16px;
+  padding: 15px 20px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0 0 15px;
+}
+
+.navbar-nav .dropdown-menu{
+  position: absolute!important;
+}
+
+.dropdown-menu{
+  width: 230%!important;
+}

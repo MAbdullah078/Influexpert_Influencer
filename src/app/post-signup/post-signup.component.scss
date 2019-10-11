@@ -1,0 +1,33 @@
+@import "../../assets/fonts/font-awesome-4.7.0/css/font-awesome.css";
+@import "../../assets/styles/scss/components/social-buttons";
+
+.btn-icon {
+  min-width: 160px;
+}
+
+
+
+
+.steps {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 600px;
+  height: 500px;
+}
+
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}

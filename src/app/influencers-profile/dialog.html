@@ -1,0 +1,127 @@
+<!--<h1 md-dialog-title>Hi</h1>
+
+<div md-dialog-content>
+  <p>What's your favorite animal?</p>
+  <mat-form-field>
+    <input MatInput tabindex="1">
+  </mat-form-field>
+</div>
+
+<div md-dialog-actions>
+  <button mat-button [mat-dialog-close]="data.animal" tabindex="2">Ok</button>
+  <button mat-button (click)="onNoClick()" tabindex="-1">No Thanks</button>
+</div>
+-->
+
+
+<div class="container">
+
+<div class="name">
+    <h2> POST CONTENT</h2>
+</div>
+
+<div class="one">
+      <div  class="float-left" >
+        <h4 class="fa fa-user"> PERSONAL INFORMATION </h4>
+      </div>
+
+<br>
+<br>
+<hr>
+</div>
+
+<div class="row">
+  <div class="col-lg-1">
+  </div>
+  <div class="col-lg-4">
+   <img mat-card-image src="{{currentUser.image_url}}" style="width: auto;height: auto" alt="Image">
+  </div>
+
+  <div class="col-lg-7">
+    <h4> Zeeshan Jawahar</h4>
+  <!--<mat-form-field class="example-full-width">
+    <input MatInput placeholder="First Name *" value="{{currentUser.first_name}}" formControlName="firstFormControl" [(ngModel)]="model.first_name" >
+  </mat-form-field>-->
+
+<form [formGroup]="basic_profile_group" name="form" (ngSubmit) = "basic_profile_group.valid && submit_prof_basic_info()"  #f="ngForm">
+<mat-form-field class="example-full-width">
+            <input matInput placeholder="First Name*" [(ngModel)]="currentUser.first_name" name="first_name" formControlName="first_name">
+            <mat-errot *ngIf="basic_profile_group.hasError('required', ['first_name'])">
+              First Name is <strong>required</strong>
+            </mat-errot>
+          </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+            <input matInput placeholder="Last Name*" [(ngModel)]="currentUser.last_name" name="last_name" formControlName="last_name">
+            <mat-errot *ngIf="basic_profile_group.hasError('required', ['last_name'])">
+              Last Name is <strong>required</strong>
+            </mat-errot>
+          </mat-form-field>
+
+
+
+ <mat-form-field class="example-full-width">
+    <input matInput placeholder="Email" formControlName="email" [(ngModel)]="currentUser.email">
+    <mat-errot *ngIf="basic_profile_group.hasError('pattern', ['email'])">
+      Please enter a valid email address
+    </mat-errot>
+    <mat-errot *ngIf="basic_profile_group.hasError('required', ['email'])">
+      Email is <strong>required</strong>
+    </mat-errot>
+  </mat-form-field>
+
+
+<!--
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="BRAND TITLE*" [(ngModel)]="currentUser.tittle" name="BRAND_TITLE" formControlName="tittleFormControl">
+            <mat-errot *ngIf="tittleFormControl.hasError('required')">
+              Brand tittle is <strong>required</strong>
+            </mat-errot>
+          </mat-form-field>-->
+
+
+          <mat-form-field class="example-full-width">
+            <input MatInput placeholder="PERSONAL BIO*" [(ngModel)]="currentUser.personal_bio" name="PERSONAL_BIO" formControlName="personal_bio">
+            <mat-errot *ngIf="basic_profile_group.hasError('required', ['personal_bio'])">
+             PERSONAL BIO is <strong>required</strong>
+            </mat-errot>
+          </mat-form-field>
+
+        <img  *ngIf="posting_profile_info"
+             src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAA
+                        GJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJ
+                        CgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAd
+                        Ka+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7W
+                        EYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhm
+                        KtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZf
+                        hYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunI
+                        nK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEA
+                        AQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJC
+                        gAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLW
+                        zpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtq
+                        lAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+<button  mat-button style="background-color: blue ; color: white" type="submit" [disabled]="posting_profile_info">Submit</button>
+<button mat-button style="background-color: red; color: white; margin-left: 5px" (click)="onNoClick()" [disabled]="posting_profile_info">Cancel</button>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+</div>

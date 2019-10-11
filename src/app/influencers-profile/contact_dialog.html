@@ -1,0 +1,104 @@
+
+<div class="container">
+
+<div class="name">
+    <h2> POST CONTENT</h2>
+</div>
+
+<div class="one">
+      <div  class="float-left" >
+        <h4 class="fa fa-user"> CONTACT INFORMATION</h4>
+      </div>
+
+<br>
+<br>
+<hr>
+</div>
+<form [formGroup]="contact_group" name="form"  (ngSubmit) = "contact_group.valid && submit_contact_info()"  #f="ngForm">
+<div class="row">
+  <div class="col-lg-6">
+
+
+ <mat-form-field class="example-full-width">
+    <input matInput placeholder="City *" name="city" [(ngModel)]="currentUser.city" formControlName="city">
+           <mat-errot *ngIf="contact_group.hasError('required', ['city'])">
+              Ctiy name is <strong>required</strong>
+            </mat-errot>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="country *"  name="country" [(ngModel)]="currentUser.country"  formControlName="country">
+    <mat-errot *ngIf="contact_group.hasError('required', ['country'])">
+              Country name is <strong>required</strong>
+            </mat-errot>
+            <mat-errot *ngIf="contact_group.hasError('pattern', ['country'])">
+              Country name is <strong>invalid</strong>
+            </mat-errot>
+  </mat-form-field>
+
+ <mat-form-field class="example-full-width">
+    <input matInput placeholder="SHIPPING ADDRESS1 *" name="shipping_address" [(ngModel)]="currentUser.shipping_address"
+     formControlName="shipping_address" >
+     <mat-errot *ngIf="contact_group.hasError('required', ['shipping_address'])">
+              Address name is <strong>required</strong>
+            </mat-errot>
+  </mat-form-field>
+
+
+<mat-form-field class="example-full-width">
+    <input matInput placeholder="Phone No *" name="phone"  [(ngModel)]="currentUser.phone" formControlName="phone" >
+
+            <mat-errot *ngIf="contact_group.hasError('required', ['phone'])">
+              Phone name is <strong>required</strong>
+            </mat-errot>
+  </mat-form-field>
+
+  </div>
+
+
+<div class="col-lg-6">
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="State *" name="state" [(ngModel)]="currentUser.state" formControlName="state" >
+
+           <mat-errot *ngIf="contact_group.hasError('required', ['state'])">
+              State name is <strong>required</strong>
+            </mat-errot>
+
+
+  </mat-form-field>
+
+
+
+   <mat-form-field class="example-full-width">
+    <input matInput placeholder="Zip Code *" name="zip_code" [(ngModel)]="currentUser.zip_code" formControlName="zip_code">
+
+            <mat-errot *ngIf="contact_group.hasError('required', ['zip_code'])">
+              Zipcode is <strong>required</strong>
+            </mat-errot>
+
+  </mat-form-field>
+
+</div>
+</div>
+
+        <img  *ngIf="posting_contact_info"
+             src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAA
+                        GJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJ
+                        CgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAd
+                        Ka+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7W
+                        EYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhm
+                        KtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZf
+                        hYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunI
+                        nK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEA
+                        AQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJC
+                        gAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLW
+                        zpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtq
+                        lAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+<button  mat-button style="background-color: blue ; color: white" type="submit" [disabled]="posting_contact_info">Submit</button>
+<button mat-button style="background-color: red; color: white; margin-left: 5px" (click)="onNoClick()" [disabled]="posting_contact_info">Cancel</button>
+
+
+</form>
+
+</div>

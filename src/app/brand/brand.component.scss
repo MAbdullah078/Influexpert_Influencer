@@ -1,0 +1,83 @@
+.brand{
+  padding: 20px 0 131px;
+  text-align: center;
+  background: #F5F7FD;
+  h2{
+    margin: 0 0 12px;
+    font-size: 30px;
+  }
+  .logo-list{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    li{
+      transition: opacity .3s ease-in-out,transform .3s ease-in-out;
+      transition: opacity .3s ease-in-out,transform .3s ease-in-out,-webkit-transform .3s ease-in-out;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0 12px;
+      padding: 0 23px;
+      transition-duration: .5s;
+      img{
+        border: 0;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.promotion{
+  .promo-box {
+    background: #fff;
+    border-radius: 6px;
+    margin: -116px 0 18px;
+    color: #8293ae;
+    padding: 33px 0 10px;
+    font: 18px/1.57 gt_walsheim,"Helvetica Neue",Arial,Helvetica,sans-serif;
+    box-shadow: 0 0 20px rgba(91,105,141,.07);
+    position: relative;
+    z-index: 5;
+    .promo-box:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      border-left: 1px solid #e2e7f5;
+    }
+    h3{
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 400;
+      margin-bottom: 15px;
+      letter-spacing: -1px;
+    }
+  }
+}
+.brand-outer .left {
+  width: 32%;
+  float: left;
+}
+.brand-outer .right {
+  width: 65%;
+  float: left;
+
+  padding: 20px;
+
+}
+.ico h3{
+  text-align: center
+}
+#logo img, img {
+  max-width: 100%;
+}
+.img-div{
+  width: 83%;
+  margin: 16px;
+}
+.textcolor-violet a{
+  color: #113058;
+  font-size: 21px;
+}

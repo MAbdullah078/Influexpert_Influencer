@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="837a751b-e080-4c99-8212-9e26bb4dd2c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/authentication/confirm/confirm.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/authentication/confirm/confirm.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/authentication/confirm/confirm.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/authentication/newpassword/newpassword.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/authentication/newpassword/newpassword.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/authentication/newpassword/newpassword.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/config-2.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-blogger/connect-blogger.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-blogger/connect-blogger.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-blogger/connect-blogger.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-blogger/connect-blogger.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-blogger/connect-blogger.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-blogger/connect-blogger.routing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-facebook/connect-facebook.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-facebook/connect-facebook.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-facebook/connect-facebook.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-facebook/connect-facebook.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-facebook/connect-facebook.routing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-instagram/connect-instagram.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-instagram/connect-instagram.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-instagram/connect-instagram.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-instagram/connect-instagram.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-instagram/connect-instagram.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-instagram/connect-instagram.routing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-linkedin/connect-linkedin.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-linkedin/connect-linkedin.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-linkedin/connect-linkedin.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-linkedin/connect-linkedin.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-linkedin/connect-linkedin.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-linkedin/connect-linkedin.routing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-pinterest/connect-pinterest.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-pinterest/connect-pinterest.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-pinterest/connect-pinterest.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-pinterest/connect-pinterest.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-pinterest/connect-pinterest.routing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-twitter/connect-twitter.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-twitter/connect-twitter.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-twitter/connect-twitter.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-twitter/connect-twitter.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-twitter/connect-twitter.routing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-youtube/connect-youtube.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-youtube/connect-youtube.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-youtube/connect-youtube.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-youtube/connect-youtube.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-youtube/connect-youtube.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/connect-youtube/connect-youtube.routing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/create-showcase/FileValidator.directive.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/create-showcase/create-showcase.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/create-showcase/create-showcase.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/create-showcase/create-showcase.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/create-showcase/create-showcase.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/create-showcase/create-showcase.routing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/loader/loader.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/loader/loader.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/loader/loader.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/loader/loader.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/manage/manage.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/manage/manage.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/manage/manage.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/manage/manage.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/manage/manage.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/manage/manage.routing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/recapcha/recapcha.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/recapcha/recapcha.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/recapcha/recapcha.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/recapcha/recapcha.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/recapcha/recapcha.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/serv/alert.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/serv/http-service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/serv/post-service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/serv/preloader-service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/settings/settings.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/settings/settings.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/settings/settings.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/settings/settings.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/settings/settings.routing.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Extra/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Extra/fonts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Extra/forms.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Extra/grids.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Extra/helpers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Extra/icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Extra/interface.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Extra/mixins.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Extra/print.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Extra/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Extra/side.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Extra/typography.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Extra/vars.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-50.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/Recaptcha Images/Recaptcha Images-56.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/data/icons/addimage_512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/eyes/eye-with-a-diagonal-line-interface-symbol-for-invisibility.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/eyes/eye.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fa-eye.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/conenct-upload-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/connect/if_status-offline_46253.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/connect/if_status_46254.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/logos/Logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/logos/Option1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/preferences_24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/preferences_32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/side-menu/bar-chart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/side-menu/browser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/side-menu/exit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/side-menu/gears.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/side-menu/man-user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/side-menu/menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/side-menu/multiple-variable-bars-data-graphic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/side-menu/program-settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/side-menu/sign-out-option.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/side-menu/suitcase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/side-menu/user (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/spinner.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/star-rating.icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/unsplash/Banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/unsplash/Banner2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/unsplash/Banner3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/unsplash/Influencers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/unsplash/Logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/manage-images/Fb@1x-.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/manage-images/Insta@1x-.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/manage-images/LinkedIn@1x-.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/manage-images/Pin@1x-.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/manage-images/Twitter@1x-.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/manage-images/Web@1x-.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/manage-images/YouTube@1x-.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/refresh-page-option.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/spinner.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular-cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/.angular-cli.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/authentication/authentication.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/authentication/authentication.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/authentication/authentication.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/authentication/authentication.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/authentication/forgot/forgot.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/authentication/forgot/forgot.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/authentication/forgot/forgot.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/authentication/forgot/forgot.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/authentication/signin/signin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/authentication/signin/signin.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/authentication/signin/signin.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/authentication/signin/signin.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/authentication/signin/signin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/authentication/signin/signin.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/authentication/signup/signup.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/authentication/signup/signup.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/authentication/signup/signup.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/authentication/signup/signup.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/authentication/signup/signup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/authentication/signup/signup.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/dropdown/dropdown.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/dropdown/dropdown.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/docs/docs.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/docs/docs.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/email/email.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/email/email.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/email/email.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/email/email.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/email/email.routing.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/email/email.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/email/message.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/email/mock-messages.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/email/server-socket.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/influencers-profile/accolades/accolades.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/influencers-profile/accolades/accolades.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/influencers-profile/contact_dialog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/influencers-profile/contact_dialog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/influencers-profile/demographic/demographic.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/influencers-profile/demographic/demographic.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/influencers-profile/demographic/demographic.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/influencers-profile/demographic/demographic.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/influencers-profile/dialog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/influencers-profile/dialog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/influencers-profile/employment-status/employment-status.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/influencers-profile/employment-status/employment-status.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/influencers-profile/employment-status/employment-status.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/influencers-profile/employment-status/employment-status.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.routing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/admin/admin-layout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/admin/admin-layout.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/admin/admin-layout.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/admin/admin-layout.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/admin/admin-layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/admin/admin-layout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/post-signup/add-blog-dialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/post-signup/countries.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/post-signup/post-signup.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/post-signup/post-signup.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/post-signup/post-signup.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/post-signup/post-signup.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/post-signup/post-signup.routing.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/menu-items/menu-items.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/menu-items/menu-items.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/unsplash/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/unsplash/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/scss/core/_main-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/scss/core/_main-header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/scss/core/_main-panel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/scss/core/_main-panel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/scss/core/_main-sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/scss/core/_main-sidebar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/scss/core/_scaffolding.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/scss/core/_scaffolding.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/styles/scss/core/_session.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/scss/core/_session.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/dist/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="40" column="80" selection-start-line="40" selection-start-column="80" selection-end-line="40" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>/email.</find>
+      <find>mat-err</find>
+      <find>asic_profile_group.hasErro</find>
+      <find>md-</find>
+      <find>form</find>
+      <find>mat-radio-button</find>
+      <find>post</find>
+      <find>mat-errort</find>
+      <find>MatFormFieldModule</find>
+      <find>MatInput</find>
+      <find>mat-step</find>
+      <find>error</find>
+      <find>.mat-input-element</find>
+      <find>.mat-select</find>
+      <find>input</find>
+      <find>matf</find>
+      <find>mat-select-trigger</find>
+      <find>.mat-select-trigger</find>
+      <find>oops</find>
+      <find>&lt;md</find>
+      <find>&lt;md-s</find>
+      <find>md-button</find>
+      <find>md-raised-button</find>
+      <find>mdStepperNext</find>
+      <find>.next-btn</find>
+      <find>.mat-form-field-hide-placeholder .mat-select-placeholder</find>
+      <find>.sh-signup-form-fix .mat-select-placeholder</find>
+      <find>.sh-signup-form-fix .mat-select</find>
+      <find>mdS</find>
+      <find>phone</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>ngTemplateOutletContext</replace>
+      <replace>MatInput</replace>
+      <replace>mat-errot</replace>
+      <replace>matSuffix</replace>
+      <replace>MatSelectModule</replace>
+      <replace>MatNativeDateModule</replace>
+      <replace>MatStepperModule</replace>
+      <replace>mat-select</replace>
+      <replace>mat-option</replace>
+      <replace>mat-form-field</replace>
+      <replace>matInput</replace>
+      <replace>mat-step</replace>
+      <replace>mat-button</replace>
+      <replace>mat-raised-button</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/node_modules/ekiras-angular-social-auth</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/app/loader/loader.component.css" />
+        <option value="$PROJECT_DIR$/src/assets/styles/scss/core/_scaffolding.scss" />
+        <option value="$PROJECT_DIR$/src/assets/styles/scss/core/_session.scss" />
+        <option value="$PROJECT_DIR$/src/app/connect-linkedin/connect-linkedin.component.html" />
+        <option value="$PROJECT_DIR$/node_modules/@swimlane/ngx-datatable/src/components/footer/footer.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/connect-linkedin/connect-linkedin.component.ts" />
+        <option value="$PROJECT_DIR$/node_modules/ng-sidebar/src/sidebar-container.component.ts" />
+        <option value="$PROJECT_DIR$/src/assets/styles/scss/core/_main-panel.scss" />
+        <option value="$PROJECT_DIR$/src/assets/styles/scss/_variables.scss" />
+        <option value="$PROJECT_DIR$/src/app/settings/settings.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/layouts/admin/admin-layout.component.ts" />
+        <option value="$PROJECT_DIR$/src/assets/Extra/side.css" />
+        <option value="$PROJECT_DIR$/src/assets/styles/scss/core/_main-sidebar.scss" />
+        <option value="$PROJECT_DIR$/src/app/authentication/signup/signup.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/connect-youtube/connect-youtube.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/settings/settings.component.html" />
+        <option value="$PROJECT_DIR$/src/app/layouts/admin/admin-layout.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/layouts/admin/admin-layout.component.html" />
+        <option value="$PROJECT_DIR$/src/app/recapcha/recapcha.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/post-signup/post-signup.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/create-showcase/create-showcase.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/post-signup/post-signup.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/influencers-profile/demographic/demographic.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/influencers-profile/employment-status/employment-status.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/email/server-socket.service.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/app/email/email.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/email/email.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/post-signup/post-signup.component.html" />
+        <option value="$PROJECT_DIR$/src/app/influencers-profile/demographic/demographic.component.html" />
+        <option value="$PROJECT_DIR$/src/app/app.routing.ts" />
+        <option value="$PROJECT_DIR$/src/app/recapcha/recapcha.component.html" />
+        <option value="$PROJECT_DIR$/src/app/authentication/authentication.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/authentication/signin/signin.component.html" />
+        <option value="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/authentication/signin/signin.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/create-showcase/create-showcase.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/create-showcase/create-showcase.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/authentication/signin/signin.component.scss" />
+        <option value="$PROJECT_DIR$/src/styles.css" />
+        <option value="$PROJECT_DIR$/src/app/authentication/signup/signup.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/authentication/signup/signup.component.html" />
+        <option value="$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.component.html" />
+        <option value="$PROJECT_DIR$/src/app/app.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/manage/manage.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/manage/manage.component.html" />
+        <option value="$PROJECT_DIR$/src/app/connect-facebook/connect-facebook.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/create-showcase/create-showcase.component.html" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="67" />
+    <option name="y" value="25" />
+    <option name="width" value="690" />
+    <option name="height" value="875" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="influexai_Influencer_12_feb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="influexai_Influencer_12_feb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="influexai_Influencer_12_feb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="influexai_Influencer_12_feb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="influexai_Influencer_12_feb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="influexai_Influencer_12_feb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="influexai_Influencer_12_feb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="influexai_Influencer_12_feb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="influexai_Influencer_12_feb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="influexai_Influencer_12_feb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+              <item name="signin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="influexai_Influencer_12_feb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="influexai_Influencer_12_feb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="influencers-profile" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="$PROJECT_DIR$/node_modules/tslint" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/eyes" />
+      <recent name="$PROJECT_DIR$/src/assets/images/logos" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/assets/manage-images" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+      <recent name="$PROJECT_DIR$/src/assets/images/side-menu" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Angular Application" />
+      <item itemvalue="npm.Angular CLI Server" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="837a751b-e080-4c99-8212-9e26bb4dd2c6" name="Default Changelist" comment="" />
+      <created>1541395901695</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541395901695</updated>
+      <workItem from="1541395903144" duration="38792000" />
+      <workItem from="1541673650967" duration="76665000" />
+      <workItem from="1542605617338" duration="41723000" />
+      <workItem from="1542956038674" duration="6506000" />
+      <workItem from="1543041773152" duration="20617000" />
+      <workItem from="1543237910898" duration="12553000" />
+      <workItem from="1543401586112" duration="1317000" />
+      <workItem from="1543483631688" duration="58000" />
+      <workItem from="1543485128966" duration="17802000" />
+      <workItem from="1543812755700" duration="23774000" />
+      <workItem from="1543989182854" duration="2594000" />
+      <workItem from="1544011185597" duration="23178000" />
+      <workItem from="1544253208671" duration="39769000" />
+      <workItem from="1544856003895" duration="19008000" />
+      <workItem from="1545628006958" duration="4665000" />
+      <workItem from="1545809335121" duration="2988000" />
+      <workItem from="1545976203373" duration="1427000" />
+      <workItem from="1546065993401" duration="23104000" />
+      <workItem from="1546675321680" duration="587000" />
+      <workItem from="1546837529422" duration="2268000" />
+      <workItem from="1546950239957" duration="700000" />
+      <workItem from="1547122857651" duration="2584000" />
+      <workItem from="1547442885536" duration="664000" />
+      <workItem from="1548169358472" duration="8285000" />
+      <workItem from="1548741659745" duration="15101000" />
+      <workItem from="1549548960437" duration="23518000" />
+      <workItem from="1549950991678" duration="1314000" />
+      <workItem from="1550466074884" duration="4837000" />
+      <workItem from="1550639898405" duration="6547000" />
+      <workItem from="1551172471489" duration="2925000" />
+      <workItem from="1551677807174" duration="2551000" />
+      <workItem from="1551709258288" duration="591000" />
+      <workItem from="1551955511176" duration="584000" />
+      <workItem from="1552971664816" duration="3319000" />
+      <workItem from="1553491011610" duration="1333000" />
+      <workItem from="1553685046447" duration="563000" />
+      <workItem from="1554204964491" duration="2651000" />
+      <workItem from="1554463984031" duration="546000" />
+      <workItem from="1554531192593" duration="589000" />
+      <workItem from="1554811882465" duration="40000" />
+      <workItem from="1555501170026" duration="666000" />
+      <workItem from="1555909928002" duration="1197000" />
+      <workItem from="1556013085306" duration="5484000" />
+      <workItem from="1556087302071" duration="1980000" />
+      <workItem from="1556174184294" duration="3444000" />
+      <workItem from="1556185564798" duration="2748000" />
+      <workItem from="1557207988684" duration="8948000" />
+      <workItem from="1557225739269" duration="89000" />
+      <workItem from="1557225901971" duration="238000" />
+      <workItem from="1557226163037" duration="44555000" />
+      <workItem from="1557481861326" duration="7374000" />
+      <workItem from="1557553649503" duration="5990000" />
+      <workItem from="1559115897391" duration="17000" />
+      <workItem from="1559116153446" duration="690000" />
+      <workItem from="1559120021826" duration="55000" />
+      <workItem from="1559206777627" duration="48000" />
+      <workItem from="1559220329647" duration="655000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="522815000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1533" height="875" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info id="npm" order="1" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.2589404" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" sideWeight="0.49933776" visible="true" weight="0.2680965" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50066227" side_tool="true" weight="0.48123324" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="TypeScript" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49933776" weight="0.32841823" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.3297587" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$USER_HOME$/Desktop/April-25/node_modules/karma/config.tpl.js" />
+      </list>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/app/settings/settings.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authentication/signup/signup.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="119" column="19" selection-start-line="119" selection-start-column="19" selection-end-line="119" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/connect-youtube/connect-youtube.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/layouts/admin/admin-layout.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="151" column="20" selection-start-line="151" selection-start-column="20" selection-end-line="151" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/layouts/admin/admin-layout.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3420">
+          <caret line="228" column="99" selection-start-line="228" selection-start-column="99" selection-end-line="228" selection-end-column="99" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#nav#0;n#ng-sidebar#0;n#ng-sidebar-container#0;n#!!top" expanded="true" />
+            <element signature="e#10625#10631#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/layouts/admin/admin-layout.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="279" column="39" selection-start-line="279" selection-start-column="39" selection-end-line="279" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/recapcha/recapcha.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authentication/authentication.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/post-signup/post-signup.module.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/create-showcase/create-showcase.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/post-signup/post-signup.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/influencers-profile/demographic/demographic.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-373">
+          <caret line="91" column="38" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/influencers-profile/employment-status/employment-status.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/rxjs/src/Subject.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="37" column="2" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/email/server-socket.service.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/email/email.service.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/email/email.module.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/email/email.component.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/material/form-field/typings/form-field.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/influencers-profile/dialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/post-signup/post-signup.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/post-signup/add-blog-dialog.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/post-signup/countries.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/influencers-profile/demographic/demographic.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-298">
+          <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.routing.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/recapcha/recapcha.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
+          <folding>
+            <element signature="n#style#0;n#mat-card#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/recapcha/recapcha.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authentication/authentication.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="212" selection-start-line="212" selection-start-column="2" selection-end-line="216" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/create-showcase/create-showcase.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="85" column="54" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/create-showcase/create-showcase.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="324" column="25" selection-start-line="324" selection-start-column="25" selection-end-line="324" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/serv/http-service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/forms/src/model.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="536" column="8" selection-start-line="536" selection-start-column="8" selection-end-line="536" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authentication/signin/signin.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2280">
+          <caret line="152" selection-start-line="152" selection-end-line="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9045">
+          <caret line="603" column="1" selection-start-line="603" selection-start-column="1" selection-end-line="603" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authentication/signup/signup.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="145" column="17" selection-start-line="145" selection-start-column="12" selection-end-line="145" selection-end-column="17" />
+          <folding>
+            <element signature="e#103#190#0" expanded="true" />
+            <element signature="e#1517#1630#0" />
+            <element signature="e#1647#1759#0" />
+            <element signature="e#1769#1916#0" />
+            <element signature="e#1931#2010#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authentication/signup/signup.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2955">
+          <caret line="197" column="32" selection-start-line="197" selection-start-column="32" selection-end-line="197" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#mat-form-field#0;n#div#3;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#mat-form-field#0;n#div#7;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authentication/signin/signin.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="43" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#mat-form-field#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#1;n#mat-form-field#1;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@ngx-translate/http-loader/src/http-loader.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/manage/manage.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/manage/manage.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="132" column="24" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/connect-facebook/connect-facebook.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/create-showcase/create-showcase.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#mat-form-field#0;n#div#1;n#div#0;n#div#0;n#form#0;n#mat-step#1;n#mat-horizontal-stepper#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="26" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="23" column="97" selection-start-line="23" selection-start-column="97" selection-end-line="23" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="85" column="6" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/authentication/signin/signin.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="41" column="112" lean-forward="true" selection-start-line="41" selection-start-column="112" selection-end-line="41" selection-end-column="112" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/influencers-profile/influencers-profile.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="40" column="80" selection-start-line="40" selection-start-column="80" selection-end-line="40" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

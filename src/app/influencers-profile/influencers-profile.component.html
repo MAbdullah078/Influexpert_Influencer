@@ -1,0 +1,273 @@
+<app-loader></app-loader>
+<div class="container margin-top-10">
+<div class="inner-container res-1440">
+
+  <!--<div class="name row">-->
+    <!--<h2> {{currentUser.first_name }}</h2>-->
+  <!--</div>-->
+
+  <div class="row pt-3 pb-2 mb-3 info-box">
+    <!--<div class="col-lg-12 col-md-12 col-sm-12">-->
+      <!--<h2 class="card-title text-uppercase text-center"> PERSONAL INFORMATION </h2>-->
+    <!--</div>-->
+
+    <!-- <div class="card-header card-header-icon" data-background-color="rose">
+      <i class="fa fa-user-o"></i>
+    </div> -->
+
+    <!-- <div class="col-lg-1 col-md-1 col-sm-1"></div> -->
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <h4 class="profile-heading" >Edit Profile</h4></div>
+    <!-- <div class="col-lg-1 col-md-1 col-sm-1"></div> -->
+      
+    <ng-container>
+      <form class="profile-form text-center " >
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <mat-form-field class="example-full-width">
+              <input type="text" matInput placeholder="Username" disabled name="username" (focus)="show(username)" #username [(ngModel)]="userdata1['username']" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <mat-form-field class="example-full-width">
+              <input type="text" matInput placeholder="Email" disabled [(ngModel)]="userdata1['email']" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <mat-form-field class="example-full-width">
+              <input type="text" matInput placeholder="First Name"  [(ngModel)]="userdata[0]['first_name']" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+            <mat-form-field class="example-full-width">
+              <input type="text" matInput placeholder="Last Name"  [(ngModel)]="userdata[0]['last_name']" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+              <mat-form-field class="example-full-width" >
+                <input type="text" matInput placeholder="Phone" [(ngModel)]="userdata[0]['phone']" [ngModelOptions]="{standalone: true}">
+              </mat-form-field>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                <mat-form-field class="example-full-width" >
+                  <input type="text" matInput placeholder="Country" [(ngModel)]="userdata[0]['country']" [ngModelOptions]="{standalone: true}" >
+                  <!--<mat-option *ngFor="let edu of EMS" value="edu.code" >{{edu.show}}</mat-option>-->
+                </mat-form-field>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                <mat-form-field class="example-full-width" >
+                  <input type="text" matInput placeholder="City" [(ngModel)]="userdata[0]['city']" [ngModelOptions]="{standalone: true}" >
+                </mat-form-field>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                  <mat-form-field class="example-full-width">
+                    <input type="text" matInput placeholder="State" [(ngModel)]="userdata[0]['state']" [ngModelOptions]="{standalone: true}" >
+                  </mat-form-field>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                    <mat-form-field class="example-full-width" >
+                    <mat-select placeholder="Genders " [(ngModel)]="userdata[0]['gender']" [ngModelOptions]="{standalone: true}" style="padding-top: 0!important; text-align:initial; width: 100%">
+                      <mat-option *ngFor="let rel of genders"  [value]="rel.value">{{rel.show}}</mat-option>
+                    </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                      <mat-form-field class="example-full-width">
+                        <input type="text" matInput placeholder="Address"  [(ngModel)]="userdata[0]['address']" [ngModelOptions]="{standalone: true}">
+                        <!-- <input type="text" matInput placeholder="Address"  [(ngModel)]="userdata[0]['address']" [ngModelOptions]="{standalone: true}"> -->
+          
+                      </mat-form-field>
+                    </div>
+                       <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img  class="image-area " height="200px" style="border-radius: 100px" data-target=".bd-example-modal-lg3" data-toggle="modal"  [src]="profile_image"  onerror="this.src='assets/images/avatar.svg'" >
+                    <div class="row ">
+                        <div class="col-md-12 text-right">
+                                      <!-- <span class="btn-file">
+                              Upload Image
+                              <input type="file"  class="upload-input" (change)="onChange($event)" accept="image/*">
+                            </span> -->
+                            <input type="file"  class="upload-input" (change)="onChange($event)" accept="image/*">
+                            <i class="fa fa-camera camera-icon">  </i>
+                        </div>
+                      </div>
+                      <div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bd-example-modal-lg3" role="dialog" tabindex="-1">
+                          <div  class="modal-dialog modal-lg">
+                            <div  class="modal-content">
+                              <img  class="img-responsive" [src]="profile_image">
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <div class="upload-img-div">
+                          <span class="image-area">
+                            <div class="custom-file-input">
+                              <input type="file"  class="upload-input" (change)="onChange($event)" accept="image/*">
+                              <div>
+                                <i class="fas fa-camera"></i>
+                                -- <img  class="img-responsive" height="200px" style="border-radius: 100px" data-target=".bd-example-modal-lg3" data-toggle="modal"  [src]="profile_image"  onerror="this.src='assets/images/avatar.svg'" >
+                                <img  class="img-responsive" [src]="profile_image">
+                              </div>
+                            </div>
+                          </span>
+                        </div> -->
+          
+          </div>
+          
+          <div class="col-lg-6 col-md-6 col-sm-12 text-right">
+            <button type="submit" (click)="editProfile()" class="btn btn-rounded">
+              Update
+            </button>
+
+        </div>
+        </div>
+      </form>
+    </ng-container>
+  </div>
+</div>
+
+
+
+  <!--<div class="row pt-3 pb-3" style="background-color: white">-->
+    <!--<div class="col-lg-4 text-center">-->
+      <!--<img mat-card-image src="{{currentUser.image_url}}" style="width: auto;height: auto" alt="Image">-->
+    <!--</div>-->
+
+    <!--<div class="col-lg-7">-->
+      <!--<h3><span style="color: blue"> {{currentUser.first_name}} &nbsp; {{currentUser.last_name}}</span></h3>-->
+
+      <!--&lt;!&ndash;<h4> <span style="color: blue"> {{currentUser.last_name}}</span></h4>&ndash;&gt;-->
+
+
+      <!--<h5><span style="color: blue"> {{currentUser.email}}</span></h5>-->
+      <!--<h5><span style="color: blue"> {{currentUser.personal_bio}}</span></h5>-->
+
+
+      <!--&lt;!&ndash;<h5 style="color: blue"> </h5>-->
+      <!--<h5 style="color: blue"> {{currentUser.last_name}}</h5>-->
+
+        <!--<h5 style="color: blue">{{currentUser.email}}</h5>-->
+        <!--<h5 style="color: blue">{{currentUser.personal_bio}}</h5> &ndash;&gt;-->
+
+      <!--<br>-->
+
+      <!--<mat-form-field class="example-full-width" (click)="openDialog()">-->
+        <!--<textarea matInput placeholder="Edit Information" readonly="readonly"></textarea>-->
+      <!--</mat-form-field>-->
+    <!--</div>-->
+    <!--<br>-->
+
+
+  <!--</div>-->
+
+
+  <br>
+  <div class=" col-lg-12 col-md-12 col-sm-12 social-bar">
+    <h4 class="heading-1"> Linked Profiles </h4>
+    <h5 class="manage-label">
+      <a  [routerLink]="['/manage-profiles']" class="" >Manage</a>
+    </h5>
+  </div>
+  <div class="scial-bar">
+        <ul class="social">
+          <li>
+            <a [routerLink]="['/connect-facebook']">
+              <img src="../../assets/manage-images/Fb@1x-.png" height="28" width="28">
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/connect-instagram']">
+              <img src="../../assets/manage-images/Insta@1x-.png" height="28" width="28">
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/connect-youtube']">
+              <img src="../../assets/manage-images/YouTube@1x-.png" height="28" width="28">
+            </a>
+          </li> <li>
+            <a [routerLink]="['/connect-twitter']">
+              <img src="../../assets/manage-images/Twitter@1x-.png" height="28" width="28">
+            </a>
+          </li>
+          <li >
+            <a [routerLink]="['/connect-blogger']">
+              <img src="../../assets/manage-images/Web@1x-.png" height="28" width="28">
+            </a>
+          </li> <li >
+            <a [routerLink]="['/connect_linkedin']">
+              <img src="../../assets/manage-images/LinkedIn@1x-.png" height="28" width="28">
+            </a>
+          </li> <li  >
+            <a [routerLink]="['/connect-pinterest']">
+              <img src="../../assets/manage-images/Pin@1x-.png" height="28" width="28">
+            </a>
+          </li>
+        </ul>
+  </div>
+
+  <!--<div class="row">-->
+    <!--<div class="col-md-9 col-sm-8">-->
+      <!--<h4 class="card-title text-uppercase"> CONTACT INFORMATION </h4>-->
+    <!--</div>-->
+    <!--<div class="col-md-3 col-sm-4">-->
+      <!--<button class="pull-right" mat-raised-button color="primary" (click)="openDialog1()" style="background-color: red"-->
+              <!--readonly="readonly">Edit-->
+      <!--</button>-->
+    <!--</div>-->
+    <!--<br>-->
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <!--<div class="col-lg-12">-->
+      <!--<mat-form-field class="example-full-width">-->
+        <!--<textarea matInput placeholder="Contact Information" (click)="openDialog1()" readonly="readonly"></textarea>-->
+      <!--</mat-form-field>-->
+
+    <!--</div>-->
+
+  <!--</div>-->
+  <!--<br>-->
+  <!--<div class="row">-->
+    <!--<div class="col-md-9 col-sm-8">-->
+      <!--<h4 class="card-title text-uppercase"> DEMOGRAPHIC </h4>-->
+    <!--</div>-->
+    <!--<div class="col-md-3 col-sm-4">-->
+      <!--<button class="pull-right" mat-raised-button color="primary" (click)="openDialog_demogrhapic()" style="background-color: red">Edit-->
+      <!--</button>-->
+    <!--</div>-->
+    <!--<br>-->
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <!--<div class="col-lg-12">-->
+      <!--<mat-form-field class="example-full-width">-->
+        <!--<textarea matInput placeholder="DEMOGRAPHIC" (click)="openDialog_demogrhapic()" readonly="readonly"></textarea>-->
+      <!--</mat-form-field>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <!--<br>-->
+
+  <!--<div class="row">-->
+    <!--<div class="col-md-9 col-sm-8">-->
+      <!--<h4 class="card-title text-uppercase"> EMPLOYMENT STATUS </h4>-->
+    <!--</div>-->
+    <!--<div class="col-md-3 col-sm-4">-->
+      <!--<button class="pull-right" mat-raised-button color="primary" (click)="openDialog_employ_status()" style="background-color: red">Edit-->
+      <!--</button>-->
+    <!--</div>-->
+    <!--<br>-->
+    <!--<hr>-->
+  <!--</div>-->
+
+  <!--<div class="row">-->
+    <!--<div class="col-lg-12">-->
+      <!--<mat-form-field class="example-full-width">-->
+            <!--<textarea matInput placeholder="EMPLOYMENT STATUS" (click)="openDialog_employ_status()"-->
+                      <!--readonly="readonly"></textarea>-->
+      <!--</mat-form-field>-->
+    <!--</div>-->
+  <!--</div>-->
+
+
+
+</div>
+

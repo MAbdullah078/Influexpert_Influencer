@@ -1,0 +1,348 @@
+<!--<div class="parent">-->
+<!--<div class="child">Foo foo</div>-->
+<!--</div>-->
+<!--<div style="width:800px; margin:0 auto;">-->
+<div class="steps" style="width: 80%">
+  <mat-horizontal-stepper [linear]="isLinear">
+    <mat-step [stepControl]="firstFormGroup"
+             *ngIf="currentUser.current_info_step ==1 ||currentUser.current_info_step ==3 || currentUser.current_info_step ==2">
+      <!--<form [formGroup]="firstFormGroup">-->
+
+
+      <h2 style="text-align: center" class="mb-4">Welcome, <span style="color: #777"> {{currentUser.first_name}}</span></h2>
+      <ng-template style="font-size: 22px; font-weight: bolder" mdStepLabel>Associate Blog</ng-template>
+      <!--<mat-form-field>-->
+      <div>
+
+
+        <button class="btn btn-icon btn-facebook mb-3 mr-2">
+          <i class="fa fa-facebook"></i>
+          Attach Facebook
+        </button>
+
+
+
+        <button class="btn btn-icon btn-google mb-3 mr-2">
+          <i class="fa fa-google-plus"></i>
+          Attach Google Plus
+        </button>
+
+        <button (click)="openDialog()" class="btn btn-icon btn-google mb-3 mr-2">
+          <i class="fa fa-blogger"></i>
+          Add Blog
+        </button>
+
+        <!--{{step.current_info_step}}-->
+
+
+                <button class="btn btn-icon btn-instagram mb-3 mr-2" [disabled]="connected_social_medias.instagram" (click)="onLoginWithInstagram()" >
+                  <i class="fa fa-instagram"></i>
+                  Attach Instagram
+                </button>
+
+                <button class="btn btn-icon btn-linkedin mb-3 mr-2" >
+                  <i class="fa fa-linkedin"></i>
+                  Attach LinkedIn
+                </button>
+
+
+
+                <button class="btn btn-icon btn-pinterest mb-3 mr-2" >
+                  <i class="fa fa-pinterest"></i>
+                  Attach Pinterest
+                </button>
+
+
+
+                <button class="btn btn-icon btn-tumblr mb-3 mr-2">
+                  <i class="fa fa-tumblr"></i>
+                  Attach Tumblr
+                </button>
+
+                <button class="btn btn-icon btn-twitter mb-3 mr-2" >
+                  <i class="fa fa-twitter"></i>
+                  Attach Twitter
+                </button>
+
+
+      </div>
+      <!--<input mdInput placeholder="Last name, First name" formControlName="firstCtrl" required>-->
+      <!--</mat-form-field>-->
+      <div class="button-row">
+        <!--<button class="float-right" md-button mdStepperNext>Next</button>-->
+
+        <button md-fab color="primary" class="float-right" style="width:55px;height:55px" (click)="showError()" mdStepperNext><i class="fa fa-arrow-right"></i></button>
+      </div>
+      <!--</form>-->
+    </mat-step>
+    <mat-step *ngIf="currentUser.current_info_step ==3 || currentUser.current_info_step ==2"
+             [stepControl]="secondFormGroup">
+      <!--<form [formGroup]="secondFormGroup">-->
+
+      <ng-template mdStepLabel>Choose Category</ng-template>
+      <!--<mat-form-field>-->
+
+      <mat-select name="selected_choice" [(ngModel)]="selected_category" placeholder="Select Category"
+                 style="width: 100%;">
+        <mat-option *ngFor="let choice of choices" [value]="choice.code">{{ choice.name }}</mat-option>
+      </mat-select>
+      <!--<mat-error *ngIf="categoryFormControl.hasError('required')">-->
+        <!--Category is <strong>required</strong>-->
+      <!--</mat-error>-->
+      <!--</mat-form-field>-->
+
+
+      <div class="row" style="margin-top: 66px">
+
+        <div class="col-md-4">
+
+          <mat-card class="example-card" style="background-color: palegoldenrod">
+            <mat-card-header>
+              <!--<div mat-card-avatar class="example-header-image"></div>-->
+              <mat-card-title>
+                <h3> Blog Post Rate</h3>
+              </mat-card-title>
+              <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+            </mat-card-header>
+            <!--<img mat-card-image src="../../assets/images/umer.jpg" alt="Photo of a Shiba Inu">-->
+            <mat-card-content>
+              <p>
+                This is how much you charge for a blog post including sharing to your social networks. The suggested
+                rate shown is based on your total reach. You can edit this rate as needed.
+              </p>
+              <hr>
+              <label>Suggested Rate: $25</label>
+              <mat-form-field class="example-full-width">
+                <input mdInput maxlength="5" [(ngModel)]="step2Model.blog_post_rate" name="blog_post_rate" placeholder="Blog Post Rate" [formControl]="rateFormControl">
+                <mat-error *ngIf="rateFormControl.hasError('pattern')">
+                  Please enter a valid rate
+                </mat-error>
+                <mat-error *ngIf="rateFormControl.hasError('required')">
+                  <strong>Required</strong>
+                </mat-error>
+              </mat-form-field>
+
+            </mat-card-content>
+            <mat-card-actions>
+
+              <!--<button  md-button>LIKE</button>-->
+              <!--<button md-button>SHARE</button>-->
+            </mat-card-actions>
+          </mat-card>
+
+
+        </div>
+
+
+        <div class="col-md-4">
+
+
+          <mat-card class="example-card" style="background-color: palegreen">
+            <mat-card-header>
+              <!--<div mat-card-avatar class="example-header-image"></div>-->
+              <mat-card-title><h3> Social Share Rate</h3></mat-card-title>
+              <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+            </mat-card-header>
+            <!--<img mat-card-image src="../../assets/images/umer.jpg" alt="Photo of a Shiba Inu">-->
+            <mat-card-content>
+              <p>
+                This is how much you charge for creating or sharing short content like Tweets, Facebook Shares,
+                Pinterest and Instagram photos. The suggested rate shown is based on your total reach. You can edit this
+                rate as needed.
+              </p>
+              <hr>
+              <label>Suggested Rate: $5</label>
+              <mat-form-field class="example-full-width">
+                <input mdInput maxlength="5" [(ngModel)]="step2Model.social_share_rate" name="social_share_rate" placeholder="Social Share Rate" [formControl]="rateFormControl1">
+                <mat-error *ngIf="rateFormControl1.hasError('pattern')">
+                  Please enter a valid rate
+                </mat-error>
+                <mat-error *ngIf="rateFormControl1.hasError('required')">
+                  <strong>Required</strong>
+                </mat-error>
+
+              </mat-form-field>
+
+            </mat-card-content>
+            <mat-card-actions>
+
+
+            </mat-card-actions>
+          </mat-card>
+
+
+        </div>
+
+        <div class="col-md-4">
+
+
+          <mat-card class="example-card" style="background-color: palevioletred">
+            <mat-card-header>
+              <!--<div mat-card-avatar class="example-header-image"></div>-->
+              <mat-card-title><h3> Video Rate</h3></mat-card-title>
+              <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+            </mat-card-header>
+            <!--<img mat-card-image src="../../assets/images/umer.jpg" alt="Photo of a Shiba Inu">-->
+            <mat-card-content>
+              <p>
+                This is how much you charge to create a video, including sharing to your social networks. You can edit
+                this rate as needed. If you do not create video content, please leave this area blank.
+              </p>
+              <hr>
+              <label>Suggested Rate: $5</label>
+              <mat-form-field class="example-full-width">
+                <input mdInput maxlength="5" [(ngModel)]="step2Model.video_rate" name="video_rate" placeholder="Video Share Rate" [formControl]="rateFormControl2">
+                <mat-error *ngIf="rateFormControl2.hasError('pattern')">
+                  Please enter a valid rate
+                </mat-error>
+                <mat-error *ngIf="rateFormControl2.hasError('required')">
+                  <strong>Required</strong>
+                </mat-error>
+
+              </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions>
+
+
+            </mat-card-actions>
+          </mat-card>
+        </div>
+
+      </div>
+      <div class="button-row" style="margin-top: 36px">
+
+
+        <button md-fab class="float-left" mdStepperPrevious>Back</button>
+        <button md-fab color="primary" class="float-right" *ngIf="currentUser.current_info_step!=3" (click)="saveStep2()" [disabled]="step2disable||rateFormControl2.hasError('pattern')||rateFormControl2.hasError('required')||rateFormControl1.hasError('pattern')||rateFormControl1.hasError('required')||rateFormControl.hasError('pattern')||rateFormControl.hasError('required')">Submit</button>
+        <img class="float-right" *ngIf="step2disable"
+             src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAA
+                        GJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJ
+                        CgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAd
+                        Ka+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7W
+                        EYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhm
+                        KtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZf
+                        hYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunI
+                        nK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEA
+                        AQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJC
+                        gAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLW
+                        zpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtq
+                        lAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+        <button md-fab color="primary" class="float-right" *ngIf="currentUser.current_info_step==3" mdStepperNext>Next</button>
+
+      </div>
+
+      <!--</form>-->
+    </mat-step>
+    <mat-step *ngIf="currentUser.current_info_step==3">
+      <ng-template mdStepLabel>Done</ng-template>
+      <h1 class="text-center">You're almost done!</h1>
+
+      <div class="row" style="margin-top: 70px">
+        <div class="col-md-3">
+          <img mat-card-image src="{{currentUser.image_url}}" style="width: auto;height: auto" alt="Image">
+        </div>
+        <div class="col-md-1"></div>
+
+        <div class="col-md-4">
+
+
+          <mat-form-field class="example-full-width">
+            <input mdInput placeholder="First Name*" [(ngModel)]="currentUser.first_name" name="first_name" [formControl]="first_nameFormControl">
+            <mat-error *ngIf="first_nameFormControl.hasError('required')">
+              First name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+
+
+          <mat-form-field class="example-full-width">
+            <input mdInput placeholder="Email"  [formControl]="emailFormControl" [(ngModel)]="currentUser.email" name="email">
+            <mat-error *ngIf="emailFormControl.hasError('pattern')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input mdInput placeholder="City*" [(ngModel)]="currentUser.city" name="city" [formControl]="cityFormControl">
+            <mat-error *ngIf="cityFormControl.hasError('required')">
+              City is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+
+           <mat-select [(ngModel)]="currentUser.country" name="country"  placeholder="Select country"
+                     style="width: 100%;" >
+            <mat-option *ngFor="let countrie of countries" [value]="countrie.code ">{{countrie.name}}</mat-option>
+          </mat-select>
+
+
+          <mat-radio-group class="example-radio-group" [(ngModel)]="currentUser.gender" name="gender" style="margin-top: 22px">
+            <label>Gender*</label>
+            <mat-radio-button class="example-radio-button" *ngFor="let gender of genders" [value]="gender.value">
+              {{gender.show}}
+            </mat-radio-button>
+          </mat-radio-group>
+          <!--<div class="example-selected-value">Your favorite season is: {{favoriteSeason}}</div>-->
+
+
+        </div>
+
+        <div class="col-md-4">
+
+          <mat-form-field class="example-full-width">
+            <input mdInput placeholder="Last Name*" [(ngModel)]="currentUser.last_name" name="last_name" [formControl]="last_nameFormControl">
+            <mat-error *ngIf="last_nameFormControl.hasError('required')">
+              Last Name is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input mdInput type="password" placeholder="password*" [(ngModel)]="currentUser.password" name="password" [formControl]="passwordFormControl">
+            <mat-error *ngIf="passwordFormControl.hasError('required')">
+              Password is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input mdInput placeholder="State / Province / Region*" [(ngModel)]="currentUser.state" name="state" [formControl]="stateFormControl">
+            <mat-error *ngIf="stateFormControl.hasError('required')">
+              <strong>Required</strong>
+            </mat-error>
+          </mat-form-field>
+
+
+          <mat-form-field class="example-full-width">
+            <input mdInput type="date" placeholder="Date of birth*" [(ngModel)]="currentUser.dob" name="dob" [formControl]="dobFormControl">
+            <mat-error *ngIf="dobFormControl.hasError('required')">
+              DOB is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div class="button-row">
+        <button md-fab class="text-center" mdStepperPrevious>Back</button>
+        <button md-fab color="primary" class="float-right" (click)="saveStep3()" [disabled]="step3disable||passwordFormControl.hasError('required')||cityFormControl.hasError('required')||stateFormControl.hasError('required')||dobFormControl.hasError('required')||first_nameFormControl.hasError('required')||last_nameFormControl.hasError('required')||emailFormControl.hasError('required')||cityFormControl.hasError('pattern')">Submit</button>
+        <img class="float-right" *ngIf="step3disable"
+             src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAA
+                        GJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJ
+                        CgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAd
+                        Ka+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7W
+                        EYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhm
+                        KtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZf
+                        hYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunI
+                        nK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEA
+                        AQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJC
+                        gAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLW
+                        zpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtq
+                        lAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>

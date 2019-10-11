@@ -1,0 +1,338 @@
+<app-loader></app-loader>
+<div class="flexy signin-signup">
+    <form class="form-content" [formGroup]="registerUser" (ngSubmit)="onSubmit()">
+        <div class="heading">
+            <!-- <img class="w-50" src="../../../assets/images/logos/Logo.png" alt="image"> -->
+            Sign Up To Your Account
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field class="w-100 mb-2">
+                    <input  type="text" matInput placeholder="Username" formControlName="userName" [(ngModel)]="model.username"   (ngModelChange)="usernamecheck(rt.value)"  #rt required>
+                    <!-- <p>{{ userchk}}</p> -->
+                    <mat-error *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+                      <span *ngIf="f.userName.errors.required">Username is required</span>
+                    </mat-error>
+                  </mat-form-field>
+                 
+                  <!-- <input type="text" matInput  name="lastname" placeholder=" Last Name" formControlName="lastName"  [(ngModel)]="model.last_name"required> -->
+          
+
+                  <mat-form-field class="w-100 mb-2">
+                      <input  type="text" matInput placeholder="First Name" formControlName="firstName"  [(ngModel)]="model.first_name" required>
+                      <mat-error *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                        <span *ngIf="f.fullName.errors.required">First Name is required</span>
+                      </mat-error>
+                  
+                    </mat-form-field>
+
+                    <!-- <input type="text" matInput  name="firstname" placeholder=" First Name" required> -->
+                   
+
+
+                    <mat-form-field class="w-100 mb-2">
+                        <input  type="text" matInput placeholder="Last Name" formControlName="lastName"  [(ngModel)]="model.last_name" required>
+                        <mat-error *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                          <span *ngIf="f.fullName.errors.required">Last Name is required</span>
+                        </mat-error>
+                      </mat-form-field>
+                      <mat-form-field class="w-100 mb-2">
+                          <input  type="text" matInput placeholder="Email" formControlName="eMail" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  [(ngModel)]="model.email" required>
+                          <mat-error *ngIf="submitted && f.eMail.errors" class="invalid-feedback">
+                            <span *ngIf="f.eMail.errors.required">Email is required</span>
+                          </mat-error>
+                        
+                        </mat-form-field>
+
+
+                       
+                       
+
+
+                        <mat-form-field class="w-100 mb-2">
+                          <input [type]="hide ? 'password' : 'text'"  matInput placeholder="Password" formControlName="passWord"   name="pass" [(ngModel)]="model.password"  required>
+                          <i *ngIf= "hide" class="fa fa-eye eye-icon" title="Show Password" (click)="hide = !hide"></i>
+              <i *ngIf= "!hide" class="fa fa-eye-slash eye-icon" title="Hide Password" (click)="hide = !hide"></i>
+                           <!-- <input  type="text" matInput placeholder="Password" formControlName="passWord"   name="pass" [(ngModel)]="model.password"  required> --> 
+                            <mat-error *ngIf="submitted && f.passWord.errors" class="invalid-feedback">
+                              <span *ngIf="f.passWord.errors.required">Password is required</span>
+                            </mat-error>
+                          </mat-form-field>
+                         
+                          <mat-form-field class="w-100 mb-2">
+                            <input [type]="hide ? 'password' : 'text'"  matInput placeholder=" Confirm Password"  [(ngModel)]="password2" (focusout)="showAllert()"   type="password" name="pd" formControlName="password2"  required>
+                            <i *ngIf= "hide" class="fa fa-eye eye-icon" title="Show Password" (click)="hide = !hide"></i>
+                            <i *ngIf= "!hide" class="fa fa-eye-slash eye-icon" title="Hide Password" (click)="hide = !hide"></i>
+                            <mat-error *ngIf="submitted && f.password2.errors" class="invalid-feedback">
+                              <span *ngIf="f.password2.errors.required">confirm password is required</span>
+                            </mat-error>
+                          </mat-form-field> 
+            </div>
+           
+
+
+
+ <!-- <mat-form-field style="width: 97%">
+                            <input [type]="hide ? 'password' : 'text'" matInput placeholder="Confirm Password"  [(ngModel)]="password2" (focusout)="showAllert()"   type="password" name="pd" required>
+                            <i *ngIf= "hide" class="fa fa-eye eye-icon" title="Show Password" (click)="hide = !hide"></i>
+                            <i *ngIf= "!hide" class="fa fa-eye-slash eye-icon" title="Hide Password" (click)="hide = !hide"></i>
+                            <mat-error *ngIf="passwordFormControl.hasError('required')">
+                              Password is <strong>required</strong>
+                            </mat-error>
+                          </mat-form-field>  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="col-md-6">
+                <mat-form-field class="w-100 mb-2">
+                    <input  type="text"  matInput id="pho" matInput placeholder="Phone" formControlName="phoNe"  name="pass"   [(ngModel)]="model.phone"required>
+                    <mat-error *ngIf="submitted && f.phoNe.errors" class="invalid-feedback">
+                      <span *ngIf="f.phoNe.errors.required">Phone is required</span>
+                    </mat-error>
+                  </mat-form-field>
+
+                 
+                 
+
+
+
+                  <mat-form-field class="w-100 select mb-2">
+                      <mat-select placeholder="Select Country" formControlName="counTry" name="relationship" style="color: #000" [(ngModel)]="model.country" (ngModelChange)="onSelect($event)" >
+                        <mat-option *ngFor="let data of getContriesData" [value]="data.name">{{ data.name }}</mat-option>
+                      </mat-select>
+                  
+          <mat-error *ngIf="submitted && f.counTry.errors" class="invalid-feedback">
+            <span *ngIf="f.counTry.errors.required">Country is required</span>
+          </mat-error>
+        </mat-form-field>
+
+
+                  <mat-form-field class="w-100 select mb-2">
+                      <mat-select placeholder="Select State" formControlName="staTe" name="relationship" style="color: #000"  [(ngModel)]="model.state"  (ngModelChange)="getCities($event)" >
+                        <mat-option *ngFor="let data of getContryData1" [value]="data.name">{{ data.name }}</mat-option>
+                      </mat-select>
+                      <mat-error *ngIf="submitted && f.staTe.errors" class="invalid-feedback">
+                        <span *ngIf="f.staTe.errors.required">State is required</span>
+                      </mat-error>
+                  </mat-form-field>
+
+         
+
+
+                  <mat-form-field class="w-100 select mb-2">
+                      <mat-select placeholder="Select City"  name="relationship" style="color: #000" id="pho" formControlName="ciTy" [(ngModel)]="model.city"  >
+                        <mat-option *ngFor="let city of getCity"  [value]="city.name">{{ city.name }}</mat-option>
+                      </mat-select>
+                      <mat-error *ngIf="submitted && f.ciTy.errors" class="invalid-feedback">
+                        <span *ngIf="f.ciTy.errors.required">City is required</span>
+                      </mat-error>
+                  </mat-form-field>
+
+                 
+
+
+
+
+                  <mat-form-field class="w-100 select mb-2">
+                      <mat-select placeholder="Select Gender" name="relationship" formControlName="gendeR"  style="color: #000"[(ngModel)]="model.gender"  >
+                        <mat-option *ngFor="let g of genders" [value]="g.value">{{ g.show }}</mat-option>
+                      </mat-select>
+                    <mat-error *ngIf="submitted && f.gendeR.errors" class="invalid-feedback">
+                      <span *ngIf="f.gendeR.errors.required">Gender is required</span>
+                    </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="w-100 mb-2">
+                      <input type="text" matInput  name="address" placeholder="Address" formControlName="address"  [(ngModel)]="model.address"required>
+                      <mat-error *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                        <span *ngIf="f.address.errors.required">address is required</span>
+                      </mat-error>
+                    </mat-form-field>
+
+                    
+              
+
+
+
+
+
+
+
+
+
+
+                               <!-- <mat-form-field style="width: 97%">
+                            <input [type]="hide ? 'password' : 'text'" matInput placeholder="Confirm Password"  [(ngModel)]="password2" (focusout)="showAllert()"   type="password" name="pd" required>
+                            <i *ngIf= "hide" class="fa fa-eye eye-icon" title="Show Password" (click)="hide = !hide"></i>
+                            <i *ngIf= "!hide" class="fa fa-eye-slash eye-icon" title="Hide Password" (click)="hide = !hide"></i>
+                            <mat-error *ngIf="passwordFormControl.hasError('required')">
+                              Password is <strong>required</strong>
+                            </mat-error>
+                          </mat-form-field>  -->
+
+              
+            </div>
+            <div class="col-md-3">
+              <app-recapcha></app-recapcha>
+              <div  style="float:right; margin: 50px 25px; font-size: x-large;font-weight: bold;color: red;"  *ngIf="!recaptcha" >Recaptcha is required</div>
+            </div>
+            <div class="col-md-9">
+                  <mat-slide-toggle>
+                      By clicking on the "Register" button below, you understand and agree that the use of this Website, Mobile Apps,
+                      AI and ALL other related Technology Platforms are subject to the <a href="https://www.influexpai.com/Terms-and-Conditions" target="_blank">Terms of Use</a> and <a href="https://www.influexpai.com/privacy_policy">Privacy Policy</a>.
+                  </mat-slide-toggle>
+                <button type="submit"  class="btn btn-primary" >Sign Up</button>
+                <p class="signup-auth text-center">Already have account. <a [routerLink]="['/authentication/signin']">Sign in</a></p>
+            </div>
+             
+        </div>
+      </form>
+</div>
+
+<!-- upertak -->
+
+<!-- <div class="login-background">
+  <div class="bg-2 col-md-12 col-lg-12" style=" padding: 30px 0 20px;
+  height: 100%;">
+    <form class="login-form-1 create-showcase" [formGroup]="registerUser" (ngSubmit)="onSubmit()">
+
+      <div class="card margin-0">
+        <div class="card-header text-center" data-background-color="rose">
+          <h4 class="card-title"><label class="font"> Signup to your Account </label></h4>
+
+        </div>
+        <p  class="signup-tagline">Okay, lets get started! First, tell us about yourself and the address we're going to help with you</p>
+
+      <div class="row">
+        <div class="col-md-4">
+          <mat-form-field class="form-group" id="mat-filed">
+            <input  type="text" matInput name="username" formControlName="userName"  placeholder="Username"  [(ngModel)]="model.username"   required>
+            <mat-error *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+              <span *ngIf="f.userName.errors.required">Username is required</span>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="example-full-width">
+            <input type="text" matInput  name="firstname" placeholder=" First Name" formControlName="firstName"  [(ngModel)]="model.first_name"required>
+            <mat-error *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+              <span *ngIf="f.fullName.errors.required">First Name is required</span>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="example-full-width">
+            <input type="text" matInput  name="lastname" placeholder=" Last Name" formControlName="lastName"  [(ngModel)]="model.last_name"required>
+            <mat-error *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+              <span *ngIf="f.fullName.errors.required">Last Name is required</span>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <input type="text" matInput placeholder="Email" formControlName="eMail" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  [(ngModel)]="model.email"  required>
+            <mat-error *ngIf="submitted && f.eMail.errors" class="invalid-feedback">
+              <span *ngIf="f.eMail.errors.required">Email is required</span>
+            </mat-error>
+          </mat-form-field>
+     </div>
+        <div class="col-md-4">
+
+          <mat-form-field style="margin-top: 10px">
+            <input matInput type="password" placeholder=" Password"  formControlName="passWord"   name="pass" [(ngModel)]="model.password" required>
+            <mat-error *ngIf="submitted && f.passWord.errors" class="invalid-feedback">
+              <span *ngIf="f.passWord.errors.required">Password is required</span>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="catagery " >
+          <mat-select placeholder="Select Country" formControlName="counTry" name="relationship" style="color: #000" [(ngModel)]="model.country" (ngModelChange)="onSelect($event)" >
+            <mat-option *ngFor="let data of getContriesData" [value]="data.name">{{ data.name }}</mat-option>
+
+          </mat-select>
+
+            <mat-error *ngIf="submitted && f.counTry.errors" class="invalid-feedback">
+              <span *ngIf="f.counTry.errors.required">Country is required</span>
+            </mat-error>
+
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field class="example-full-width catagery ">
+          <mat-select name="relationship" style="color: #000" formControlName="staTe" [(ngModel)]="model.state"  (ngModelChange)="getCities($event)"  required placeholder="Select States">
+            <mat-option *ngFor="let data of getContryData1"  [value]="data.name">{{ data.name }}</mat-option>
+          </mat-select>
+
+            <mat-error *ngIf="submitted && f.staTe.errors" class="invalid-feedback">
+              <span *ngIf="f.staTe.errors.required">State is required</span>
+            </mat-error>
+          </mat-form-field>
+          </div>
+
+          <div class="col-md-6">
+            <mat-form-field class="example-full-width catagery" >
+            <mat-select name="relationship" style="color: #000" id="pho" formControlName="ciTy" [(ngModel)]="model.city" required placeholder="Select City">
+              <mat-option *ngFor="let city of getCity"  [value]="city.name">{{ city.name }}</mat-option>
+            </mat-select>
+              <mat-error *ngIf="submitted && f.ciTy.errors" class="invalid-feedback">
+                <span *ngIf="f.ciTy.errors.required">City is required</span>
+              </mat-error>
+            </mat-form-field>
+            </div>
+
+            <div class="col-md-6">
+
+              <mat-form-field  style="margin-top: 10px">
+                <input type="text" matInput id="pho" formControlName="phoNe" placeholder=" Phone" name="pass"   [(ngModel)]="model.phone"  required>
+                <mat-error *ngIf="submitted && f.phoNe.errors" class="invalid-feedback">
+                  <span *ngIf="f.phoNe.errors.required">Phone is required</span>
+                </mat-error>
+              </mat-form-field>
+         </div>
+
+     <div class="col-md-6 ">
+       <mat-form-field class="example-full-width catagery ">
+       <mat-select  name="relationship" formControlName="gendeR" style="color: #000" [(ngModel)]="model.gender" placeholder="Select Gender">
+         <mat-option *ngFor="let g of genders" [value]="g.value">{{ g.show }}</mat-option>
+
+
+       </mat-select>
+         <mat-error *ngIf="submitted && f.gendeR.errors" class="invalid-feedback">
+           <span *ngIf="f.gendeR.errors.required">Gender is required</span>
+         </mat-error>
+       </mat-form-field>
+ </div>
+      </div>
+        <div class="row">
+          <div class="col-md-6">
+          <div class="form-group text-center" [ngClass]="{ 'has-error':!recaptcha}" style="margin: 0 auto">
+      <div>
+        <app-recapcha style="margin:0 auto; float: left; padding: 10px; margin-top: 10px;"></app-recapcha>
+        <div  style="float:right; margin: 50px 25px; font-size: x-large;font-weight: bold;color: red;"  *ngIf="!recaptcha" >Recaptcha is required</div>
+      </div>
+
+          </div>
+        </div>
+        <div class="col-md-6" style="margin-top:10px">
+          <p class="signup-auth"><mat-slide-toggle></mat-slide-toggle>
+            By clicking on the "Register" button below, you understand and agree that the use of this Website, Mobile Apps,
+            AI and ALL other related Technology Platforms are subject to the <a href="https://www.influexpai.com/Terms-and-Conditions" target="_blank">Terms of Use</a> and <a href="https://www.influexpai.com/privacy_policy">Privacy Policy</a>.
+          </p>
+          <button type="submit"  class="button" tabindex=3 style="margin-top:10px;"> Register</button>
+          <p class="signup-auth text-center">Already have account. <a [routerLink]="['/authentication/signin']">Sign in</a></p>
+        </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div> -->

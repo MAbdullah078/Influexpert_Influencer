@@ -1,0 +1,38 @@
+<section>
+<div class="container ">
+<h1 class="text-center">Influencer Showcase</h1>
+</div>
+<!-- <div class="container" >
+  <div class="col-md-4">
+
+  </div>
+</div> -->
+<!-- <div *ngFor="let data of datashowcase ">
+    <p>{{data.city}}</p>
+    <p>{{data.email}}</p>
+  
+  </div> -->
+  <div class="container">
+      <div class="row">
+
+     <div class="col-md-4" *ngFor="let message of showcase">
+       <div class="showcase">
+       <img src="{{message.show_image[0]?.image}}" onerror="this.src='../../../assets/images/logos/Logo1.png'" alt="">
+       <div class="influcencer-information">
+    <p><span>Showcase Title:</span>  {{message.title}}</p>
+    <p>Description:   {{message.description}}</p>
+    <p>Link: {{message.urls}}</p>
+    <!-- <p>{{message.city}}</p>
+    <p>{{message.email}}</p> -->
+    <p>Status: {{message.status}}</p>
+  </div>
+    <!-- <p *ngIf="{{show_image.show_image}} === P">Pending</p> -->
+    <!-- <p *ngIf="messgae.status == N">Not Approved </p>
+    <p *ngIf="messgae.status == A">Approved </p> -->
+  </div>
+  </div>
+  </div>
+
+  </div>
+</section>
+

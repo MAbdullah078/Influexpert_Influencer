@@ -1,0 +1,77 @@
+/* #contact{padding-top:90px;width:100%;color:#fff}.section-content{text-align:center;color:#000}.contact-section .form-line{border-right:1px solid #B29999}.form-group{margin:0 0 8px}.submit{font-size:25px;float:right;background-color:#000;color:#fff;border:none;border-radius:50px;box-shadow:0 0 10px #ccc;height:55px;padding:0 10px;font-weight:900}
+.contact-address h2 {
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0;
+    color: #333;
+}
+.contact-address h5 {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.1;
+}
+#contact-map {
+    padding: 20px 50px 10px;
+    margin-top: 20px;
+    background: #fafafa;
+} */
+/* .textarea{
+    
+    height: 152px;
+}
+.fa-paper-plane{
+    margin-right: 5px;
+}
+.heading-1 {
+    font-size: 32px;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    margin: 32px;
+}
+.section-content p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.section-content {
+    text-align: center;
+    color: #000;
+}
+.contact-address h5 {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.1;
+}
+.contact-address h2 {
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0;
+    color: #333;
+}
+.submit-button{
+    margin: 17px
+}  */
+#contact{padding-top:90px;width:100%;color:#fff}.section-content{text-align:center;color:#000}.contact-section .form-line{border-right:1px solid #B29999}.form-group{margin:0 0 8px}.submit{font-size:25px;float:right;background-color:#000;color:#fff;border:none;border-radius:50px;box-shadow:0 0 10px #ccc;height:55px;padding:0 10px;font-weight:900}
+.contact-address h2 {
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0;
+    color: #333;
+}
+.contact-address h5 {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.1;
+}
+#contact-map {
+    padding: 20px 50px 10px;
+    margin-top: 20px;
+    background: #fafafa;
+}
+.textarea{
+    
+    height: 152px;
+}
+.fa-paper-plane{
+    margin-right: 5px;
+}

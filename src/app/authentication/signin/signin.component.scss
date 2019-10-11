@@ -1,0 +1,52 @@
+.flexy{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: url(../../../assets/images/LoginInflu.png)center/100% no-repeat;
+}
+.flexy ul{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flexy ul li a img{
+  transition: all .4s ease-in-out;
+}
+.flexy ul li a img:hover{
+  transform: scale(1.2);
+}
+.form-content{
+  width: 500px;
+  background: url(../../../assets/images/backkk.png);
+  padding: 10px 20px 20px;
+  opacity: 0.8;
+  border-radius: 20px;
+}
+.fa-eye,
+.fa-eye-slash,
+.fa-close {
+  position: absolute;
+  right: 0;
+  top: 6px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.forgot,
+.privacy {
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+.mat-form-field input{
+  font-size: 24px;
+  font-weight: 600;
+}
+.error{
+       position: absolute!important;
+      top: 83px;
+      color: #c00;
+}

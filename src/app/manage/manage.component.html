@@ -1,0 +1,93 @@
+
+  <div class="inner-container1">
+  <div class="row">
+      <div class="col-lg-8 col-sm-8 col-xs-12">
+        <div class="single" *ngIf="isFBStatus">
+            <h5>Facebook Profile</h5>
+            <h6 class="pull-right"> <img src="../../assets/images/connect/if_status_46254.png" title="Connected"> Connected</h6>
+        </div>
+        <div class="single" *ngIf="!isFBStatus">
+            <h5>Facebook Profile</h5>
+            <h6 class="pull-right"> <img src="../../assets/images/connect/if_status-offline_46253.png" title="No tConnected"> Not Connected</h6>
+        </div>
+
+      </div>
+      <div class="col-lg-4 col-sm-4 col-xs-12 text-center">
+        <button class="delete-btn" *ngIf="isFBStatus" (click)="sureDeletedFB()">Delete </button>
+        <h4 class="not-connect" *ngIf="!isFBStatus">Not Connected</h4>
+      </div>
+      <div class="col-lg-8 col-sm-8 col-xs-12">
+        <div class="single" *ngIf="isYTStatus">
+            <h5>Youtube Channel </h5>\
+            <h6 class="pull-right"> <img src="../../assets/images/connect/if_status_46254.png" title="Connected"> Connected</h6>
+
+        </div>
+        <div class="single" *ngIf="!isYTStatus">
+            <h5>Youtube Profile</h5>
+            <h6 class="pull-right"> <img src="../../assets/images/connect/if_status-offline_46253.png" title="No tConnected"> Not Connected</h6>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-4 col-xs-12 text-center">
+        <button class="delete-btn" *ngIf="isYTStatus"  (click)="sureDeletedYT()">Delete </button>
+        <h4 class="not-connect" *ngIf="!isYTStatus">Not Connected</h4>
+
+      </div>
+
+      <div class="col-lg-8 col-sm-8 col-xs-12">
+        <div class="single">
+            <h5>Twitter Profile</h5>
+            <h6 class="pull-right"> <img src="../../assets/images/connect/if_status_46254.png" title="Connected"> Connected</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-4 col-xs-12" style="text-align: center">
+        <button class="delete-btn">Delete </button>
+      </div>
+      <div class="col-lg-8 col-sm-8 col-xs-12">
+        <div class="single">
+            <h5>Instagram Profile</h5>
+            <h6 class="pull-right"> <img src="../../assets/images/connect/if_status_46254.png" title="Connected"> Connected</h6>
+
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-4 col-xs-12" style="text-align: center">
+        <button class="delete-btn">Delete </button>
+      </div>
+      <div class="col-lg-8 col-sm-8 col-xs-12">
+        <div class="single">
+            <h5>Blogger Profile</h5>
+            <h6 class="pull-right"> <img src="../../assets/images/connect/if_status_46254.png" title="Connected"> Connected</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-4 col-xs-12" style="text-align: center">
+        <button class="delete-btn" >Delete </button>
+      </div>
+      <div class="col-lg-8 col-sm-8 col-xs-12">
+        <div class="single" *ngIf="isStatusLD">
+            <h5>LinkedIn Profile</h5>
+            <h6 class="pull-right"> <img src="../../assets/images/connect/if_status_46254.png" title="Connected"> Connected</h6>
+        </div>
+
+        <div class="single" *ngIf="!isStatusLD">
+            <h5>LinkedIn Profile</h5>
+            <h6 class="pull-right"> <img src="../../assets/images/connect/if_status-offline_46253.png" title="No tConnected"> Not Connected</h6>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-sm-4 col-xs-12 text-center">
+        <button class="delete-btn" *ngIf="isStatusLD"  (click)="sureDeletedLD()">Delete </button>
+        <h4 class="not-connect" *ngIf="!isStatusLD">Not Connected</h4>
+      </div>
+      <div class="col-lg-8 col-sm-8 col-xs-12">
+        <div class="single">
+            <h5>Pinterest Profile</h5>
+            <h6 class="pull-right"> <img src="../../assets/images/connect/if_status_46254.png" title="Connected"> Connected</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-4 col-xs-12" style="text-align: center">
+        <button class="delete-btn">Delete </button>
+      </div>
+  </div>
+</div>

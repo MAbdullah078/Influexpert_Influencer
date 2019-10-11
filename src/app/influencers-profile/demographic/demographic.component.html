@@ -1,0 +1,102 @@
+<div class="container">
+
+  <div class="name">
+    <h2>DEMOGRAPHIC Edit</h2>
+  </div>
+
+  <div class="one">
+    <div class="float-left">
+      <h4 class="fa fa-user"> CONTACT INFORMATION</h4>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+  </div>
+  <form name="form" (ngSubmit)="submit_demographic_info(f)" #f="ngForm">
+
+    <div class="row">
+      <div class="col-sm-12">
+
+      </div>
+      <div class="col-lg-6">
+
+
+
+        <mat-select name="relationship" [(ngModel)]="currentUser.relationship" placeholder="Select Relationship"
+                   style="width: 100%;">
+          <mat-option *ngFor="let relation of RElATIONSHIPS" [value]="relation.code">{{ relation.show }}</mat-option>
+
+
+        </mat-select>
+        <br><br>
+
+
+        <br>
+
+
+        <mat-select name="education" [(ngModel)]="currentUser.education" placeholder="Select Education"
+                   style="width: 100%;">
+          <mat-option *ngFor="let edu of EDUCATIONS" [value]="edu.code">{{ edu.show }}</mat-option>
+          <!--<mat-errot *ngIf="demo_valid.hasError('required', 'education')">
+              Relationships is <strong>required</strong>
+           </mat-errot>-->
+        </mat-select>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+      </div>
+
+
+      <div class="col-lg-6">
+
+        <br>
+        <br>
+        <br>
+
+
+        <mat-select name="pets" placeholder="Select Pet" [(ngModel)]="currentUser.pets" style="width: 100%;">
+          <mat-option *ngFor="let pet of PET" [value]="pet.code">{{ pet.show }}</mat-option>
+        </mat-select>
+
+
+        <br>
+        <br>
+        <br>
+
+
+        <mat-select name="ethnicity" [(ngModel)]="currentUser.ethnicity" placeholder="Select ETHNICITY"
+                   style="width: 100%;">
+          <mat-option *ngFor="let eth of ETHS" [value]="eth.code"> {{ eth.show }}</mat-option>
+        </mat-select>
+      </div>
+
+
+      <img *ngIf="posting_demographic_info"
+           src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAA
+                        GJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJ
+                        CgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAd
+                        Ka+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7W
+                        EYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhm
+                        KtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZf
+                        hYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunI
+                        nK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEA
+                        AQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJC
+                        gAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLW
+                        zpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtq
+                        lAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+      <button mat-button style="background-color: blue ; color: white" type="submit"
+              [disabled]="posting_demographic_info">Submit
+      </button>
+
+      <button mat-button style="background-color: red; color: white; margin-left: 5px" (click)="onNoClick()"
+              [disabled]="posting_demographic_info">Cancel
+      </button>
+
+    </div>
+  </form>
+
+</div>

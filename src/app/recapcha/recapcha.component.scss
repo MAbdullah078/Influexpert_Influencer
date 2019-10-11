@@ -1,0 +1,67 @@
+.card {
+    width: 162px;
+    padding: 10px !important;
+    // background: #f2f2f2;
+    .mat-form-field {
+        // width: 100%;
+        text-align: center;
+        font-size: 16px;
+    }
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between
+    }
+    button {
+        background: #000;
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    float: right;
+    outline: 0;
+        .mat-icon {
+            color: white
+        }
+    }
+}
+input[_ngcontent-c4] {
+    margin: 8px 0 0;
+    background: #fff;
+    padding: 4px;
+    /* border-radius: 5px; */
+    font-size: 18px;
+    border: 2px inset;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid;
+    font: inherit;
+    font-size: 16px;
+    text-align: center;
+}
+.main img {
+    width: 80%;
+    border-radius: 5px;
+}
+
+.focus-border:focus{
+
+    outline: none!important;
+
+
+}
+.focus-border{
+    border: none;
+    border-bottom: 1px solid;
+    text-align: center;
+    font-size: inherit;
+    width:90%
+}
+.recapcha-img{
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 3px;
+}

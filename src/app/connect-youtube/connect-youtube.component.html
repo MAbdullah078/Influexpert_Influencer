@@ -1,0 +1,136 @@
+<app-loader></app-loader>
+
+<div class="container-fluid text-center" *ngIf="isLoggedIn && !isStatusYT">
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <h2>Profile Status: <img src="../../assets/images/connect/if_status-offline_46253.png"></h2>
+    </div>
+    <div class="inner-container">
+        <div  class="name row">
+            <h2 >Click to Connect your Youtube Channel </h2>
+        </div>
+      <div  class="row info-box">
+          <img class="cannot-upload" src="../../assets/images/conenct-upload-icon.png" (click)="linkedGoogle()"  >
+        </div>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="!isLoggedIn && !isStatusYT">
+
+<h6>Profile Status: <img src="../../assets/images/connect/if_status_46254.png" title="Connected"></h6>
+  <form (click)="post_Youtube(f)" #f>
+<div class="card offset-4" style="width: 18rem;" >
+  <img class="card-img-top" [src]="user.photoUrl" alt="card image">
+  <div class="card-body">
+    <h5 class="card-title">Youtube Channel</h5>
+    <p class="card-text">Hi, {{user.name}}<br> Click to save your your Channel.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <mat-form-field>
+        <input matInput type="text" [value]="user.name" placeholder="Name">
+
+      </mat-form-field>
+    </li>
+
+
+    <li class="list-group-item">
+      <mat-form-field>
+        <input matInput type="text" [value]="user.email" placeholder="Email">
+
+      </mat-form-field>
+    </li>
+  </ul>
+  <div class="card-body">
+    <button class="btn btn-danger">CANCEL</button>
+    <button class="btn btn-success" type="submit">SAVE</button>
+  </div>
+</div>
+  </form>
+</ng-container>
+<ng-container *ngIf="postYes && isStatusYT">
+
+
+  <!--<h6>Profile Status:<img src="../../assets/images/connect/if_status_46254.png" title="Connected"></h6>
+
+  <div class="card offset-4" style="width: 18rem;" >
+    <img class="card-img-top" [src]="response.image" alt="card image" name="img">
+    <div class="card-body">
+      <h5 class="card-title">Youtube Channel</h5>
+      <p class="card-text">Hi {{response.name}} ,<br> Your Profile is Connected with youtube.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <mat-form-field>
+          <input matInput type="text" [value]="response.name" placeholder="Name" name="nm">
+
+        </mat-form-field>
+      </li>
+
+
+      <li class="list-group-item">
+        <mat-form-field>
+          <input matInput type="text" [value]="response.email" placeholder="Email" name="em">
+
+        </mat-form-field>
+      </li>
+    </ul>
+
+
+  </div>
+   <div>
+    <div class="row">
+      <div class="col-md-3 offset-9">
+        <button type="button" class="btn btn-info" routerLink="/manage-profiles">Manage your Profile</button>
+      </div>
+    </div>
+  </div> -->
+
+
+
+
+
+  <!--  -->
+  <div class="position-r">
+    <button type="button" class="btn profile-btn" routerLink="/manage-profiles">Manage your Profile</button>
+</div>
+<div class="text-center col-lg-12 col-md-12">
+    <h2>Profile Status:<img src="../../assets/images/connect/if_status_46254.png" title="Connected"></h2>
+  </div>
+<!-- <h6>Profile Status: <img src="../../assets/images/connect/if_status_46254.png" title="Connected"></h6> -->
+<div class="connect-card" >
+  <div class="head">
+      <h5 class="">Youtube Channel</h5>
+  </div>
+
+  <div class="img-box">
+      <img [src]="response.image" alt="card image" name="img">
+  </div>
+  
+  <div class="user-box text-center">
+    <p class="user-name">Hi {{response.name}} </p> 
+    <p class="detail">Your Profile is Connected with youtube.</p>
+  </div>
+  <div class="user-box">
+    <form class="sh-signup-form-fix">
+        <mat-form-field class="full-width ">
+          <input matInput type="text" [value]="response.name" placeholder="Name" name="nm">
+ 
+          </mat-form-field>
+          <mat-form-field class="full-width ">
+            <input matInput type="text" [value]="response.email" placeholder="Email" name="em">
+   
+            </mat-form-field>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+</ng-container>

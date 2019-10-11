@@ -1,0 +1,42 @@
+<app-loader></app-loader>
+
+<div  class="inner-container">
+
+
+  <div  class="row info-box">
+    <div class="row pt-3 pb-2 mb-3 info-box">
+      <div class="card-header card-header-icon" data-background-color="rose">
+        <img src="../../assets/images/preferences_32.png">
+      </div>
+      <div>
+        <h4 style="font-weight: 600">Preferences</h4></div>
+    <div class="setting-bar">
+        <h5>Add me in Opt-In influencer's searches </h5>
+        <label class="switch">
+          <input type="checkbox" [(ngModel)]="opt_In" (change)="OPT_IN()">
+          <span class="slider round"></span>
+        </label>
+    </div>
+  
+    <div class="setting-bar" >
+        <h5>Allow brands & agencies to contact me directly</h5>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+    </div>
+  
+  
+    <div class="setting-bar">
+        <h5>Subscribe now to get InfluExpert.AI email updates</h5>
+        <label class="switch">
+          <input type="checkbox" [(ngModel)]="switch" (change)="Subscribe()">
+          <span class="slider round"></span>
+        </label>
+    </div>
+
+   
+      
+    
+  </div>
+</div>

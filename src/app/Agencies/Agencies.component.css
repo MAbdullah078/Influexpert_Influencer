@@ -1,0 +1,98 @@
+.container-fluid {
+    padding-left: 0!important;
+    padding-right: 0!important
+}
+
+.nav-tabs {
+    border-bottom: none!important;
+    margin: 20px 0;
+    display: flex;
+}
+
+.nav-tabs>li>a {
+    line-height: 1.42857143;
+    border: none!important;
+    border-radius: 4px 4px 0 0
+}
+
+.nav-tabs>li.active {
+    border-color: color(#B3A9A9)
+}
+
+.nav-tabs>li>a>i {
+    zoom: 3;
+}
+
+.nav-tabs>li.active>a {
+    color: #c00!important;
+    border: 1px solid #f2f5f7!important;
+    background: #f2f5f7!important
+}
+
+.nav-tabs>li>a {
+    color: #1D1D1D!important;
+}
+
+.lead {
+    color: #f5f5f5;
+    text-shadow: 0 0 12px #000;
+    margin: 31px;
+}
+.para-button{
+    margin: 8px;
+}
+.nav-tabs > li.active > a {
+    color: #c00!important;
+    border: 1px solid #f2f5f7!important;
+    background: #f2f5f7!important;
+}
+.nav-tabs > li > a {
+    line-height: 1.42857143;
+    border: none!important;
+    border-radius: 4px 4px 0 0;
+    color: #1d1d1d!important;
+}
+.agencies-tabs li {
+    text-align: center;
+    margin: 0 21px;
+    background: #f2f2f2;
+    border-radius: 5px;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.upper-container {
+    background: url('../../assets/images/influence.png') no-repeat;
+    background-size: 100%;
+    justify-content: center;
+    background-position: 0px;
+}
+
+.title .highlight {
+    display: inline;
+    background: #2a2e2f;
+    color: #fff;
+    padding: .5rem 0;
+    margin-top: 1%;
+    font-family: 'Fjalla One', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-shadow: 10px 0 0 #2a2e2f, -10px 0 0 #2a2e2f
+}
+
+.title {
+    line-height: 43px
+}
+
+.row {
+    margin-right: 0!important;
+    margin-left: 0!important
+}
+.tab-pane .col-md-push-6 {
+    height: 275px;
+    text-align: center;
+}
+.tab-pane .col-md-push-6 img{
+    max-width: 100%;
+    max-height: 100%;
+}

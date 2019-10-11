@@ -1,0 +1,97 @@
+<!-- <app-header></app-header> -->
+<div class="blog-wrapper">
+  <section class="title-top-bg">
+    <div class="container-fluid">
+      <h1>Feature Post</h1>
+    </div>
+  </section>
+  <div class="container-fluid blog-container" >
+    <div  *ngFor="let page of getBlogs">
+      <!--<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 margin-b mydiv">-->
+        <div class="col-lg-3 col-md-3 layer-content" style="margin-left: 4%; margin-top: 14px; ">
+          <div>
+            <img alt="ChoiceGenie" [src]="page['blog_image']">
+          </div>
+          <div class="blog-layout-content">
+            <a target="_blank">
+              <h3>{{page['heading']}}</h3>
+            </a>
+            <div>
+              <p><strong>Lorem ipsum dolor sit amet, sed te facer splendide vituperata,</strong></p>
+                <button class="btn btn-rounded" (click)="getcurrentBlog(page)">Read More</button>
+            </div>
+          </div>
+        <!--</div>-->
+      </div>
+      <!--<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 margin-b mydiv">-->
+          <!--<div class="layer-content">-->
+            <!--<div>-->
+              <!--<img alt="ChoiceGenie" src="../../assets/images/blog/blog1.jpg">-->
+            <!--</div>-->
+            <!--<div class="blog-layout-content">-->
+              <!--<a target="_blank">-->
+                <!--<h2>A Comprehensive Guide</h2>-->
+              <!--</a>-->
+              <!--<div>-->
+                <!--<p><strong>Lorem ipsum dolor sit amet, sed te facer splendide vituperata,</strong></p>-->
+                <!--<button class="btn btn-rounded">Read More</button>-->
+
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 margin-b mydiv">-->
+            <!--<div class="layer-content">-->
+              <!--<div>-->
+                <!--<img alt="ChoiceGenie" src="../../assets/images/blog/blog1.jpg">-->
+              <!--</div>-->
+              <!--<div class="blog-layout-content">-->
+                <!--<a target="_blank">-->
+                  <!--<h2>A Comprehensive Guide</h2>-->
+                <!--</a>-->
+                <!--<div>-->
+                  <!--<p><strong>Lorem ipsum dolor sit amet, sed te facer splendide vituperata,</strong></p>-->
+                  <!--<button class="btn btn-rounded">Read More</button>-->
+
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 margin-b mydiv">-->
+              <!--<div class="layer-content">-->
+                <!--<div>-->
+                  <!--<img alt="ChoiceGenie" src="../../assets/images/blog/blog1.jpg">-->
+                <!--</div>-->
+                <!--<div class="blog-layout-content">-->
+                  <!--<a target="_blank">-->
+                    <!--<h2>A Comprehensive Guide</h2>-->
+                  <!--</a>-->
+                  <!--<div>-->
+                    <!--<p><strong>Lorem ipsum dolor sit amet, sed te facer splendide vituperata,</strong></p>-->
+                    <!--<button class="btn btn-rounded">Read More</button>-->
+
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 margin-b mydiv">-->
+                <!--<div class="layer-content">-->
+                  <!--<div>-->
+                    <!--<img alt="ChoiceGenie" src="../../assets/images/blog/blog1.jpg">-->
+                  <!--</div>-->
+                  <!--<div class="blog-layout-content">-->
+                    <!--<a target="_blank">-->
+                      <!--<h2>A Comprehensive Guide</h2>-->
+                    <!--</a>-->
+                    <!--<div>-->
+                      <!--<p><strong>Lorem ipsum dolor sit amet, sed te facer splendide vituperata,</strong></p>-->
+                      <!--<button class="btn btn-rounded">Read More</button>-->
+
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

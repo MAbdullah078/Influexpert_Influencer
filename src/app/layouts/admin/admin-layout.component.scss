@@ -1,0 +1,348 @@
+.configuration {
+  width: 240px;
+  position: fixed;
+  right: 0;
+  top: 150px;
+  margin-left: 0;
+  z-index: 99999999;
+  transition: transform .3s ease-in-out;
+  transform: translate(100%, 0);
+  .card {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    border-radius: 0;
+  }
+
+}
+.configuration.active {
+  transform: translate(0, 0);
+}
+.configuration-cog {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: -50px;
+  line-height: 50px;
+  font-size: 24px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  cursor: pointer;
+  i:before {
+    line-height: 50px;
+  }
+}
+.badge{
+  font-size: 20px;
+  margin-right: 3px;
+  color: #282828;
+}
+#inner_ul li{
+  //color: #818181;
+  font-size: 17px;
+  margin-top: 4%;
+  margin-left: 20%;
+  font-style: inherit;
+}
+#inner_ul li i{
+  margin-right: 20px;
+}
+#inner_ul li a{
+  color: #000;
+}
+.navigation-item i{
+  color: #555555!important;
+  position: absolute;
+  left: 14px;
+  
+}
+.ng-sidebar{
+  position: absolute!important
+}
+
+
+
+
+
+//
+.main-brand {
+  background: #fff;
+  width: 99%;
+}
+.hidden-xs-down{
+  font-size: 25px;
+  font-weight: bold;
+  color: #000 !important;
+}
+.side-menu-avatar {
+  padding: 28px 0;
+  background: #f5f5f5;
+  margin: -10px 0 1px;
+}
+.side-menu-avatar .avatar-preview {
+  display: block;
+  margin: 0 auto;
+}
+
+.avatar-preview.avatar-preview-100 {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.avatar-preview img {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  //  height: 100%;
+  -webkit-border-radius: 50%;
+  border-radius: 8%;
+}
+.app ng-sidebar > .sidebar-panel.ng-sidebar .menu{
+  padding-right: 0px !important;
+  // border-bottom: 1px solid #ccc!important;
+}
+.app {
+  height: auto!important;
+}
+.drop-btn{
+  padding: 16px 36px;
+  border: none;
+  color:#000000!important;
+  font-weight: bold;
+  width: 100%;
+  background: transparent;
+  
+}
+.drop-btn:hover{
+
+  color: #000 !important;
+  background-color: #f5f5f5;
+  width: 100%;
+}
+.drop-btn i{
+  color: #c00;
+  margin-top: 5px
+}
+.dropdown-ul li i{
+  font-size: 22px;
+  color: grey;
+  margin: 4px 0px;
+  
+}
+.dropdown-ul li a{
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+  display: block;
+  padding: 6px 45px;
+  border-bottom: 1px solid #CCCCCC;
+  transition: .5s;
+}
+.dropdown-ul li a:hover{
+  // border-left: 4px solid #cc0000;
+  // color: #c00!important;
+  background-color: #f5f5f5!important;
+  color: #555555!important
+}
+.dropdown-menu{
+  width: 95% !important;
+  border: none;
+  box-shadow: 0px 0px 5px 3px #ccc;
+  padding: 0px;
+}
+.navigation-item i:hover{
+  color: #ffffff;
+}
+.main-footer{
+  background: #000 !important;
+}
+.copy-right{
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 15px;
+}
+.rating-starts {
+  //display: -webkit-box;
+  //display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  text-align:justify;
+}
+.rating-starts fieldset {
+  margin: 0 auto;
+  float: none;
+}
+
+$unchecked-star: '\2606';
+$unchecked-color: #888;
+$checked-star: '\2605';
+$checked-color: #e52;
+
+.popup-close-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 38px;
+  background: #000000;
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  cursor: pointer;
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  color: #fff;
+  font-size: 30px;
+  font-family: "Open Sans",sans-serif;
+  font-weight: 500;
+  text-align: center;
+  line-height: 50px;
+  z-index: 1;
+}
+.hidden-md-down{
+  width: 140px;
+  margin-top: 20%;
+  height: 40px!important;
+  margin-left: -18px;
+
+}
+
+.star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  * {
+    font-size: 1rem;
+  }
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  & > input {
+    display: none;
+    & + label {
+      /* only enough room for the star */
+      display: inline-block;
+      overflow: hidden;
+      text-indent: 9999px;
+      width: 1em;
+      font-size: 35px;
+      white-space: nowrap;
+      cursor: pointer;
+      &:before {
+        display: inline-block;
+        text-indent: -9999px;
+        content: $unchecked-star;
+        color: $unchecked-color;
+      }
+    }
+    &:checked ~ label:before,
+    & + label:hover ~ label:before,
+    & + label:hover:before {
+      content: $checked-star;
+      color: #e52;
+      text-shadow: 0 0 1px #333;
+    }
+  }
+
+  /* the hidden clearer */
+  & > .star-cb-clear + label {
+    text-indent: -9999px;
+    width: .5em;
+    margin-left: -.5em;
+  }
+  & > .star-cb-clear + label:before {
+    width: .5em;
+  }
+
+  &:hover > input + label:before {
+    content: $unchecked-star;
+    color: $unchecked-color;
+    text-shadow: none;
+  }
+  &:hover > input + label:hover ~ label:before,
+  &:hover > input + label:hover:before {
+    content: $checked-star;
+    color: $checked-color;
+    text-shadow: 0 0 1px #333;
+  }
+}
+fieldset {
+  border: 0;
+  border-radius: 1px;
+  padding: 0.1em 9.5em 0.9em;
+  margin: 1em auto;
+}
+
+.upload-input{
+  position: absolute;
+  top: 14%!important;
+  opacity: 0!important;
+  height: 15%!important;
+  cursor: pointer;
+  z-index: 99;
+}
+.upload-cam-img{
+  position: absolute;
+  top: 30%;
+  font-size: 75px;
+  color: white;
+  left: 35%;
+  cursor: pointer;
+  display: none;
+}
+
+.navigation-item a:hover{
+  background: #f5f5f5!important;
+  color: #555555!important
+}
+
+.navigation-item.open a {
+  background: #f5f5f5!important;
+  border-bottom: 1px solid #d9dbdc;
+  border-top: 1px solid #d9dbdc;
+}
+
+// nav ul li a img:hover{
+//   background-color: transparent;
+//   color: #c00!important;
+// }
+
+.navigation-link:active{
+
+  color: #c00;
+}
+
+
+.navigation-link {
+  color: #000000!important;
+  padding-left: 7px;
+  display: flow-root;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.nav-img{
+
+  -webkit-filter: grayscale(100%)!important; 
+    filter: grayscale(100%)!important;
+}
+
+.menu .navigation-item {
+  border-bottom: none!important;
+}
+
+nav ul li a .nav-img{
+
+  background: none!important
+}
+
+nav ul li a .nav-img:hover{
+
+  background: white!important
+}
+
+// .navigation-link:hover .fa{
+//   color: #fff !important;
+// }
+

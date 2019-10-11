@@ -1,0 +1,39 @@
+
+
+<div>
+<h1 md-dialog-title style="color: #0d47a1" class="text-center"><b>Blog</b></h1>
+<div md-dialog-content>
+  <!--<p>Please Enter Your URL</p>-->
+      <mat-form-field class="example-full-width">
+          <input mdInput placeholder="Blog Url" name="blog_url" [(ngModel)]="data.blog_url" [formControl]="urlFormControl">
+          <mat-error *ngIf="urlFormControl.hasError('pattern')">
+          Please enter a valid URL address
+          </mat-error>
+          <mat-error *ngIf="urlFormControl.hasError('required')">
+            Url is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+</div>
+
+
+  <div md-dialog-content>
+    <br>
+    <!--<p>Blog Title</p>-->
+       <mat-form-field class="example-full-width">
+          <input mdInput placeholder="Blog title" name="blog_title" [(ngModel)]="data.blog_title" [formControl]="tittleFormControl">
+          <mat-error *ngIf="tittleFormControl.hasError('pattern')">
+            Please enter a valid blog tittle
+          </mat-error>
+          <mat-error *ngIf="tittleFormControl.hasError('required')">
+            Blog tittle is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+  </div>
+
+
+<div md-dialog-actions class="button-row pull-right">
+  <button md-button color="warn" (click)="onNoClick()"  tabindex="2">Cancel</button>
+  <button md-button color="primary" [disabled]="tittleFormControl.hasError('pattern') || tittleFormControl.hasError('pattern') || urlFormControl.hasError('pattern') || urlFormControl.hasError('required')" [mat-dialog-close]="data" tabindex="-1">Done</button>
+</div>
+</div>
