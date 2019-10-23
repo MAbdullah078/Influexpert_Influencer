@@ -522,7 +522,7 @@ pts-right{
 /* Start Setting page */
 .name {
   height: 55px;
-  background-color: #82D0DC;
+  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
   color: white;
   padding: 10px;
   text-align: center;
