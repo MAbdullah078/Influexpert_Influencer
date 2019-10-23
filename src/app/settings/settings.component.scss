@@ -36,7 +36,7 @@
 }
 
 input:checked + .slider {
-  background-color:#82D0DC
+  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
 }
 
 input:focus + .slider {
@@ -60,7 +60,7 @@ input:checked + .slider:before {
  .card-header {
    padding: 1.4rem 1.4rem!important;
    margin: -30px 10px 35px!important;
-   background-color: #82D0DC !important;
+   background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
    border-bottom: 0 solid rgba(0, 0, 0, 0.06)!important;
  }
 
