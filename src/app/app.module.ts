@@ -23,6 +23,7 @@ import {AgenciesComponent} from './Agencies/Agencies.component';
 import { BrandComponent } from './brand/brand.component';
 import { MyshowcaseComponent } from './myshowcase/myshowcase.component';
 import {PricingComponent} from './pricing/pricing.component';
+
 import {
   BlogComponent,
   // ContactComponent,
@@ -58,6 +59,7 @@ import { RecapchaModule } from './recapcha/recapcha.module';
 import { TextMaskModule } from 'angular2-text-mask';
 
 import { from } from 'rxjs/observable/from';
+import { ShowcasedetailComponent } from './showcasedetail/showcasedetail.component';
 // const config= new AuthServiceConfig([
 //   {
 //     id: LinkedinLoginProvider.PROVIDER_ID,
@@ -124,7 +126,8 @@ export function provideConfig() {
     TermsAndConditionsComponent,
     TermsComponent,
     WhatIsInfluexpaiComponent,
-    MyshowcaseComponent
+    MyshowcaseComponent,
+    ShowcasedetailComponent
             // AccountSettingComponent,
 // SigninComponent
     // PostSignupComponent
