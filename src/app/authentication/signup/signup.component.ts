@@ -31,6 +31,7 @@ const confirmPassword = new FormControl('', CustomValidators.equalTo(password));
 export class SignupComponent implements OnInit {
 
   public form: FormGroup;
+  hide;
   currentUser:any;
   recaptcha= true;
   consumerkey: any = 'FjRW5PnI1hE2TvpYuGSxEeGKY';

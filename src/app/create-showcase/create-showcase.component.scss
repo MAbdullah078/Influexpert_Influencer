@@ -240,9 +240,10 @@ mat-step {
 .next-btn{
   //bottom: 4px;
   font-weight: bold;
-  background: #000000;
-  color: white;
+  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
+  color: #fff;
   display: block;
+  border: none;
   //padding: 10px 19px 10px 22px;
   right: 0;
   //position: absolute;
@@ -252,9 +253,10 @@ mat-step {
 }
 
 .next-btn:hover{
-  background-color: #1b3763 !important;
-  border: none;
-  transition: 1s;
+  box-shadow: none;
+  background: #fff;
+  border: 1px solid #ff4270;
+  color: #ff4270;
 }
 .next-btn:focus{
 
@@ -263,20 +265,21 @@ mat-step {
 }
 .back-button{
   font-weight: bold;
-  background: #000000;
-  color: white;
+  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
+  color: #fff;
   border-radius: 25px;
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
   margin-bottom: 5px;
+  border: none;
 }
 
 
 
 .back-button:hover{
-  background-color: #1b3763!important;
-  color: white!important;
-  border: none;
-  transition: 1s;
+  box-shadow: none;
+  background: #fff;
+  border: 1px solid #ff4270!important;
+  color: #ff4270;
 }
 .back-button:focus{
 

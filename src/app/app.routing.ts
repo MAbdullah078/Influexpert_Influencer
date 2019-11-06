@@ -2,6 +2,7 @@ import {Routes} from '@angular/router';
 import {AdminLayoutComponent} from './layouts/admin/admin-layout.component';
 import {AuthLayoutComponent} from './layouts/auth/auth-layout.component';
 import {PostSignupComponent} from "./post-signup/post-signup.component";
+import {ShowcasedetailComponent} from "./showcasedetail/showcasedetail.component";
 
 import {
   BlogComponent,
@@ -177,6 +178,7 @@ export const AppRoutes: Routes = [
 
 {path: 'myshowcase', component: MyshowcaseComponent},
 { path: 'pricing', component: PricingComponent },
+{path:'showcasedetail', component: ShowcasedetailComponent},
 {path: 'contactus', component: ContactComponent},
 
 
