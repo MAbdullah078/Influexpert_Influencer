@@ -36,7 +36,9 @@ button, input, optgroup, select, textarea {
   cursor: pointer;
 }
 .mat-slide-toggle-content{
+  color: #000;
   font-weight: 600;
+  font-size: 13px;
 }
 .mat-slide-toggle,
 .mat-slide-toggle-content {
@@ -501,7 +503,7 @@ pts-right{
   padding: 0 25px;
 }
 .signup-label{
-  margin: 0;
+  margin: 7px;
   font-size: 16px;
   display: block;
   font-weight: 600;
@@ -737,7 +739,18 @@ about-text {
   font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
 } */
 
-
+.btn-primary {
+  font-size: 16px!important;
+  font-weight: 400!important;
+  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
+  border: none;
+  padding: 6px 20px;
+  box-shadow: 0 5px 5px #ccc;
+  border-radius: 50px;
+}
+.btn-primary:hover{
+  box-shadow: none
+}
 
 /*Media Queries*/
 @media (max-width: 1280px) {

@@ -14,7 +14,7 @@
   width: 700px;
   background: url(../../../assets/images/backkk.png);
   padding: 10px 20px 20px;
-  opacity: 0.8;
+  opacity: 1.0;
   border-radius: 20px;
 }
 .mat-form-field input,
@@ -24,9 +24,6 @@
 }
 .mat-option{
   font-size: 16px!important;
-}
-.btn-primary{
-  margin-left: 43px;
 }
 .eye-icon{
   position: absolute;
@@ -38,4 +35,10 @@
   font-weight: 600;
   margin: 5px 0 0;
   text-align: center;
+}
+.sign-in-button{
+  width: 80%;
+  font-size: 24px !important;
+  text-transform: capitalize;
+  margin: 5px 81px;
 }
