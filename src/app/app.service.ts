@@ -517,7 +517,7 @@ contact_Us(name, email, phone, message) {
     let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
     headers.append('Content-Type', 'application/json');
     // let username = localStorage.getItem('username');
-    alert(id)
+    // alert(id)
     return this.http.get(Config.api+'/showcase/get-showcase/' +id,{headers: headers}).map((response: Response) => {
       return response.json();
     })
@@ -566,10 +566,10 @@ contact_Us(name, email, phone, message) {
         'requirement':req1
        },
        {headers: headers}).map((response: Response) => {
-        // if(response.status==202){
-        //     swal('Updated', 'success')
+        if(response.status==202){
+            swal('Updated', 'success')
   
-        // }
+        }
         console.log(response)
     });
   }
