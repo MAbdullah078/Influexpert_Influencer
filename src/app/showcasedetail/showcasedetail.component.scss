@@ -1,0 +1,39 @@
+.rfm-details{
+    .header_rfm{
+      margin-top: -55px;
+      background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
+      border-radius: 5px;
+      box-shadow: 0 4px 5px #Ccc;
+      margin-bottom: 20px;
+    }
+    margin: 100px auto;
+    max-width: 900px;
+    box-shadow: 0 0 5px #ccc;
+    padding: 20px;
+      .mat-form-field{
+        width: 100%;
+        input{
+          font-size: 14px;
+          color: rgba(0,0,0,.87);
+          font-weight: normal;
+        }
+        textarea{
+          font-size: 14px;
+          color: rgba(0,0,0,.87);
+          height: 59px;
+          font-weight: normal;
+          resize: none;
+        }
+       
+     
+      }
+      .showcase-image{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    .modal-form{
+        margin-top: 50px;
+    }
+  }
+
