@@ -47,13 +47,6 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
-html,
-button,
-input,
-select,
-textarea {
-  font-family: "Open Sans";
-}
 body {
   margin: 0;
 }
@@ -110,8 +103,6 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
-  _font-family: 'courier new', monospace;
   font-size: 1em;
 }
 /**

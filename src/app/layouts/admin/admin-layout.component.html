@@ -38,16 +38,19 @@
       <ul class="navigation" appAccordion>
         <li class="navigation-item" appAccordionLink >
           <a class="navigation-link" routerLinkactive="active-route"  appAccordionToggle [routerLink]="['/profile']">
-            <img src="../../../assets/images/side-menu/man-user.png" class="nav-img"> 
+            <img class="nav-img" src="../../../assets/images/my profile50px.png"> 
             Profile
           </a>
           </li>
-        <li class="navigation-item">
-        <div class="dropdown">
-          <button class="drop-btn dropdown-toggle" routerLinkactive="active-route" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img src="../../../assets/images/side-menu/multiple-variable-bars-data-graphic.png">
+        <li class="navigation-item dropdown">
+          <!-- <button class="drop-btn dropdown-toggle" routerLinkactive="active-route" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img class="nav-img" src="../../../assets/images/side-menu/multiple-variable-bars-data-graphic.png">
             Linked Profile
-          </button>
+          </button> -->
+          <a class="navigation-link dropdown-toggle" routerLinkactive="active-route" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img class="nav-img" src="../../../assets/images/my ogrspace.png">
+            Linked Profile
+          </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <ul class="dropdown-ul">
               <li><i class="fa fa-facebook-f" ></i><a  [routerLink]="['/connect-facebook']">Facebook</a></li>
@@ -59,25 +62,23 @@
               <li><i class="fa fa-pinterest-p"></i><a  [routerLink]="['/connect-pinterest']">Pinterest</a></li>
             </ul>
           </div>
-        </div>
         </li>
 
 
         <li class="navigation-item" appAccordionLink >
           <a class="navigation-link" routerLinkactive="active-route" appAccordionToggle [routerLink]="['/create-showcase']" >
-            <img src="../../../assets/images/side-menu/suitcase.png">
+            <img class="nav-img" src="../../../assets/images/Property details.png">
             Create ShowCase
           </a>
         </li>
         <li class="navigation-item" appAccordionLink >
           <a class="navigation-link" routerLinkactive="active-route" appAccordionToggle [routerLink]="['/myshowcase']" >
-            <img src="../../../assets/images/side-menu/suitcase.png">
+            <img class="nav-img" src="../../../assets/images/how it works@25px.png">
             My ShowCase
           </a>
         </li> <li class="navigation-item" appAccordionLink >
           <a class="navigation-link" routerLinkactive="active-route" appAccordionToggle [routerLink]="['/settings']" >
-            <img src="../../../assets/images/side-menu/program-settings.png">
-
+            <img class="nav-img" src="../../../assets/images/ogrespace as service@25px.png">
             Settings
           </a>
         </li>
@@ -90,7 +91,7 @@
         <!--</li>-->
         <li class="navigation-item" appAccordionLink >
           <a class="navigation-link" appAccordionToggle routerLinkactive="active-route" [routerLink]="['/authentication/signin']" >
-            <img src="../../../assets/images/side-menu/sign-out-option.png">
+            <img class="nav-img" src="../../../assets/images/signout50px.png">
             Sign out
           </a>
         </li>
