@@ -38,9 +38,11 @@
         </mat-form-field>
         </div>
         <div class="col-sm-12  mb-4">
-            <mat-form-field class="example-full-width">
-                <input type="text" matInput placeholder="Description"  #des  value="{{showcase.description}}">
-              </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <textarea matInput placeholder="Description"  #des   value="{{showcase.description}}"></textarea>
+                </mat-form-field>
+              </form>
+              
               </div>
             </div>
         <img class="showcase-image" *ngFor="let message of image" src="{{message['image']}}" onerror="this.src='../../../assets/images/logos/Logo1.png'" alt="">
