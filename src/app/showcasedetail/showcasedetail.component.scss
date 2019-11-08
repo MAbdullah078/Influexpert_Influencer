@@ -24,16 +24,26 @@
           font-weight: normal;
           resize: none;
         }
+        
        
      
       }
-      .showcase-image{
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-    }
     .modal-form{
         margin-top: 50px;
     }
+
   }
+  .rfm-details .uploadedimg {
+    width: 200px;
+    height: 100px;
+    border: 2px solid #ccc;
+    padding: 5px;
+    margin: 5px;
+}
+.rfm-details .uploadedimg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
 
