@@ -2,11 +2,11 @@
 /* width */
 
 body{
-  font-family: 'Roboto', sans-serif!important;
+  font-family: 'Open Sans', sans-serif!important;
   background: #fff
 }
 button, input, optgroup, select, textarea {
-  font-family: 'Roboto', sans-serif!important;
+  font-family: 'Open Sans', sans-serif!important;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -158,14 +158,8 @@ button, input, optgroup, select, textarea {
   transition: .5s;
 } */
 .app ng-sidebar > .sidebar-panel.ng-sidebar .menu .navigation-link{
-  color: #000000;
-  padding-left: 41px;
-  display: flow-root;
+  padding-left: 40px;
   position: relative;
-
-}
-.app ng-sidebar > .sidebar-panel.ng-sidebar .menu .navigation-link :hover{
-  color: white;
 }
 /* .app ng-sidebar > .sidebar-panel.ng-sidebar .menu .navigation-item:active {
   background: black;
@@ -184,7 +178,6 @@ button, input, optgroup, select, textarea {
 }
 .connect-box h2{
   border-bottom: 2px solid #c00;
-  font-family: sans-serif;
   padding-bottom: 6px;
 }
 .mat-stepper-horizontal, .mat-stepper-vertical {
@@ -738,7 +731,6 @@ about-text {
 
 /* .mat-form-field{
   font-size: 18px;
-  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
 } */
 .mat-form-field-appearance-legacy .mat-form-field-wrapper {
   padding-bottom: 1.25em;
@@ -889,11 +881,6 @@ about-text {
   }
 
 }
-/* h1, h2,h3, h4, h5,h6{
-  font-family: sans-serif!important;
-} */
-
-
 .form-control.is-invalid:focus {
   border-color: white!important;
 }
