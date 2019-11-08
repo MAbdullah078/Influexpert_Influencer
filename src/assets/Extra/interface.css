@@ -2254,10 +2254,10 @@ hr.margin-4 {
   background-color: #00a8ff;
   border-color: #00a8ff;
 }
-.btn.btn-primary:hover {
+/* .btn.btn-primary:hover {
   background-color: #16b4fc;
   border-color: #16b4fc;
-}
+} */
 .btn.btn-secondary {
   background-color: #6b7a85;
   border-color: #6b7a85;

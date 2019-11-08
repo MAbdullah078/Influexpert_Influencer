@@ -28,3 +28,57 @@
     font-weight: 600;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#myrfm{
+    padding: 40px 10px;
+    min-height: 90vh;
+    .rfm-wrap{
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 10px;
+      .rfm_img{
+        img{
+          border-radius: 5px 5px 0 0;
+          height: 168px;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+      .box {
+        height: 72px;
+        overflow: hidden;
+      }
+      .title{
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .box p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+      }
+    }
+    .font-12{
+      font-size: 12px;
+    }
+    .btn-117{
+      min-width: 117px;
+    }
+  }
+  

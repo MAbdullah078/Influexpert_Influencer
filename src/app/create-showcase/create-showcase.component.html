@@ -1,7 +1,7 @@
 <app-loader></app-loader>
 <div class="container text-center">
   <div class="row text-center ">
-    <h2 class="stepper-heading">Create ShowCase</h2>
+    <h2 class="stepper-heading">Create Showcase</h2>
 
 </div>
 </div>
@@ -12,7 +12,7 @@
       <ng-template matStepLabel>Add Images</ng-template>
 
         <div class="form-group photos-resume text-center" style="margin-top: 50px;">
-          <div style="" class="col-md-4 uploaded-pic" *ngFor="let img of ImgSrc;let ind=index">
+          <div style="" class="col-md-3 uploaded-pic" *ngFor="let img of ImgSrc;let ind=index">
             <div class="new" >
               <img accept=".jpg, .jpeg, .png" src="{{img}}" alt="your image" allowmultiple="true"/>
             </div>
@@ -60,7 +60,7 @@
       </div>
       <div class="col-lg-9">
         <mat-form-field style="width: 100%;" class="catagery mt-4">
-      <mat-select placeholder="{{'Please Select Category'}}"  (change)="selectCat($event.value)" required [(ngModel)]="model.catID" ngDefaultControl [ngModelOptions]="{standalone: true}"  style="width: 100%">
+      <mat-select placeholder="{{'Select Category'}}"  (change)="selectCat($event.value)" required [(ngModel)]="model.catID" ngDefaultControl [ngModelOptions]="{standalone: true}"  style="width: 100%">
       <mat-option *ngFor="let option of options "  [value]="option.id" >{{ option.name }}</mat-option>
       </mat-select>
         </mat-form-field>
@@ -74,7 +74,7 @@
       </div>
       <div class="col-lg-9">
       <mat-form-field style="width: 100%;margin-top: 10px;">
-      <input matInput placeholder="Please Write the Title of your Showcase" [(ngModel)]="model.title" name="til" formControlName="secondCtrl" required  />
+      <input matInput placeholder="Write Title of Showcase" [(ngModel)]="model.title" name="til" formControlName="secondCtrl" required  />
 
       </mat-form-field>
       </div>
@@ -83,11 +83,11 @@
 
       <div class="row">
       <div class="col-lg-3">
-      <label >Profile Link</label>
+      <label>Link Profile</label>
       </div>
       <div class="col-lg-9">
       <mat-form-field style="width: 100%" >
-      <input matInput placeholder="Paste here the best social media profile" [(ngModel)]="model.urls" name="link" formControlName="thirdCtrl" required>
+      <input matInput placeholder="Link your SM Profiles here" [(ngModel)]="model.urls" name="link" formControlName="thirdCtrl" required>
 
       </mat-form-field>
       </div>
@@ -105,14 +105,14 @@
 
   <mat-step [stepControl]="thirdFromGroup">
   <form [formGroup]="thirdFromGroup" class="create-showcase">
-  <ng-template matStepLabel>Description</ng-template>
+  <ng-template matStepLabel>Showcase Description</ng-template>
   <div class="row sh-signup-form-fix">
   <div class="col-lg-3" id="margin">
   <label >Write Description</label>
   </div>
   <div class="col-lg-9">
   <mat-form-field class="margin-top-10 width100">
-  <textarea matInput placeholder="Write Description" [(ngModel)]="model.description" name="des" formControlName="fourthCtrl" style="line-height:8.75px"></textarea>
+  <textarea matInput placeholder="Write Description" [(ngModel)]="model.description" name="des" formControlName="fourthCtrl" style="line-height:8.75px" required></textarea>
   </mat-form-field>
   </div>
 
@@ -134,7 +134,7 @@
   </div>
   <div class="col-lg-9">
   <mat-form-field style="width: 100%;    margin-top: 10px;">
-  <input matInput placeholder="Requirement" [(ngModel)]="model.requirement1" name="req1" formControlName="fifthCtrl">
+  <input matInput placeholder="Requirement" [(ngModel)]="model.requirement1" name="req1" formControlName="fifthCtrl" required>
 
   </mat-form-field>
   </div>
@@ -149,7 +149,7 @@
   </div>
   <div class="col-lg-9">
   <mat-form-field style="width: 100%">
-  <input matInput placeholder="Requirement 2" [(ngModel)]="model.requirement2" name="req2" formControlName="sixthCtrl">
+  <input matInput placeholder="Requirement 2" [(ngModel)]="model.requirement2" name="req2" formControlName="sixthCtrl" required>
   </mat-form-field>
   </div>
 
@@ -180,9 +180,9 @@
     <ng-template matStepLabel>Publish</ng-template>
     <div class="row">
     <div class="col-lg-12 text-center" id="margin">
-    <h6> Thanks for creating your ShowCase. Click to publsih your ShowCase,</h6>
+    <h6> Thanks for creating your Showcase. Click to publsih your Showcase,</h6>
     <br>
-    <h6>"Your showcase will be shown after reviewed by admin.</h6>
+    <h6>Your showcase will be shown after reviewed by admin.</h6>
     </div>
 
     </div>

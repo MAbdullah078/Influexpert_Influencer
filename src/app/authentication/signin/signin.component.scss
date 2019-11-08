@@ -20,10 +20,10 @@
   transform: scale(1.2);
 }
 .form-content{
-  width: 500px;
+  width: 400px;
   background: url(../../../assets/images/backkk.png);
   padding: 10px 20px 20px;
-  opacity: 0.8;
+  opacity: 1.0;
   border-radius: 20px;
 }
 .fa-eye,
@@ -31,8 +31,8 @@
 .fa-close {
   position: absolute;
   right: 0;
-  top: 6px;
-  font-size: 20px;
+  top: 17px;
+  font-size: 14px;
   cursor: pointer;
 }
 .forgot,
@@ -40,6 +40,7 @@
   font-size: 12px;
   font-weight: 600;
   display: inline-block;
+  color: #304ffe
 }
 .mat-form-field input{
   font-size: 24px;

@@ -57,7 +57,7 @@
     "ng2-validation": "4.2.0",
     "ng4-social-login": "^1.4.2",
     "ngx-facebook": "^2.4.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.0",
     "queueing-subject": "^0.1.1",
     "quill": "1.2.6",
     "rebuild-node-sass": "^1.1.0",

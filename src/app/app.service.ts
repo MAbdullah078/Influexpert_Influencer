@@ -91,14 +91,27 @@ export class App_service {
             return res;
         }))
 }
+
+onUpload2(id,image:File){
+  // const fd= new FormData();
+  const fd2= new FormData();
+  fd2.append('input_file0',image);
+  this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+  this.username =  this.currentUser.username;
+  fd2.append('username',this.username);
+
+  return this.http.put(Config.api + '/showcase/edit-showcase-images/'+id,fd2, {headers: headers} )
+      .pipe(tap(res=>{
+          return res;
+      }))
+}
+
+
 checkuser(check){
   return this.http.get(Config.api+ '/user_name_exist/'+check ).map((response: Response) => {
     return response.json();
 });
-
-    // return this.http.get(Config.api + '/user_name_exist/').map((response: Response) =>{ return response.json());
-
-    // });
 }
 get_profile_pic(){
   this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -114,26 +127,8 @@ get_profile_pic(){
     return this.http.get(Config.api + '/getallblog/').map((response: Response) => response.json());
 
 }
-
-
-//   contact_Us(name, email, phone, message) {
-//     return this.http.post('http://192.168.29.166:8000/contact-us/',
-//     // http://192.168.29.166:8000/contact-us/
-//         {
-//             'name':name,
-//             'email' :email,
-//             'mobile_no': phone,
-//             'message' :message
-
-//         }).map((response: Response) => {
-//             console.log(response)
-//         });
-// }
-
-
 contact_Us(name, email, phone, message) {
   return this.http.post('http://192.168.29.166:8000/contact-us/',
-  // http://192.168.29.166:8000/contact-us/
       {
           'name':name,
           'email' :email,
@@ -492,26 +487,6 @@ contact_Us(name, email, phone, message) {
     });
   }
 
-  // onUpload(image: File)
-  // {
-  //   const fd= new FormData();
-  //   let id= localStorage.getItem('user_id');
-  //   fd.append('path', image);
-  //   let username =  localStorage.getItem('username');
-  //   return this.Http.post(Config.api + '/profile/' + username, fd)
-  //     .map(res=>{
-  //       console.log('Responce is', res);
-  //     })
-  // }
-
-  // get_profile_pic(){
-  //   this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-  //   let username =  localStorage.getItem('username');
-  //   return this.Http.get(Config.api+ '/profile_view/' + username).map((response: Response) => {
-  //     return response.json();
-  //   });
-  // }
-
     forgot_password_code(email){
     return this.Http.post(Config.api+ '/forgetpasswordcode/',
       {'email': email}).map((response: Response) => {
@@ -537,6 +512,69 @@ contact_Us(name, email, phone, message) {
       });
   }
 
+  showmyshowcase(id){
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+    headers.append('Content-Type', 'application/json');
+    // let username = localStorage.getItem('username');
+    // alert(id)
+    return this.http.get(Config.api+'/showcase/get-showcase/' +id,{headers: headers}).map((response: Response) => {
+      return response.json();
+    })
+    
+  }
+
+  deleteshowcase(id){
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+    return this.http.delete(Config.api+'/showcase/delete-showcase/' + id,{headers: headers}).pipe(tap((response: Response) => {
+    //   if(response.status==202){
+    //     swal('Deleted', 'success')
+
+    // }
+      return response.json();
+    }))
+
+  }
+
+
+  editshowcase(id,ti,url,ca,des){
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+        return this.http.put(Config.api+'/showcase/edit-showcase/' + id,
+    {
+        'title':ti,
+        'category' :[ca],
+        'description': des,
+        'urls': url,
+       },
+       {headers: headers}).map((response: Response) => {
+        if(response.status==202){
+            swal('Updated', 'success')
+  
+        }
+        console.log(response)
+    });
+  }
+
+
+  editrequirement(id,req1){
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+        return this.http.put(Config.api+'/showcase/edit-showcase-requirements/' + id,
+    {
+        'requirement':req1
+       },
+       {headers: headers}).map((response: Response) => {
+        if(response.status==202){
+            swal('Updated', 'success')
+  
+        }
+        console.log(response)
+    });
+  }
+
+  
 }
 
 

@@ -1,0 +1,62 @@
+<section>
+<div class="rfm-details">
+    <div class="header_rfm">
+        <h2 class="m-0 p-2 text-white text-center">Showcase Details</h2>
+      </div>
+<form class="user-add-ingo-form modal-form" enctype="multipart/form-data" [formGroup]="users">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+    <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="title"   #title  value="{{showcase.title}}">
+  </mat-form-field>
+</div>
+  
+    
+  <div class="col-md-4 mb-4">
+    <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="url"  #url value="{{showcase.urls}}">
+  </mat-form-field>
+  </div>
+  
+  <div class=" col-md-4 mb-4">
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Category"  #cat  value="{{showcase.catagory.name}}" required>
+  </mat-form-field>
+  </div>
+
+  
+
+
+    <div class=" col-md-4 mb-4 " *ngFor="let message of requirement">
+  <mat-form-field class="example-full-width">
+        <input type="text" matInput placeholder="Requirements"  #req1  value="{{message['requirement']}}">
+    </mat-form-field>
+    </div>
+    <div class="col-md-4 mb-4">
+      <mat-form-field class="example-full-width">
+          <input type="text" matInput placeholder="Status"  #stat  readonly="readonly" value="{{showcase['status']}}">
+        </mat-form-field>
+        </div>
+        <div class="col-sm-12  mb-4">
+                <mat-form-field class="example-full-width">
+                  <textarea matInput placeholder="Description"  #des   value="{{showcase.description}}"></textarea>
+                </mat-form-field>
+              
+              
+              </div>
+            </div>
+        <img class="showcase-image" *ngFor="let message of image" src="{{message['image']}}" onerror="this.src='../../../assets/images/logos/Logo1.png'" alt="">
+     
+    <div class="col-lg-6 col-md-6 col-sm-12 text-right">
+      <button type="submit" (click)="updateshowcase(title.value,url.value,cat.value,des.value)" class="btn btn-primary">
+        Update
+      </button>
+  </div>
+  <!-- <div class="col-lg-6 col-md-6 col-sm-12 text-right">
+      <button type="submit" (click)="updaterequirement(req1.value)" class="btn btn-rounded">
+        Update Req
+      </button>
+  </div> -->
+  </form>
+</div>
+</section>
