@@ -2,11 +2,11 @@
 /* width */
 
 body{
-  font-family: 'Open Sans', sans-serif!important;
+  font-family: 'Roboto', sans-serif;
   background: #fff
 }
 button, input, optgroup, select, textarea {
-  font-family: 'Open Sans', sans-serif!important;
+  font-family: 'Roboto', sans-serif;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -141,7 +141,7 @@ button, input, optgroup, select, textarea {
 
 
 .profile-form  .mat-form-field-label{
-  top: 23px;
+  top: 21px;
 }
 .mat-focused, .mat-focused .mat-form-field-label {
   color: #000!important;
@@ -180,18 +180,17 @@ button, input, optgroup, select, textarea {
   border-bottom: 2px solid #c00;
   padding-bottom: 6px;
 }
-.mat-stepper-horizontal, .mat-stepper-vertical {
-  box-shadow: 0px 0px 5px 2px #e2e2e2;
-  border-radius: 10px;
-}
+
 .mat-horizontal-stepper-header-container {
-  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
   border-radius: 10px 10px 0 0;
 }
 .mat-step-header .mat-step-label.mat-step-label-active {
-  color: #ffffff;
+  color: #000;
   font-weight: bold;
   font-size: 18px;
+}
+.create-stepper .mat-horizontal-stepper-header .mat-step-icon{
+  display: none;
 }
 .create-showcase .mat-form-field-label {
   top: 25px;
@@ -210,8 +209,8 @@ button, input, optgroup, select, textarea {
   padding: 10px !important;
 }
 .stepper-style{
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 10px 0 0 0;
 }
 #myBtn {
   position: fixed;
@@ -305,6 +304,18 @@ pts-right{
   min-height: 196px;
   padding: 8px 16px;
     margin: 10px 0;
+}
+.stepper-case .mat-form-field-label {
+  font-size: 16px !important;
+  font-weight: 500!important;
+  color: rgba(0,0,0,.54);
+  margin: 0;
+  top: 18px;
+}
+.stepper-case .mat-input-element {
+  font-size: 16px !important;
+  font-weight: 600;
+
 }
 .paddings-strong{
     padding-left: 5px;
@@ -750,6 +761,20 @@ about-text {
   box-shadow: none;
   background:#000!important;
 }
+.profile-form  .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
+  transform: translateY(-19px) scale(.75) perspective(100px) translateZ(.001px);
+}
+ .mat-step-header .mat-step-label.mat-step-label-active {
+  color: #020202;
+  font-size: 14px;
+}
+.mat-horizontal-stepper-header .mat-step-icon,
+.mat-horizontal-stepper-header .mat-step-icon-not-touched{
+  display: none;
+}
+.mat-step-header .mat-step-label{
+  color:#000;
+}
 
 /*Media Queries*/
 @media (max-width: 1280px) {
@@ -778,9 +803,7 @@ about-text {
   .connect-box {
     width: 96%;
   }
-  .stepper-style {
-    width: 100%;
-  }
+
   .form-box{
     width: 42% !important;
   }

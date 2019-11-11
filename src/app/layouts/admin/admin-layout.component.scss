@@ -92,6 +92,10 @@
   border-radius: 100%;
   overflow: hidden;
 }
+.dropdown-ul img{
+  width:16px;
+  margin-right: 8px;
+}
 .avatar-preview img {
   display: block;
   cursor: pointer;
@@ -137,7 +141,7 @@
   font-weight: bold;
   color: #000000;
   display: block;
-  padding: 6px 45px;
+  padding: 6px 27px;
   border-bottom: 1px solid #CCCCCC;
   transition: .5s;
 }

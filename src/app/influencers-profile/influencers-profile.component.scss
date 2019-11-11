@@ -89,12 +89,6 @@ padding: 10px;
 .example-full-width {
   width: 100%;
 }
-.profile-form{
-  width: 100%;
-  padding: 20px 20px;
-
-
-}
 .card [data-background-color=rose] {
   background: #000;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(0, 0, 0, .4);
@@ -184,14 +178,6 @@ padding: 10px;
   box-shadow: 1px 1px 24px -11px #242121;
 
 }
-
-.profile-form[_ngcontent-c4] {
-  width: 100%;
-  padding: 0 20px;
-  margin-top: 30px;
-}
-
-
 .nav-link .copy-right:hover {
   background-color: transparent;
   color:white !important;
@@ -219,7 +205,7 @@ padding: 10px;
 }
 .profile-form{
   width: 90%;
-  margin: 60px auto;
+  margin: 0 auto;
 }
 .btn-file input[type=file] {
   opacity: 0;
@@ -406,25 +392,37 @@ padding: 10px;
 }
 .upload-input {
   position: absolute;
-  left: 204px;
-  top: -92px;
-  width: 18px;
-  height: 16px;
+  left: 117px;
+  top: 26px;
+  width: 25px;
+  height:25px;
   opacity: 0;
   z-index: 1;
 }
 .camera-icon {
   position: absolute;
-  left: 203px;
-  top: -89px;;
-  width: 18px;
-  height: 16px;
+  left: 117px;
+  top: 26px;
+  width: 25px;
+  height:25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
   font-size: 16px;
+  background: #fff;
+  border-radius: 50px;
 }
 .image-area {
   width: 100px;
   height: 100px;
   border-radius: 50px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.upload-image {
+  width: 175px;
+  height: 175px;
   -o-object-fit: cover;
   object-fit: cover;
 }
