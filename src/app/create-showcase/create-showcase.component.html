@@ -2,7 +2,7 @@
 <div class="container text-center">
   <div class="card one mt-4">
   <div class="card-header ">
-    <h2 class="stepper-heading">Create Showcase</h2>
+    <h2 class="stepper-heading"><img class="h-img" src="../../assets/images/Property details.png" alt=""> Create Showcase</h2>
 
 </div>
 
@@ -12,7 +12,7 @@
     <form [formGroup]="firstFormGroup" class="create-stepper">
       <ng-template matStepLabel><img class="stepper-img"  src="../../assets/images/header-images/add image.png" alt=""> Add Images</ng-template>
 
-        <div class="form-group photos-resume text-center" style="margin-top: 50px;">
+        <div class="form-group photos-resume text-center mt-2">
           <div style="" class="col-md-3 uploaded-pic" *ngFor="let img of ImgSrc;let ind=index">
             <div class="new" >
               <img accept=".jpg, .jpeg, .png" src="{{img}}" alt="your image" allowmultiple="true"/>
@@ -36,14 +36,13 @@
                    accept=".jpg, .jpeg, .png"  name="file"  multiple  />
             <img class="camera-img"  src="../../assets/data/icons/addimage_512.png" alt="Add Image"/>
           </label>
-          <!--*ngIf="FuncCheckIfImageUploaded()"-->
-          <br>
-          <label class="imagename">{{this.imageName}}</label>
+          <div class="imagename">{{this.imageName}}</div>
           <img *ngIf="FuncCheckNumberOfImages()" src="">
-
+        <div class="text-right mt-2">
           <button mat-raised-button (click)="onUpload()" matStepperNext class="next-btn">
             Next
           </button>
+        </div>
         </div>
     </form>
   </mat-step>
@@ -95,11 +94,13 @@
 
       </div>
 
-
-        <button mat-raised-button matStepperPrevious class="back-button float-left">Back</button>
-        <button mat-raised-button matStepperNext class="next-btn">
+<div class="d-inline-block w-100 mb-2">
+  <button mat-raised-button matStepperPrevious class="back-button float-left">Back</button>
+        <button mat-raised-button matStepperNext class="next-btn float-right">
           Next
         </button>
+</div>
+        
       </div>
     </form>
   </mat-step>
@@ -118,8 +119,8 @@
   </div>
 
   </div>
-  <div>
-  <button mat-raised-button matStepperNext class="next-btn">Next</button>
+  <div class="d-inline-block w-100 mb-2">
+  <button mat-raised-button matStepperNext class="next-btn float-right">Next</button>
   <button mat-raised-button matStepperPrevious class="back-button float-left">Back</button>
   </div>
   </form>
@@ -169,9 +170,9 @@
 
   </div>
 
-  <div>
+  <div class="d-inline-block w-100 mb-2">
   <button mat-raised-button matStepperNext class="next-btn float-right">Next</button>
-  <button mat-raised-button matStepperPrevious class="back-button float-left" style="margin-right: 15px">Back</button>
+  <button mat-raised-button matStepperPrevious class="back-button float-left">Back</button>
   </div>
   </form>
   </mat-step>
@@ -187,7 +188,7 @@
     </div>
 
     </div>
-    <div>
+    <div class="d-inline-block w-100 mb-2">
       <button mat-raised-button class="back-button float-right" type="submit">Publish</button>
       <button mat-raised-button matStepperPrevious class="back-button float-left">Back</button>
     </div>

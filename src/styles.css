@@ -185,9 +185,7 @@ button, input, optgroup, select, textarea {
   border-radius: 10px 10px 0 0;
 }
 .mat-step-header .mat-step-label.mat-step-label-active {
-  color: #000;
-  font-weight: bold;
-  font-size: 18px;
+  color: #000!important;
 }
 .create-stepper .mat-horizontal-stepper-header .mat-step-icon{
   display: none;
@@ -202,7 +200,7 @@ button, input, optgroup, select, textarea {
   background-color: #fff;
   color: #000;
 }
-.mat-step-header .mat-step-label, .mat-step-header .mat-step-optional {
+.mat-step-header .mat-step-optional {
   color: #ffffff;
 }
 .mat-horizontal-content-container {
@@ -218,17 +216,22 @@ button, input, optgroup, select, textarea {
   right: 30px;
   z-index: 99;
   font-size: 18px;
-  background-color: #82D0DC;
+  background-color: #e20074;
   color: rgb(255, 255, 255);
   width: 60px;
   height: 60px;
   border-radius: 50px;
-  padding: 8px 14px;
+  padding: 4px 14px;
   transition: .3s;
 }
 #myBtn i{
   display: block;
   text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+.ng-sidebar__content{
+  min-height: 400px;
 }
 .uploaded-pic{
   /*float: left;*/
@@ -529,13 +532,18 @@ pts-right{
 
 /* Start Setting page */
 .name {
-  height: 55px;
-  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
-  color: white;
-  padding: 10px;
-  text-align: center;
-  border-radius: 10px 10px 0 0;
-  display: block;
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  border-radius: 3px;
+  width: 100%;
+  margin: -20px 15px 0;
+}
+.name h2{
+  margin: 0;
+  text-align: left;
+  font-size: 26px;
+  font-weight: 500;
 }
 .info-box {
   background: #fff;
@@ -626,12 +634,13 @@ about-text {
 }
 .setting-bar{
   width: 100%;
-  display: block;
-  padding: 10px;
+  padding: 10px 20px 0;
 }
 .setting-bar h5{
-  display: inline-block;
-  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 5px 0 0;
+  float: left;
 }
 .feature-matrix-table td {
   padding: 20px 15px!important;
@@ -749,31 +758,29 @@ about-text {
 .btn-primary {
   font-size: 16px!important;
   font-weight: 400!important;
-  background: #000;
+  background: #000!important;
   color:#fff!important;
   text-transform: capitalize;
   border: none;
   padding: 6px 20px;
-  box-shadow: 0 5px 5px #ccc;
+  box-shadow: 0 5px 5px #ccc!important;
   border-radius: 50px;
 }
 .btn-primary:hover{
-  box-shadow: none;
-  background:#000!important;
+  box-shadow: none!important;
+  background:#e20074!important;
 }
 .profile-form  .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
   transform: translateY(-19px) scale(.75) perspective(100px) translateZ(.001px);
-}
- .mat-step-header .mat-step-label.mat-step-label-active {
-  color: #020202;
-  font-size: 14px;
 }
 .mat-horizontal-stepper-header .mat-step-icon,
 .mat-horizontal-stepper-header .mat-step-icon-not-touched{
   display: none;
 }
 .mat-step-header .mat-step-label{
-  color:#000;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgba(0,0,0,.54)!important;
 }
 
 /*Media Queries*/
