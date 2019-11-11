@@ -71,11 +71,45 @@ export class SignupComponent implements OnInit {
   getContryData1: any = [];
   getCity: any = [];
   indexes: any= [];
-  registerUser: FormGroup;
+  // registerUser: FormGroup;
   submitted = false;
   check:boolean;
-  userchk: any;
+  public phoneMask = ['+', '1', '-', /[1-9]/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+  email = '^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$';
+  password_regex = '^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*[\/\\\!\"#$%&()*+,£^.:;=?\\\\[\\]\\-\'<>~|@_{}]).{8,}$';
 
+  userchk: any;
+  isInvalid:boolean
+  registerUser = this.fb.group({
+    userName: ['', Validators.required],
+    // fullName: ['', Validators.required],
+    firstName:['', Validators.compose([Validators.required, Validators.pattern("[a-zA-Z ]+"),Validators.minLength(2),Validators.maxLength(64)])],
+    lastName:['',Validators.compose([Validators.required, Validators.pattern("[a-zA-Z ]+"),Validators.minLength(2),Validators.maxLength(64)])],
+    eMail: ['',Validators.compose([ Validators.required, Validators.pattern(this.email)])],
+    phoNe: ['', Validators.required],
+    passWord: ['',Validators.compose([Validators.required, Validators.minLength(8), Validators.pattern(this.password_regex), Validators.maxLength(100)])],
+    relationShip: ['', Validators.required],
+    employement_Status: ['', Validators.required],
+    gendeR: ['', Validators.required],
+    address:['', Validators.required],
+    password2:['', [Validators.required]],
+    eduCation: ['', Validators.required],
+    ciTy: ['', Validators.required],
+    counTry: ['', Validators.required],
+    staTe: ['', Validators.required],
+    
+  });
+  public change2(event: any): void {
+    var phn = this.registerUser.controls['phone'].value.split('_').join('').split('-').join('').split('+').join('').length
+    if (phn < 11) {
+      this.isInvalid = true;
+      // alert(2)
+    }
+    else {
+      this.isInvalid = false;
+    }
+    
+  }
   constructor(private http: Http, private loaderHttp: HttpService,private fb: FormBuilder, private router: Router, private fB: FacebookService, private _nav : Router,
   public toastr: ToastsManager, vcr: ViewContainerRef, private recapcha: RecapchaService, private socialAuthService: AuthService, private srvc_obj: App_service) {
 
@@ -139,25 +173,7 @@ export class SignupComponent implements OnInit {
 
   ngOnInit() {
 
-          this.registerUser = this.fb.group({
-            userName: ['', Validators.required],
-            // fullName: ['', Validators.required],
-            firstName:['', Validators.required],
-            lastName:['', Validators.required],
-            eMail: ['', Validators.required],
-            phoNe: ['', Validators.required],
-            passWord: ['', Validators.required],
-            relationShip: ['', Validators.required],
-            employement_Status: ['', Validators.required],
-            gendeR: ['', Validators.required],
-            address:['', Validators.required],
-            password2:['', Validators.required],
-            eduCation: ['', Validators.required],
-            ciTy: ['', Validators.required],
-            counTry: ['', Validators.required],
-            staTe: ['', Validators.required],
-            
-          });
+    this.check=false;
 
     this.fB.logout();
     this.form = this.fb.group({
@@ -262,32 +278,37 @@ export class SignupComponent implements OnInit {
     showCustom() {
       this.toastr.custom('<span style="color: red">Message in red.</span>', null, {enableHTML: true});
     }
+    username;
+
 
     usernamecheck(val){
       // alert(val)
-      this.check=false;
+      // this.check=false;
      
       this.srvc_obj.checkuser(val).subscribe((data) => {
-        this.check = data;
-        // alert(this.check)
-      if(data===false){
-        this.check=false;
+        this.username = data;
+        
+      // if(this.username.message==='False'){
+      //   this.check=false;
+      //   alert('h')
+      // }
+      },
+      error=>{
+        if(error.status==400){
+          this.check=true;
+          // alert('o')
+        }
+// alert(this.check)
       }
-else if(data===true) {
-  this.check=true;
-  Swal({
-    type: 'error',
-    title: 'Oops...',
-    text: 'Username already exist',
+// else {
+  
+//   alert('o')
+//   Swal({
+//     type: 'error',
+//     title: 'Oops...',
+//     text: 'Username already exist',
     
-  })
-}
-
-
-
-      });
-    
-     
+      )  
     }
 
 
@@ -329,27 +350,45 @@ else if(data===true) {
 
   onSubmit() {
 
-    this.submitted = true;
-    this.recaptcha = this.recapcha.check();
-    if (this.recaptcha == true && this.registerUser.invalid && this.check==false && this.wrongPass== true ) {
+    // this.submitted = true;
+    // this.recaptcha = this.recapcha.check();
+    console.log( this.registerUser.controls['userName'].value,
+    this.registerUser.controls['firstName'].value,
+    this.registerUser.controls['lastName'].value,
+    this.registerUser.controls['eMail'].value,
+    this.registerUser.controls['passWord'].value,
+    this.registerUser.controls['counTry'].value,
+    this.registerUser.controls['address'].value, this.registerUser.controls['phoNe'].value.split('_').join('').split('-').join('').split('+').join(''),
+    this.registerUser.controls['staTe'].value,
+    this.registerUser.controls['ciTy'].value,
+    this.registerUser.controls['gendeR'].value)
+    if ( this.recapcha.check()){
+    if ( this.check==false && this.wrongPass== true &&
+    this.registerUser.controls.firstName.valid ||this.registerUser.controls.lastName.valid ||this.registerUser.controls.eMail.valid||this.registerUser.controls.passWord.valid
+      &&this.registerUser.controls.passWord.valid
+      &&this.registerUser.controls.counTry.valid
+      &&this.registerUser.controls.address.valid
+      &&this.registerUser.controls.phoNe.valid
+      &&this.registerUser.controls.staTe.valid
+      &&this.registerUser.controls.ciTy.valid
+      &&this.registerUser.controls.gendeR.valid
+      &&this.registerUser.controls.userName.valid) {
       this.srvc_obj.register_user(
-        this.model.username,
-        this.model.name,
-        this.model.first_name,this.model.last_name,
-        this.model.email,
-        this.model.password,
-        this.model.country,
-        this.model.address, 
+        this.registerUser.controls['userName'].value,
+        this.registerUser.controls['firstName'].value,
+        this.registerUser.controls['lastName'].value,
+        this.registerUser.controls['eMail'].value,
+        this.registerUser.controls['passWord'].value,
+        this.registerUser.controls['counTry'].value,
+        this.registerUser.controls['address'].value,
         this.model.relationship='null',
         this.model.education='null',
-        this.model.phone,
-        this.model.state,
-        this.model.city,
+        this.registerUser.controls['phoNe'].value.split('_').join('').split('-').join('').split('+').join(''),
+        this.registerUser.controls['staTe'].value,
+        this.registerUser.controls['ciTy'].value,
         this.model.employment_status='null',
-        this.model.gender
-
-       
-
+        this.registerUser.controls['gendeR'].value
+      
       ).subscribe((data) => {
 
           this._nav.navigate(['/authentication/signin']);
@@ -363,8 +402,21 @@ else if(data===true) {
           this.show_Sgnup_Error();
         });
     }
-    else {
+  }
+    else if(this.registerUser.controls.firstName.invalid ||this.registerUser.controls.lastName.invalid ||this.registerUser.controls.eMail.invalid||this.registerUser.controls.passWord.invalid
+      ||this.registerUser.controls.passWord.invalid
+      ||this.registerUser.controls.counTry.invalid
+      ||this.registerUser.controls.address.invalid
+      ||this.registerUser.controls.phoNe.invalid
+      ||this.registerUser.controls.staTe.invalid
+      ||this.registerUser.controls.ciTy.invalid
+      ||this.registerUser.controls.gendeR.invalid
+      ||this.registerUser.controls.userName.invalid
+      ) {
       Swal('oops','please provide the information and then click on sign up button','error');
+    }
+    else{
+      Swal('please confirm you are not rebot','error');
     }
   }
   showAllert(){

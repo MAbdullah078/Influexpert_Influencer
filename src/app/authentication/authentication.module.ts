@@ -9,6 +9,8 @@ import { SignupComponent } from './signup/signup.component';
 import { ConfirmComponent } from './confirm/confirm.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { LockscreenComponent } from './lockscreen/lockscreen.component';
+import { TextMaskModule } from 'angular2-text-mask';
+
 import {MatNativeDateModule,MatSelectModule,MatDialogModule,
         MatSlideToggleModule,
         MatButtonModule, MatCheckboxModule,
@@ -56,7 +58,7 @@ export function getAuthServiceConfigs() {
     MatDatepickerModule,
     MatSelectModule,
     MatOptionModule,
-    MatInputModule,
+    MatInputModule,TextMaskModule,
     MatSlideToggleModule,
 
   ],
