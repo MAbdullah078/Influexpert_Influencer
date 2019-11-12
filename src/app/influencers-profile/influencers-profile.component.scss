@@ -184,13 +184,17 @@ padding: 10px;
 }
 
 .profile-heading{
-  text-align: center;
-  font-size: 32px;
-  color: #fff;
-  background: linear-gradient(90deg,#a91f73 0,#ff4270 100%);
-  border-radius: 5px;
-  margin: -30px 0 0;
-  padding: 6px
+    font-size: 26px;
+    color: #fff;
+    background: #000;
+    border-radius: 3px;
+    margin: -35px 8px 0;
+    padding: 15px;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(0,0,0,.4);
+}
+.h-img{
+  width: 30px;
+    vertical-align: text-top;
 }
 //.mat-select-trigger{
 //  margin-top: 18px!important;
@@ -417,12 +421,13 @@ padding: 10px;
   width: 100px;
   height: 100px;
   border-radius: 50px;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 .upload-image {
   width: 175px;
   height: 175px;
-  -o-object-fit: cover;
   object-fit: cover;
+}
+::-webkit-file-upload-button{
+  cursor: pointer;
 }

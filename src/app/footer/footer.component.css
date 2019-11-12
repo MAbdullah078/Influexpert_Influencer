@@ -79,13 +79,13 @@ form input[type=text] {
 .subscribe-btn {
     border: none;
     position: absolute;
-    height: 37px;
-    right: 0px;
+    height: 36px;
+    right: 2px;
     top: 0;
     background: transparent !important;
     border-radius: 0 50px 50px 0;
     padding-right: 0;
-    box-shadow: none;
+    box-shadow: none!important;
 }
 .subscribe-btn i{
     color: #c00 !important;
