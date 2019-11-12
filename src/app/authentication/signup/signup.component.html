@@ -1,24 +1,22 @@
 <app-loader></app-loader>
-<div class="flexy signin-signup">
+<div class="main-content flexy">
+<div class="container">
     <form class="form-content" [formGroup]="registerUser" (ngSubmit)="onSubmit()">
-        <div class="heading">
-            <!-- <img class="w-50" src="../../../assets/images/logos/Logo.png" alt="image"> -->
+      <div class="col-md-12">
+                <div class="heading">
+            <i  class="fa fa-user"></i>
             Sign Up To Your Account
         </div>
+
+        <div class=" mt-4">
         <div class="row">
-            <div class="col-md-6">
-                <mat-form-field class="w-100 mb-2">
-                    <input  type="text" matInput placeholder="Username" formControlName="userName" [(ngModel)]="model.username"   (ngModelChange)="usernamecheck(rt.value)"  #rt required>
-                    <!-- <p>{{ userchk}}</p> -->
-                    <mat-error *ngIf="submitted && f.userName.errors" class="invalid-feedback">
-                      <span *ngIf="f.userName.errors.required">Username is required</span>
-                    </mat-error>
-                  </mat-form-field>
+            <div class="col-md-4">
+               
                  
                   <!-- <input type="text" matInput  name="lastname" placeholder=" Last Name" formControlName="lastName"  [(ngModel)]="model.last_name"required> -->
           
 
-                  <mat-form-field class="w-100 mb-2">
+                  <mat-form-field class="w-100 mb-4">
                       <input  type="text" matInput placeholder="First Name" formControlName="firstName"  [(ngModel)]="model.first_name" required>
                       <mat-error *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
                         <span *ngIf="f.fullName.errors.required">First Name is required</span>
@@ -30,26 +28,22 @@
                    
 
 
-                    <mat-form-field class="w-100 mb-2">
-                        <input  type="text" matInput placeholder="Last Name" formControlName="lastName"  [(ngModel)]="model.last_name" required>
-                        <mat-error *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-                          <span *ngIf="f.fullName.errors.required">Last Name is required</span>
-                        </mat-error>
+                  
+              
+
+
+                       
+                       
+
+                    <mat-form-field class="w-100 select mb-4">
+                        <mat-select placeholder="Select Gender" name="relationship" formControlName="gendeR"  style="color: #000"[(ngModel)]="model.gender"  >
+                          <mat-option *ngFor="let g of genders" [value]="g.value">{{ g.show }}</mat-option>
+                        </mat-select>
+                      <mat-error *ngIf="submitted && f.gendeR.errors" class="invalid-feedback">
+                        <span *ngIf="f.gendeR.errors.required">Gender is required</span>
+                      </mat-error>
                       </mat-form-field>
-                      <mat-form-field class="w-100 mb-2">
-                          <input  type="text" matInput placeholder="Email" formControlName="eMail" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  [(ngModel)]="model.email" required>
-                          <mat-error *ngIf="submitted && f.eMail.errors" class="invalid-feedback">
-                            <span *ngIf="f.eMail.errors.required">Email is required</span>
-                          </mat-error>
-                        
-                        </mat-form-field>
-
-
-                       
-                       
-
-
-                        <mat-form-field class="w-100 mb-2">
+                        <mat-form-field class="w-100 mb-4">
                           <input [type]="hide ? 'password' : 'text'"  matInput placeholder="Password" formControlName="passWord"   name="pass" [(ngModel)]="model.password"  required>
                           <i *ngIf= "hide" class="fa fa-eye eye-icon" title="Show Password" (click)="hide = !hide"></i>
               <i *ngIf= "!hide" class="fa fa-eye-slash eye-icon" title="Hide Password" (click)="hide = !hide"></i>
@@ -58,15 +52,15 @@
                               <span *ngIf="f.passWord.errors.required">Password is required</span>
                             </mat-error>
                           </mat-form-field>
+                          <mat-form-field class="w-100 mb-4">
+                              <input  type="text" matInput placeholder="Email" formControlName="eMail" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  [(ngModel)]="model.email" required>
+                              <mat-error *ngIf="submitted && f.eMail.errors" class="invalid-feedback">
+                                <span *ngIf="f.eMail.errors.required">Email is required</span>
+                              </mat-error>
+                            
+                            </mat-form-field>
                          
-                          <mat-form-field class="w-100 mb-2">
-                            <input [type]="hide ? 'password' : 'text'"  matInput placeholder=" Confirm Password"  [(ngModel)]="password2" (focusout)="showAllert()"   type="password" name="pd" formControlName="password2"  required>
-                            <i *ngIf= "hide" class="fa fa-eye eye-icon" title="Show Password" (click)="hide = !hide"></i>
-                            <i *ngIf= "!hide" class="fa fa-eye-slash eye-icon" title="Hide Password" (click)="hide = !hide"></i>
-                            <mat-error *ngIf="submitted && f.password2.errors" class="invalid-feedback">
-                              <span *ngIf="f.password2.errors.required">confirm password is required</span>
-                            </mat-error>
-                          </mat-form-field> 
+                    
             </div>
            
 
@@ -93,20 +87,21 @@
 
 
 
-            <div class="col-md-6">
-                <mat-form-field class="w-100 mb-2">
-                    <input  type="text"  matInput id="pho" matInput placeholder="Phone" formControlName="phoNe"  name="pass"   [(ngModel)]="model.phone"required>
-                    <mat-error *ngIf="submitted && f.phoNe.errors" class="invalid-feedback">
-                      <span *ngIf="f.phoNe.errors.required">Phone is required</span>
+            <div class="col-md-4">
+                <mat-form-field class="w-100 mb-4">
+                    <input  type="text" matInput placeholder="Last Name" formControlName="lastName"  [(ngModel)]="model.last_name" required>
+                    <mat-error *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                      <span *ngIf="f.fullName.errors.required">Last Name is required</span>
                     </mat-error>
                   </mat-form-field>
+              
 
                  
                  
 
 
 
-                  <mat-form-field class="w-100 select mb-2">
+                  <mat-form-field class="w-100 select mb-4">
                       <mat-select placeholder="Select Country" formControlName="counTry" name="relationship" style="color: #000" [(ngModel)]="model.country" (ngModelChange)="onSelect($event)" >
                         <mat-option *ngFor="let data of getContriesData" [value]="data.name">{{ data.name }}</mat-option>
                       </mat-select>
@@ -115,43 +110,29 @@
             <span *ngIf="f.counTry.errors.required">Country is required</span>
           </mat-error>
         </mat-form-field>
+        <mat-form-field class="w-100 mb-4">
+            <input  type="text" matInput placeholder="Username" formControlName="userName" [(ngModel)]="model.username"   (ngModelChange)="usernamecheck(rt.value)"  #rt required>
+            <!-- <p>{{ userchk}}</p> -->
+            <mat-error *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+              <span *ngIf="f.userName.errors.required">Username is required</span>
+            </mat-error>
+          </mat-form-field>
 
 
-                  <mat-form-field class="w-100 select mb-2">
-                      <mat-select placeholder="Select State" formControlName="staTe" name="relationship" style="color: #000"  [(ngModel)]="model.state"  (ngModelChange)="getCities($event)" >
-                        <mat-option *ngFor="let data of getContryData1" [value]="data.name">{{ data.name }}</mat-option>
-                      </mat-select>
-                      <mat-error *ngIf="submitted && f.staTe.errors" class="invalid-feedback">
-                        <span *ngIf="f.staTe.errors.required">State is required</span>
-                      </mat-error>
-                  </mat-form-field>
+               
 
          
 
 
-                  <mat-form-field class="w-100 select mb-2">
-                      <mat-select placeholder="Select City"  name="relationship" style="color: #000" id="pho" formControlName="ciTy" [(ngModel)]="model.city"  >
-                        <mat-option *ngFor="let city of getCity"  [value]="city.name">{{ city.name }}</mat-option>
-                      </mat-select>
-                      <mat-error *ngIf="submitted && f.ciTy.errors" class="invalid-feedback">
-                        <span *ngIf="f.ciTy.errors.required">City is required</span>
-                      </mat-error>
-                  </mat-form-field>
+                
 
                  
 
 
 
 
-                  <mat-form-field class="w-100 select mb-2">
-                      <mat-select placeholder="Select Gender" name="relationship" formControlName="gendeR"  style="color: #000"[(ngModel)]="model.gender"  >
-                        <mat-option *ngFor="let g of genders" [value]="g.value">{{ g.show }}</mat-option>
-                      </mat-select>
-                    <mat-error *ngIf="submitted && f.gendeR.errors" class="invalid-feedback">
-                      <span *ngIf="f.gendeR.errors.required">Gender is required</span>
-                    </mat-error>
-                    </mat-form-field>
-                    <mat-form-field class="w-100 mb-2">
+                
+                    <mat-form-field class="w-100 mb-4">
                       <input type="text" matInput  name="address" placeholder="Address" formControlName="address"  [(ngModel)]="model.address"required>
                       <mat-error *ngIf="submitted && f.address.errors" class="invalid-feedback">
                         <span *ngIf="f.address.errors.required">address is required</span>
@@ -181,21 +162,58 @@
 
               
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
+                <mat-form-field class="w-100 mb-4">
+                    <input  type="text"  matInput id="pho" matInput placeholder="Phone" formControlName="phoNe"  name="pass"   [(ngModel)]="model.phone"required>
+                    <mat-error *ngIf="submitted && f.phoNe.errors" class="invalid-feedback">
+                      <span *ngIf="f.phoNe.errors.required">Phone is required</span>
+                    </mat-error>
+                  </mat-form-field>
+                  <mat-form-field class="w-100 select mb-4">
+                      <mat-select placeholder="Select City"  name="relationship" style="color: #000" id="pho" formControlName="ciTy" [(ngModel)]="model.city"  >
+                        <mat-option *ngFor="let city of getCity"  [value]="city.name">{{ city.name }}</mat-option>
+                      </mat-select>
+                      <mat-error *ngIf="submitted && f.ciTy.errors" class="invalid-feedback">
+                        <span *ngIf="f.ciTy.errors.required">City is required</span>
+                      </mat-error>
+                  </mat-form-field>
+            
+                  <mat-form-field class="w-100 select mb-4">
+                      <mat-select placeholder="Select State" formControlName="staTe" name="relationship" style="color: #000"  [(ngModel)]="model.state"  (ngModelChange)="getCities($event)" >
+                        <mat-option *ngFor="let data of getContryData1" [value]="data.name">{{ data.name }}</mat-option>
+                      </mat-select>
+                      <mat-error *ngIf="submitted && f.staTe.errors" class="invalid-feedback">
+                        <span *ngIf="f.staTe.errors.required">State is required</span>
+                      </mat-error>
+                  </mat-form-field>
+                  <mat-form-field class="w-100 mb-4">
+                      <input [type]="hide ? 'password' : 'text'"  matInput placeholder=" Confirm Password"  [(ngModel)]="password2" (focusout)="showAllert()"   type="password" name="pd" formControlName="password2"  required>
+                      <i *ngIf= "hide" class="fa fa-eye eye-icon" title="Show Password" (click)="hide = !hide"></i>
+                      <i *ngIf= "!hide" class="fa fa-eye-slash eye-icon" title="Hide Password" (click)="hide = !hide"></i>
+                      <mat-error *ngIf="submitted && f.password2.errors" class="invalid-feedback">
+                        <span *ngIf="f.password2.errors.required">confirm password is required</span>
+                      </mat-error>
+                    </mat-form-field> 
+               
+            </div>
+            <div class="col-md-3 recaptcha-div">
               <app-recapcha></app-recapcha>
               <div  style="float:right; margin: 50px 25px; font-size: x-large;font-weight: bold;color: red;"  *ngIf="!recaptcha" >Recaptcha is required</div>
             </div>
             <div class="col-md-9">
-                  <mat-slide-toggle>
+                  <mat-slide-toggle class="toggle-para">
                       By clicking on the "Register" button below, you understand and agree that the use of this Website, Mobile Apps,
                       AI and ALL other related Technology Platforms are subject to the <a href="https://www.influexpai.com/Terms-and-Conditions" target="_blank">Terms of Use</a> and <a href="https://www.influexpai.com/privacy_policy">Privacy Policy</a>.
                   </mat-slide-toggle>
                 <button type="submit"  class="btn btn-primary sign-in-button" >Sign Up</button>
-                <p class="signup-auth text-center">Already have account. <a [routerLink]="['/authentication/signin']">Sign in</a></p>
+                <p class="signup-auth ">Already have account. <a [routerLink]="['/authentication/signin']">Sign in</a></p>
             </div>
              
         </div>
+      </div>
+      </div>
       </form>
+</div>
 </div>
 
 <!-- upertak -->
