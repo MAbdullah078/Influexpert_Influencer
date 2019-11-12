@@ -176,13 +176,14 @@ export const AppRoutes: Routes = [
   ,{path: 'myshowcase', component: MyshowcaseComponent,
   // loadChildren: './myshowcase/showcase.module#MyShowcaseModule' , canActivate: [AuthGuard]
   }
+ , {path:'showcasedetail',component: ShowcasedetailComponent}
 ]
 },
  
 
 
 { path: 'pricing', component: PricingComponent },
-{path:'showcasedetail', component: ShowcasedetailComponent},
+// {path:'showcasedetail', component: ShowcasedetailComponent},
 {path: 'contactus', component: ContactComponent},
 
 
