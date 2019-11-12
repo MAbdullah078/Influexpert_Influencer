@@ -5,25 +5,11 @@
   height: 100%;
   background: url(../../../assets/images/LoginInflu.png)center/100% no-repeat;
 }
-.flexy ul{
-  list-style: none;
-  padding: 0;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.flexy ul li a img{
-  transition: all .4s ease-in-out;
-}
-.flexy ul li a img:hover{
-  transform: scale(1.2);
-}
+
 .form-content{
-  width: 400px;
-  background: url(../../../assets/images/backkk.png);
+  width: 425px;
+  background: #fff;
   padding: 10px 20px 20px;
-  opacity: 1.0;
   border-radius: 20px;
 }
 .fa-eye,
@@ -35,12 +21,17 @@
   font-size: 14px;
   cursor: pointer;
 }
-.forgot,
+
 .privacy {
+  color: #337ab7!important;
   font-size: 12px;
+  transition: none;
+}
+.forgot{
+  color: #337ab7!important;
   font-weight: 600;
-  display: inline-block;
-  color: #304ffe
+  font-size: 15px;
+  transition: none;
 }
 .mat-form-field input{
   font-size: 24px;
@@ -50,4 +41,27 @@
   position: absolute !important;
   color: #c00;
   bottom: -19px;
+}
+.div-header{
+  position: relative;
+  font-weight: 700;
+  font-size: 30px;
+  padding: 10px;
+  box-shadow: 0 7px 15px #a5a5a5;
+  margin-top: -30px;
+  border-radius: 5px;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  box-sizing: border-box;
+}
+.social-icon a{
+  margin: 0 10px;
+}
+.sign-in-button{
+  padding: 6px 40px;
+  width: 90%;
+    font-size: 24px!important;
+    font-weight: 600!important;
+  box-shadow: 0 14px 26px -12px rgba(0,0,0,.42),0 4px 23px 0 rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2)!important;
 }

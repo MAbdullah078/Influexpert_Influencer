@@ -129,11 +129,6 @@ section#contact i {
     color: #ff4270;
     padding-right: 10px
 }
-
-#contact a:hover {
-    text-decoration: underline;
-}
-
 .chat {
     list-style: none;
     margin: 0;
