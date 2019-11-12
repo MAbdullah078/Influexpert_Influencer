@@ -28,6 +28,16 @@
     font-weight: 600;
 
 }
+.profile-heading{
+  font-size: 26px;
+  color: #fff;
+  background: #000;
+  border-radius: 3px;
+  margin: -35px 8px 0;
+  padding: 15px;
+  -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
+}
 
 
 
@@ -44,7 +54,7 @@
 
 
 #myrfm{
-    padding: 40px 10px;
+    padding: 60px 10px;
     min-height: 90vh;
     .rfm-wrap{
       width: 300px;
@@ -79,6 +89,9 @@
     }
     .btn-117{
       min-width: 117px;
+    }
+    .showcase-container{
+      background: #fff;
     }
   }
   
