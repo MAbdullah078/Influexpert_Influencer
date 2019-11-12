@@ -1,6 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import {App_service} from '../app.service';
-
+// import {Component, OnInit, ViewChild} from '@angular/core';
+import {FormBuilder, FormGroup, Validators, FormControl, NgForm} from '@angular/forms';
+// import {FileValidatorDirective} from './FileValidator.directive';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {MatStepper} from '@angular/material';
+import {HttpService} from '../serv/http-service';
+import { Headers,Response, Http } from '@angular/http';
+import {Config} from '../config';
+import {Observable} from 'rxjs/Observable';
+// import {App_service} from '../app.service';
+import Swal from "sweetalert2";
+import swal from 'sweetalert2';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-myshowcase',
@@ -19,7 +31,8 @@ export class MyshowcaseComponent implements OnInit {
   datashowcase :any =[]
   show_image;
 
-  constructor(private app_Service: App_service) { }
+  constructor(private app_Service: App_service,private _formBuilder: FormBuilder, private http: HttpClient ,
+    private router: Router, private loader: HttpService) { }
 
   ngOnInit() {
 

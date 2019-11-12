@@ -18,10 +18,20 @@
 
                   <mat-form-field class="w-100 mb-4">
                       <input  type="text" matInput placeholder="First Name" formControlName="firstName"  [(ngModel)]="model.first_name" required>
-                      <mat-error *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                      <mat-error *ngIf="registerUser.controls.firstName.touched && registerUser.controls.firstName.invalid">
+                        <mat-error *ngIf="registerUser.controls.firstName.errors.required">Name cannot be empty </mat-error>
+                    </mat-error>
+                    
+                      <!-- <mat-error *ngIf="registerUser.controls.firstName.hasError('required')"> FirstName is required
+                      </mat-error> -->
+                    
+                      <!-- <mat-error *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
                         <span *ngIf="f.fullName.errors.required">First Name is required</span>
+                      </mat-error> -->
+                      <mat-error *ngIf="registerUser.controls.firstName.hasError('minlength')"> Name should be between 2 to 60 characters
                       </mat-error>
-                  
+                      <mat-error *ngIf="registerUser.controls.firstName.hasError('maxlength')"> Name should be between 2 to 60 characters
+                      </mat-error>
                     </mat-form-field>
 
                     <!-- <input type="text" matInput  name="firstname" placeholder=" First Name" required> -->
@@ -48,8 +58,20 @@
                           <i *ngIf= "hide" class="fa fa-eye eye-icon" title="Show Password" (click)="hide = !hide"></i>
               <i *ngIf= "!hide" class="fa fa-eye-slash eye-icon" title="Hide Password" (click)="hide = !hide"></i>
                            <!-- <input  type="text" matInput placeholder="Password" formControlName="passWord"   name="pass" [(ngModel)]="model.password"  required> --> 
-                            <mat-error *ngIf="submitted && f.passWord.errors" class="invalid-feedback">
+                            <!-- <mat-error *ngIf="submitted && f.passWord.errors" class="invalid-feedback">
                               <span *ngIf="f.passWord.errors.required">Password is required</span>
+                            </mat-error> -->
+
+
+                            <mat-error *ngIf="registerUser.controls.passWord.touched && registerUser.controls.passWord.invalid">
+                              <mat-error *ngIf="registerUser.controls.passWord.errors.required">password cannot be empty </mat-error>
+                            </mat-error>
+                            <!-- <mat-error *ngIf="registerUser.controls.passWord.errors.required">password cannot be empty </mat-error> -->
+                            <mat-error *ngIf="registerUser.controls.passWord.hasError('pattern')">  password must be according to pattern
+                            </mat-error>
+                            <mat-error *ngIf="registerUser.controls.passWord.hasError('minlength')">  password must be minum 8 characters
+                            </mat-error>
+                            <mat-error *ngIf="registerUser.controls.passWord.hasError('maxlength')">  password must be maximum 100 characters
                             </mat-error>
                           </mat-form-field>
                           <mat-form-field class="w-100 mb-4">
@@ -106,9 +128,9 @@
                         <mat-option *ngFor="let data of getContriesData" [value]="data.name">{{ data.name }}</mat-option>
                       </mat-select>
                   
-          <mat-error *ngIf="submitted && f.counTry.errors" class="invalid-feedback">
-            <span *ngIf="f.counTry.errors.required">Country is required</span>
-          </mat-error>
+                      <mat-error *ngIf="registerUser.controls.counTry.touched && registerUser.controls.counTry.invalid">
+                        <mat-error *ngIf="registerUser.controls.counTry.errors.required">Country cannot be empty </mat-error>
+                      </mat-error>
         </mat-form-field>
         <mat-form-field class="w-100 mb-4">
             <input  type="text" matInput placeholder="Username" formControlName="userName" [(ngModel)]="model.username"   (ngModelChange)="usernamecheck(rt.value)"  #rt required>
@@ -134,8 +156,11 @@
                 
                     <mat-form-field class="w-100 mb-4">
                       <input type="text" matInput  name="address" placeholder="Address" formControlName="address"  [(ngModel)]="model.address"required>
-                      <mat-error *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                      <!-- <mat-error *ngIf="submitted && f.address.errors" class="invalid-feedback">
                         <span *ngIf="f.address.errors.required">address is required</span>
+                      </mat-error> -->
+                      <mat-error *ngIf="registerUser.controls.address.touched && registerUser.controls.address.invalid">
+                        <mat-error *ngIf="registerUser.controls.address.errors.required">Address cannot be empty </mat-error>
                       </mat-error>
                     </mat-form-field>
 
@@ -203,7 +228,7 @@
             <div class="col-md-9">
                   <mat-slide-toggle class="toggle-para">
                       By clicking on the "Register" button below, you understand and agree that the use of this Website, Mobile Apps,
-                      AI and ALL other related Technology Platforms are subject to the <a href="https://www.influexpai.com/Terms-and-Conditions" target="_blank">Terms of Use</a> and <a href="https://www.influexpai.com/privacy_policy">Privacy Policy</a>.
+                      AI and ALL other related Technology Platforms are subject to the INFLUENCER <a href="/terms" target="_blank">Terms of Use</a> and <a href="/privacy">Privacy Policy</a>.
                   </mat-slide-toggle>
                 <button type="submit"  class="btn btn-primary sign-in-button" >Sign Up</button>
                 <p class="signup-auth ">Already have account. <a [routerLink]="['/authentication/signin']">Sign in</a></p>

@@ -32,12 +32,12 @@ export class App_service {
   showerror(){
     this.toast.error('Some Server Side Error')
   }
-  register_user(username, name,first_name,last_name, email , password, country,address,
+  register_user(username, first_name,last_name, email , password, country,address,
                relationship , education, phone, state, city, employment_status, gender ){
     return this.Http.post(Config.api + '/influencer_signup/',
       {
         'username': username ,
-        'name': name,
+        // 'name': name,
         'first_name': first_name,
         'last_name': last_name,
         'email': email ,

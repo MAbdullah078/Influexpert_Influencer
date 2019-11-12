@@ -60,6 +60,7 @@ import { TextMaskModule } from 'angular2-text-mask';
 
 import { from } from 'rxjs/observable/from';
 import { ShowcasedetailComponent } from './showcasedetail/showcasedetail.component';
+
 // const config= new AuthServiceConfig([
 //   {
 //     id: LinkedinLoginProvider.PROVIDER_ID,
@@ -126,6 +127,7 @@ export function provideConfig() {
     TermsAndConditionsComponent,
     TermsComponent,
     WhatIsInfluexpaiComponent,
+    
     MyshowcaseComponent,
     ShowcasedetailComponent
             // AccountSettingComponent,
