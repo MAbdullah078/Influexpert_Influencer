@@ -10,7 +10,7 @@ import { ConfirmComponent } from './confirm/confirm.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { LockscreenComponent } from './lockscreen/lockscreen.component';
 import { TextMaskModule } from 'angular2-text-mask';
-
+import { ShareFooterModule } from '../shareFooter.module'
 import {MatNativeDateModule,MatSelectModule,MatDialogModule,
         MatSlideToggleModule,
         MatButtonModule, MatCheckboxModule,
@@ -60,7 +60,7 @@ export function getAuthServiceConfigs() {
     MatOptionModule,
     MatInputModule,TextMaskModule,
     MatSlideToggleModule,
-
+    ShareFooterModule
   ],
   declarations: [SigninComponent, SignupComponent, ForgotComponent, LockscreenComponent, ConfirmComponent, NewpasswordComponent],
   providers: [FacebookService,  {

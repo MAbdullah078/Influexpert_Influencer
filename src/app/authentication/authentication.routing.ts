@@ -5,7 +5,6 @@ import { SignupComponent } from './signup/signup.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { LockscreenComponent } from './lockscreen/lockscreen.component';
 import {NewpasswordComponent} from './newpassword/newpassword.component';
-
 export const AuthenticationRoutes: Routes = [
   {
     path: '',

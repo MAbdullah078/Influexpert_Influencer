@@ -12,6 +12,7 @@ import {ViewChild} from '@angular/core';
 import { JwtHelper } from 'angular2-jwt';
 import { AuthService } from 'angular5-social-login';
 import { FacebookLoginProvider, GoogleLoginProvider } from 'angular5-social-login';
+// import {FooterComponent} from '../../footer/footer.component';
 // import {
 //   AuthService,
 //   FacebookLoginProvider,
