@@ -14,13 +14,14 @@
     margin-bottom: 10px;
     font-size: 15px;
     line-height: 18px;
-    font-weight: 500!important;
+    font-weight: 400!important;
 }
 
 .footer-wrapper ul li a {
     line-height: 35px;
     font-size: 16px;
     color: #273c61;
+    font-weight: 500;
 }
 
 ul.footer-social-icons li {
@@ -78,12 +79,13 @@ form input[type=text] {
 .subscribe-btn {
     border: none;
     position: absolute;
-    height: 37px;
-    right: 0px;
+    height: 36px;
+    right: 2px;
     top: 0;
     background: transparent !important;
     border-radius: 0 50px 50px 0;
     padding-right: 0;
+    box-shadow: none!important;
 }
 .subscribe-btn i{
     color: #c00 !important;
@@ -94,10 +96,11 @@ form input[type=text] {
     width: 100%;
     display: block;
     height: auto;
+    background: #273c61;
 }
 
 .footer-copyright a {
-    color: #273c61;   
+    color: #fff;   
     padding: 0 5px;
 }
 #footerwrap{
@@ -108,8 +111,8 @@ form input[type=text] {
 p.copyright-text {
     margin: 0;
     font-size: 14px;
-    color: #273c61;
-    font-weight: 500!important;
+    color: #fff;
+    font-weight: 400!important;
 }
 
 .footer-link-border {
@@ -244,4 +247,17 @@ button#btn-chat {
 .footer-stores-img img {
     width: 25%;
     margin-left: 90px;
+}
+.social-heading{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 8px 0 10px;
+}
+.socail-links img{
+    width: 80%;
+    margin-left: 11px;
+    height: 100%;
+}
+.socail-links{
+    display: flex;
 }

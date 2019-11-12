@@ -1,17 +1,18 @@
 <app-loader></app-loader>
 <div class="container text-center">
-  <div class="row text-center ">
-    <h2 class="stepper-heading">Create Showcase</h2>
+  <div class="card one mt-4">
+  <div class="card-header ">
+    <h2 class="stepper-heading"><img class="h-img" src="../../assets/images/Property details.png" alt=""> Create Showcase</h2>
 
 </div>
-</div>
+
 <div class="stepper-style">
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
   <mat-step [stepControl]="firstFormGroup">
-    <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Add Images</ng-template>
+    <form [formGroup]="firstFormGroup" class="create-stepper">
+      <ng-template matStepLabel><img class="stepper-img"  src="../../assets/images/header-images/add image.png" alt=""> Add Images</ng-template>
 
-        <div class="form-group photos-resume text-center" style="margin-top: 50px;">
+        <div class="form-group photos-resume text-center mt-2">
           <div style="" class="col-md-3 uploaded-pic" *ngFor="let img of ImgSrc;let ind=index">
             <div class="new" >
               <img accept=".jpg, .jpeg, .png" src="{{img}}" alt="your image" allowmultiple="true"/>
@@ -35,31 +36,30 @@
                    accept=".jpg, .jpeg, .png"  name="file"  multiple  />
             <img class="camera-img"  src="../../assets/data/icons/addimage_512.png" alt="Add Image"/>
           </label>
-          <!--*ngIf="FuncCheckIfImageUploaded()"-->
-          <br>
-          <label class="imagename">{{this.imageName}}</label>
+          <div class="imagename">{{this.imageName}}</div>
           <img *ngIf="FuncCheckNumberOfImages()" src="">
-
+        <div class="text-right mt-2">
           <button mat-raised-button (click)="onUpload()" matStepperNext class="next-btn">
             Next
           </button>
+        </div>
         </div>
     </form>
   </mat-step>
 
   <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup" class="create-showcase">
+    <form [formGroup]="secondFormGroup" class="create-stepper">
 
-      <ng-template matStepLabel>Overview</ng-template>
-      <div class="whole sh-signup-form-fix">
+      <ng-template matStepLabel><img class="stepper-img"  src="../../assets/images/overview.png" alt="">Overview</ng-template>
+      <div class="whole ">
 
 
       <div class="row">
-      <div class="col-lg-3" id="margin">
+      <div class="col-lg-3 mt-4  mb-4 label-division" >
       <label>Select Category</label>
       </div>
-      <div class="col-lg-9">
-        <mat-form-field style="width: 100%;" class="catagery mt-4">
+      <div class="col-lg-9  mt-4 mb-4">
+        <mat-form-field style="width: 100%;">
       <mat-select placeholder="{{'Select Category'}}"  (change)="selectCat($event.value)" required [(ngModel)]="model.catID" ngDefaultControl [ngModelOptions]="{standalone: true}"  style="width: 100%">
       <mat-option *ngFor="let option of options "  [value]="option.id" >{{ option.name }}</mat-option>
       </mat-select>
@@ -69,11 +69,11 @@
       </div>
 
       <div class="row">
-      <div class="col-lg-3" id="margin">
+      <div class="col-lg-3 mb-4 label-division" >
       <label >Showcase Title</label>
       </div>
-      <div class="col-lg-9">
-      <mat-form-field style="width: 100%;margin-top: 10px;">
+      <div class="col-lg-9  mb-4">
+      <mat-form-field style="width: 100%">
       <input matInput placeholder="Write Title of Showcase" [(ngModel)]="model.title" name="til" formControlName="secondCtrl" required  />
 
       </mat-form-field>
@@ -82,10 +82,10 @@
       </div>
 
       <div class="row">
-      <div class="col-lg-3">
+      <div class="col-lg-3 mb-4 label-division" >
       <label>Link Profile</label>
       </div>
-      <div class="col-lg-9">
+      <div class="col-lg-9 mb-4">
       <mat-form-field style="width: 100%" >
       <input matInput placeholder="Link your SM Profiles here" [(ngModel)]="model.urls" name="link" formControlName="thirdCtrl" required>
 
@@ -94,46 +94,48 @@
 
       </div>
 
-
-        <button mat-raised-button matStepperPrevious class="back-button">Back</button>
-        <button mat-raised-button matStepperNext class="next-btn">
+<div class="d-inline-block w-100 mb-2">
+  <button mat-raised-button matStepperPrevious class="back-button float-left">Back</button>
+        <button mat-raised-button matStepperNext class="next-btn float-right">
           Next
         </button>
+</div>
+        
       </div>
     </form>
   </mat-step>
 
   <mat-step [stepControl]="thirdFromGroup">
-  <form [formGroup]="thirdFromGroup" class="create-showcase">
-  <ng-template matStepLabel>Showcase Description</ng-template>
-  <div class="row sh-signup-form-fix">
-  <div class="col-lg-3" id="margin">
+  <form [formGroup]="thirdFromGroup" class="create-stepper">
+  <ng-template matStepLabel><img class="stepper-img"  src="../../assets/images/header-images/description.png" alt="">Showcase Description</ng-template>
+  <div class="row">
+  <div class="col-lg-3 mt-4 ">
   <label >Write Description</label>
   </div>
   <div class="col-lg-9">
-  <mat-form-field class="margin-top-10 width100">
+  <mat-form-field class="mt-4 width100">
   <textarea matInput placeholder="Write Description" [(ngModel)]="model.description" name="des" formControlName="fourthCtrl" style="line-height:8.75px" required></textarea>
   </mat-form-field>
   </div>
 
   </div>
-  <div>
-  <button mat-raised-button matStepperNext class="next-btn">Next</button>
-  <button mat-raised-button matStepperPrevious style="margin-right: 15px" class="back-button">Back</button>
+  <div class="d-inline-block w-100 mb-2">
+  <button mat-raised-button matStepperNext class="next-btn float-right">Next</button>
+  <button mat-raised-button matStepperPrevious class="back-button float-left">Back</button>
   </div>
   </form>
   </mat-step>
 
 
   <mat-step [stepControl]="fourthFromGroup">
-  <form [formGroup]="fourthFromGroup"  class="create-showcase">
-  <ng-template matStepLabel>Requirements</ng-template>
+  <form [formGroup]="fourthFromGroup"  class="create-stepper">
+  <ng-template matStepLabel> <img class="stepper-img"  src="../../assets/images/header-images/FAQ ICON.png" alt=""> Requirements</ng-template>
   <div class="row">
-  <div class="col-lg-3" id="margin">
+  <div class="col-lg-3  mt-4  mb-4 label-division" >
   <label >Requirement 1</label>
   </div>
-  <div class="col-lg-9">
-  <mat-form-field style="width: 100%;    margin-top: 10px;">
+  <div class="col-lg-9  mt-4  mb-4 ">
+  <mat-form-field style="width: 100%;    ">
   <input matInput placeholder="Requirement" [(ngModel)]="model.requirement1" name="req1" formControlName="fifthCtrl" required>
 
   </mat-form-field>
@@ -144,11 +146,11 @@
 
 
   <div class="row">
-  <div class="col-lg-3" id="margin">
+  <div class="col-lg-3 mb-4 label-division ">
   <label >Requirement 2</label>
   </div>
-  <div class="col-lg-9">
-  <mat-form-field style="width: 100%">
+  <div class="col-lg-9 mt-4  mb-4">
+  <mat-form-field style="width: 100%" >
   <input matInput placeholder="Requirement 2" [(ngModel)]="model.requirement2" name="req2" formControlName="sixthCtrl" required>
   </mat-form-field>
   </div>
@@ -157,10 +159,10 @@
 
 
   <div class="row">
-  <div class="col-lg-3" id="margin">
+  <div class="col-lg-3 mb-4 label-division" >
   <label >Requirement 3</label>
   </div>
-  <div class="col-lg-9">
+  <div class="col-lg-9 mt-4  mb-4">
   <mat-form-field style="width: 100%">
   <input matInput placeholder="Requirement 3(Optional)">
   </mat-form-field>
@@ -168,16 +170,16 @@
 
   </div>
 
-  <div>
-  <button mat-raised-button matStepperNext class="next-btn">Next</button>
-  <button mat-raised-button matStepperPrevious class="back-button" style="margin-right: 15px">Back</button>
+  <div class="d-inline-block w-100 mb-2">
+  <button mat-raised-button matStepperNext class="next-btn float-right">Next</button>
+  <button mat-raised-button matStepperPrevious class="back-button float-left">Back</button>
   </div>
   </form>
   </mat-step>
 
   <mat-step>
     <form #f (ngSubmit)="createShowCase(f)">
-    <ng-template matStepLabel>Publish</ng-template>
+    <ng-template matStepLabel><img class="stepper-img"  src="../../assets/images/header-images/publish.png" alt="">Publish</ng-template>
     <div class="row">
     <div class="col-lg-12 text-center" id="margin">
     <h6> Thanks for creating your Showcase. Click to publsih your Showcase,</h6>
@@ -186,11 +188,13 @@
     </div>
 
     </div>
-    <div>
-      <button mat-raised-button class="back-button" type="submit">Publish</button>
-      <button mat-raised-button matStepperPrevious class="back-button">Back</button>
+    <div class="d-inline-block w-100 mb-2">
+      <button mat-raised-button class="back-button float-right" type="submit">Publish</button>
+      <button mat-raised-button matStepperPrevious class="back-button float-left">Back</button>
     </div>
     </form>
   </mat-step>
 </mat-horizontal-stepper>
+</div>
+</div>
 </div>
