@@ -127,6 +127,7 @@ export function provideConfig() {
     TermsAndConditionsComponent,
     TermsComponent,
     WhatIsInfluexpaiComponent,
+    
     MyshowcaseComponent,
     ShowcasedetailComponent
             // AccountSettingComponent,

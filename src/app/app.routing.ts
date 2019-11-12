@@ -172,11 +172,15 @@ export const AppRoutes: Routes = [
     {
     path: 'docs',
     loadChildren: './docs/docs.module#DocsModule',canActivate: [AuthGuard]
-  }]
+  }
+  ,{path: 'myshowcase', component: MyshowcaseComponent,
+  // loadChildren: './myshowcase/showcase.module#MyShowcaseModule' , canActivate: [AuthGuard]
+  }
+]
 },
  
 
-{path: 'myshowcase', component: MyshowcaseComponent},
+
 { path: 'pricing', component: PricingComponent },
 {path:'showcasedetail', component: ShowcasedetailComponent},
 {path: 'contactus', component: ContactComponent},

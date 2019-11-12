@@ -13,7 +13,7 @@
                     <mat-error *ngIf="submitted && f.userName.errors" class="invalid-feedback">
                       <span *ngIf="f.userName.errors.required">Username is required</span>
                     </mat-error>
-                    <mat-error *ngIf="check==true"> username already exist</mat-error>
+                    <div *ngIf="check==true"> username already exist</div>
                     <!-- <mat-error *ngIf="submitted && f.userName.errors" class="invalid-feedback">
                       <span *ngIf="f.userName.errors.required">Username is required</span>
                     </mat-error> -->
