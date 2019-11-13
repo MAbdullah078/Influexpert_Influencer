@@ -133,23 +133,28 @@
                  
 
 
-
+                  <mat-form-field class="w-100 mb-4">
                   
                       <!-- <mat-select placeholder="Select Country" formControlName="counTry" name="relationship" style="color: #000" [(ngModel)]="model.country" (ngModelChange)="onSelect($event)" >
                         <mat-option *ngFor="let data of getContriesData" [value]="data.name">{{ data.name }}</mat-option>
                       </mat-select> -->
-                      <!-- <mat-select 
+                      <mat-select 
                        formControlName="counTry" placeholder="Country*" name="relationship" style="color: #000" [(ngModel)]="model.country" (ngModelChange)="onSelect($event)" >
                           <mat-option *ngFor="let item of allcountry  " [value]="item.name" >
                 
                               <img class="country-img" src="{{item.image_path}}">
                             {{item.name }}
                           </mat-option>
-                        </mat-select>
-                       -->
-                       <mat-form-field class="w-100 mb-4">
 
-                       <input matInput class="sh-text-capt" type="text"  id="city" formControlName="counTry" [(ngModel)]="vin_Data.country"
+                        </mat-select>
+
+                      <mat-error *ngIf="registerUser.controls.counTry.touched && registerUser.controls.counTry.invalid">
+                          <mat-error *ngIf="registerUser.controls.counTry.errors.required">Country cannot be empty </mat-error>
+                        </mat-error>
+                      </mat-form-field> 
+                       
+
+                       <!-- <input matInput class="sh-text-capt" type="text"  id="city" formControlName="counTry" [(ngModel)]="vin_Data.country"
                        value="{{vin_Data.countryy}}" placeholder="Country" required />
 
                     
@@ -157,7 +162,7 @@
                       <mat-error *ngIf="registerUser.controls.counTry.touched && registerUser.controls.counTry.invalid">
                         <mat-error *ngIf="registerUser.controls.counTry.errors.required">Country cannot be empty </mat-error>
                       </mat-error>
-        </mat-form-field>
+        </mat-form-field> -->
 
 
         
