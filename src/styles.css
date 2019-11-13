@@ -205,13 +205,10 @@ top: 25px;
 }
 .create-stepper input.mat-input-element {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .create-showcase .mat-form-field-label {
   top: 25px;
-}
-input.mat-input-element{
-  margin-top: 0!important;
 }
 .create-showcase .catagery .mat-form-field-label {
   top: 18px;
@@ -782,7 +779,6 @@ about-text {
   color:#fff!important;
   text-transform: capitalize;
   border: none;
-  transition: .4s ease-in-out;
   padding: 6px 20px;
   box-shadow: 0 5px 5px #ccc!important;
   border-radius: 50px;
@@ -790,7 +786,6 @@ about-text {
 .btn-primary:hover{
   box-shadow: none!important;
   background:#e20074!important;
-
 }
 .profile-form  .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
   transform: translateY(-19px) scale(.75) perspective(100px) translateZ(.001px);
