@@ -936,3 +936,8 @@ about-text {
 .form-control.is-invalid:focus {
   border-color: white!important;
 }
+@media  (max-width: 992px){
+  .toggle-para .mat-slide-toggle-content {
+    font-size: 11px;
+}
+}

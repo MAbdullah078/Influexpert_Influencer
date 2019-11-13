@@ -256,3 +256,22 @@ button#btn-chat {
 .socail-links{
     display: flex;
 }
+@media  (max-width: 1024px){
+    .footer-wrapper ul li a {
+        font-size: 14px;
+    }
+}
+@media  (max-width: 992px){
+    .footer-wrapper ul li a {
+        font-size: 12px;
+    }
+    #footerwrap h4 {
+        font-size: 16px;
+    }
+    #footerwrap p {
+        font-size: 12px;
+    }
+    .social-heading {
+        font-size: 12px;
+    }
+}
