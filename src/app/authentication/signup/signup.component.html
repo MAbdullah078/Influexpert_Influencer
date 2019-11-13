@@ -124,14 +124,90 @@
 
 
                   <mat-form-field class="w-100 select mb-4">
-                      <mat-select placeholder="Select Country" formControlName="counTry" name="relationship" style="color: #000" [(ngModel)]="model.country" (ngModelChange)="onSelect($event)" >
+                      <!-- <mat-select placeholder="Select Country" formControlName="counTry" name="relationship" style="color: #000" [(ngModel)]="model.country" (ngModelChange)="onSelect($event)" >
                         <mat-option *ngFor="let data of getContriesData" [value]="data.name">{{ data.name }}</mat-option>
-                      </mat-select>
-                  
+                      </mat-select> -->
+                      <mat-select 
+                       formControlName="counTry" placeholder="Country*" name="relationship" style="color: #000" [(ngModel)]="model.country" (ngModelChange)="onSelect($event)" >
+                          <mat-option *ngFor="let item of allcountry  " [value]="item.name" >
+                
+                              <img class="country-img" src="{{item.image_path}}">
+                            {{item.name }}
+                          </mat-option>
+                        </mat-select>
+                      
+
+
+                    
                       <mat-error *ngIf="registerUser.controls.counTry.touched && registerUser.controls.counTry.invalid">
                         <mat-error *ngIf="registerUser.controls.counTry.errors.required">Country cannot be empty </mat-error>
                       </mat-error>
         </mat-form-field>
+
+
+      
+            <!-- <div class="form-group label-floating " [ngClass]="displayFieldCss(register, 'zipcode')"> -->
+              <mat-form-field class="w-100 select mb-4">
+                <input matInput type="number" maxlength="5" id="zipcode" min="0" 
+                  (ngModelChange)="zipcodeCheck(zipcode1.value)" #zipcode1 formControlName="zipcode"
+                  placeholder="Zip / Postal Code" required oninput="validity.valid||(value='');" onKeyPress="if(this.value.length==5) return false;" />
+                <mat-error *ngIf="registerUser.controls.zipcode.value == ''">
+                  <strong>Zip / Postal Code cannot be empty</strong>
+                </mat-error>
+                <mat-error class="border-right" *ngIf="registerUser.controls.zipcode.hasError('pattern')">
+                  Only Numbers
+                </mat-error>
+                <mat-error *ngIf="registerUser.controls.zipcode.errors?.minlength">
+                  Only 5 Numbers.
+                </mat-error>
+              </mat-form-field>
+              <p class="clr_red" *ngIf="invalid  && !vin_Data.city && !vin_Data.state && !vin_Data.country">
+                Invalid Zip / Postal Code
+              </p>
+              <p *ngIf="!invalid  && vin_Data.city && vin_Data.state && vin_Data.country">
+                
+              </p>
+            <!-- </div> -->
+          
+          
+        
+      <!-- </div> -->
+
+    
+      <div class="row signup-form-row">
+          <div class="col-md-4 ">
+              <!-- <div class="form-group label-floating" [ngClass]="displayFieldCss(register, 'city')"> -->
+                <mat-form-field class="w-100 mb-4">
+                  <input matInput class="sh-text-capt" type="text"  id="city" formControlName="ciTy" [(ngModel)]="vin_Data.city"
+                    value="{{vin_Data.city}}" placeholder="City" required />
+                  <!-- <mat-error *ngIf="register.controls.city.value == ''">
+                    <strong>City cannot be empty</strong>
+                  </mat-error> -->
+                </mat-form-field>
+                
+              <!-- </div> -->
+            </div>
+          <div class="col-md-4">
+            <!-- <div class="form-group label-floating" [ngClass]="displayFieldCss(register, 'state')"> -->
+              <mat-form-field class="w-100 mb-4">
+                <input matInput class="text-uppercase"  type="text" id="state" [(ngModel)]="vin_Data.state" value="{{vin_Data.state}}"
+                  formControlName="staTe" placeholder="State / Province" required />
+                <!-- <mat-error *ngIf="register.controls.state.value == ''">
+                  <strong>State cannot be empty</strong>
+                </mat-error> -->
+
+              </mat-form-field>
+            <!-- </div> -->
+          </div>
+          </div>
+
+
+
+
+
+
+
+
         <mat-form-field class="w-100 mb-4">
             <input  type="text" matInput placeholder="Username" formControlName="userName" [(ngModel)]="model.username"   (ngModelChange)="usernamecheck(rt.value)"  #rt required>
             <!-- <p>{{ userchk}}</p> -->
@@ -194,7 +270,7 @@
                       <span *ngIf="f.phoNe.errors.required">Phone is required</span>
                     </mat-error>
                   </mat-form-field>
-                  <mat-form-field class="w-100 select mb-4">
+                  <!-- <mat-form-field class="w-100 select mb-4">
                       <mat-select placeholder="Select City"  name="relationship" style="color: #000" id="pho" formControlName="ciTy" [(ngModel)]="model.city"  >
                         <mat-option *ngFor="let city of getCity"  [value]="city.name">{{ city.name }}</mat-option>
                       </mat-select>
@@ -210,7 +286,7 @@
                       <mat-error *ngIf="submitted && f.staTe.errors" class="invalid-feedback">
                         <span *ngIf="f.staTe.errors.required">State is required</span>
                       </mat-error>
-                  </mat-form-field>
+                  </mat-form-field> -->
                   <mat-form-field class="w-100 mb-4">
                       <input [type]="hide ? 'password' : 'text'"  matInput placeholder=" Confirm Password"  [(ngModel)]="password2" (focusout)="showAllert()"   type="password" name="pd" formControlName="password2"  required>
                       <i *ngIf= "hide" class="fa fa-eye eye-icon" title="Show Password" (click)="hide = !hide"></i>

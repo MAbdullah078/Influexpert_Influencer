@@ -74,6 +74,7 @@ export class SignupComponent implements OnInit {
   // registerUser: FormGroup;
   submitted = false;
   check:boolean;
+  digitsOnly = '^[0-9,-]+$';
   public phoneMask = ['+', '1', '-', /[1-9]/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
   email = '^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$';
   password_regex = '^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*[\/\\\!\"#$%&()*+,£^.:;=?\\\\[\\]\\-\'<>~|@_{}]).{8,}$';
@@ -90,6 +91,7 @@ export class SignupComponent implements OnInit {
     passWord: ['',Validators.compose([Validators.required, Validators.minLength(8), Validators.pattern(this.password_regex), Validators.maxLength(100)])],
     relationShip: ['', Validators.required],
     employement_Status: ['', Validators.required],
+    zipcode: ['', Validators.compose([Validators.required, Validators.pattern(this.digitsOnly), Validators.minLength(5)])],
     gendeR: ['', Validators.required],
     address:['', Validators.required],
     password2:['', [Validators.required]],
@@ -110,6 +112,8 @@ export class SignupComponent implements OnInit {
     }
     
   }
+  vin_Data = { city: "", state: "", country: "" };
+  vin_Data2 = { city2: "", state2: "", country2: "" };
   constructor(private http: Http, private loaderHttp: HttpService,private fb: FormBuilder, private router: Router, private fB: FacebookService, private _nav : Router,
   public toastr: ToastsManager, vcr: ViewContainerRef, private recapcha: RecapchaService, private socialAuthService: AuthService, private srvc_obj: App_service) {
 
@@ -189,7 +193,13 @@ export class SignupComponent implements OnInit {
         }
       });
   }
-
+  allcountry;
+  ngAfterViewInit(){
+    this.srvc_obj.getcounty().subscribe( data =>{
+      this.allcountry = data['countries'];
+      console.log(this.allcountry);
+    })
+  }
 
   getCities(value){
 
@@ -330,6 +340,43 @@ export class SignupComponent implements OnInit {
         console.log(this.bearertoken);
       }
     });
+  }
+  invalid
+  zipcode2;
+  endRequest
+  zipcodeCheck(zipcode1) {
+    if (zipcode1.length > 4) {
+      this.endRequest = this.srvc_obj.zipcode(zipcode1).subscribe(
+        data => {
+          this.vin_Data.city = data['city'];
+          this.vin_Data.state = data['state'];
+          this.vin_Data.country = data['country'];
+        },
+          error => {
+            error.status== 400
+            this.invalid=error.status;
+            delete this.vin_Data.city;
+            delete this.vin_Data.state;
+            delete this.vin_Data.country;
+      });
+    }
+  }
+  zipcodeCheck2(zipcode2) {
+    if (zipcode2.length > 4) {
+      this.endRequest = this.srvc_obj.zipcode(zipcode2).subscribe(
+        data => {
+          this.vin_Data2.city2 = data['city'];
+          this.vin_Data2.state2 = data['state'];
+          this.vin_Data2.country2 = data['country'];
+        },
+          error => {
+            error.status== 400
+            this.invalid=error.status;
+            delete this.vin_Data2.city2;
+            delete this.vin_Data2.state2;
+            delete this.vin_Data2.country2;
+      });
+    }
   }
 
   signUpFB() {

@@ -59,10 +59,22 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
                 <mat-form-field class="example-full-width" >
-                  <input type="text" matInput placeholder="Country*" [(ngModel)]="userdata[0]['country']" [ngModelOptions]="{standalone: true}" >
+                  <!-- <input type="text" matInput placeholder="Country*" [(ngModel)]="userdata[0]['country']" [ngModelOptions]="{standalone: true}" > -->
                   <!--<mat-option *ngFor="let edu of EMS" value="edu.code" >{{edu.show}}</mat-option>-->
+               
+                  <mat-select [(ngModel)]="userdata[0]['country']"
+                          formControlName="country*" value="{{country}}" placeholder="Country">
+                              <mat-option *ngFor="let item of allcountry" [value]="item.name" >
+                    
+                                  <img class="country-img" src="{{item.image_path}}">
+                                {{item.name }}
+                              </mat-option>
+                            </mat-select>
+
+               
                 </mat-form-field>
               </div>
+
               <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
                 <mat-form-field class="example-full-width" >
                   <input type="text" matInput placeholder="City*" [(ngModel)]="userdata[0]['city']" [ngModelOptions]="{standalone: true}" >
@@ -131,6 +143,7 @@
     </ng-container>
   </div>
 </div>
+
 
 
   <!--<div class="row pt-3 pb-3" style="background-color: white">-->

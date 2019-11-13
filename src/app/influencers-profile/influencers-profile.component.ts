@@ -30,7 +30,7 @@ export class InfluencersProfileComponent implements OnInit {
   getCity: any = [];
   getContryData: any = [];
   getContryData1: any = [];
-
+  allcountry;
   animal: string;
   name: string;
   NE;
@@ -86,6 +86,7 @@ export class InfluencersProfileComponent implements OnInit {
   ];
 
   ngOnInit() {
+    this.getcountry();
     this.username= localStorage.getItem('username');
 this.loadprofilepic();
 
@@ -221,7 +222,16 @@ this.loadprofilepic();
     });
   }
  
-
+  getcountry(){
+  this.src_obj.getcounty().subscribe( data =>{
+    // console.log(data.countries, 'Mahad')
+    this.allcountry = data.countries;
+    console.log(this.allcountry);
+  },
+  error=>{
+    console.log(error, 'Mahad')
+  })
+  }
 
   openDialog_accolades(): void {
     const dialogRef = this.dialog.open(AccoladesComponent, {

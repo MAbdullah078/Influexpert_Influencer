@@ -573,7 +573,16 @@ contact_Us(name, email, phone, message) {
         console.log(response)
     });
   }
-
+  getcounty(){
+    return this.http.get('https://apis.rfpgurus.com/all_countries/').map((response:Response)=>{
+    return response = response.json()
+    // console.log(response)
+    })
+  }
+  zipcode(zip) {
+   
+    return this.http.get('https://apis.rfpgurus.com/zipcode/' + zip + '/').map((response: Response) => response.json());
+  }
   
 }
 
