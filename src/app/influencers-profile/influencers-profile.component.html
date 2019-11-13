@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <mat-form-field class="example-full-width" >
-                    <mat-select placeholder="Genders* " [(ngModel)]="userdata[0]['gender']" [ngModelOptions]="{standalone: true}" style="padding-top: 0!important; text-align:initial; width: 100%">
+                    <mat-select placeholder="Gender* " [(ngModel)]="userdata[0]['gender']" [ngModelOptions]="{standalone: true}" style="padding-top: 0!important; text-align:initial; width: 100%">
                       <mat-option *ngFor="let rel of genders"  [value]="rel.value">{{rel.show}}</mat-option>
                     </mat-select>
                     </mat-form-field>
@@ -133,7 +133,6 @@
 </div>
 
 
-
   <!--<div class="row pt-3 pb-3" style="background-color: white">-->
     <!--<div class="col-lg-4 text-center">-->
       <!--<img mat-card-image src="{{currentUser.image_url}}" style="width: auto;height: auto" alt="Image">-->
@@ -167,7 +166,7 @@
   <!--</div>-->
 
 
-  <br>
+  <!-- <br>
   <div class=" col-lg-12 col-md-12 col-sm-12 social-bar">
     <h4 class="heading-1"> Linked Profiles </h4>
     <h5 class="manage-label">
@@ -209,7 +208,7 @@
             </a>
           </li>
         </ul>
-  </div>
+  </div> -->
 
   <!--<div class="row">-->
     <!--<div class="col-md-9 col-sm-8">-->

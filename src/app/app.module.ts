@@ -18,7 +18,8 @@ import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 
 import {NgTemplateOutlet} from '@angular/common';
 import {OutletContext} from '@angular/router';
-import { FooterComponent } from './footer/footer.component';
+// import { FooterComponent } from './footer/footer.component';
+import { ShareFooterModule } from './shareFooter.module'
 import {AgenciesComponent} from './Agencies/Agencies.component';
 import { BrandComponent } from './brand/brand.component';
 import { MyshowcaseComponent } from './myshowcase/myshowcase.component';
@@ -116,7 +117,7 @@ export function provideConfig() {
     AppComponent,
     AdminLayoutComponent,
     PricingComponent,
-    AuthLayoutComponent,FooterComponent,BlogComponent,AgenciesComponent,
+    AuthLayoutComponent,BlogComponent,AgenciesComponent,
     ContactComponent,BrandComponent,
     InfluencersComponent,
     HowItWorksComponent,
@@ -137,6 +138,7 @@ export function provideConfig() {
   imports: [
     JwSocialButtonsModule,
     BrowserModule,
+    ShareFooterModule,
     MatSlideToggleModule,
     BlackgeeksRecaptchaModule,
     SlimLoadingBarModule,
