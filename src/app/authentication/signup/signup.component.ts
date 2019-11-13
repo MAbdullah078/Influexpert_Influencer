@@ -78,11 +78,11 @@ export class SignupComponent implements OnInit {
   public phoneMask = ['+', '1', '-', /[1-9]/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
   email = '^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$';
   password_regex = '^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*[\/\\\!\"#$%&()*+,£^.:;=?\\\\[\\]\\-\'<>~|@_{}]).{8,}$';
-
+  usernameOnly = '[a-zA-Z0-9_.]+';
   userchk: any;
   isInvalid:boolean
   registerUser = this.fb.group({
-    userName: ['', Validators.required],
+    userName: ['', Validators.compose([Validators.required, Validators.pattern(this.usernameOnly), Validators.minLength(3)])],
     // fullName: ['', Validators.required],
     firstName:['', Validators.compose([Validators.required, Validators.pattern("[a-zA-Z ]+"),Validators.minLength(2),Validators.maxLength(64)])],
     lastName:['',Validators.compose([Validators.required, Validators.pattern("[a-zA-Z ]+"),Validators.minLength(2),Validators.maxLength(64)])],
@@ -93,7 +93,7 @@ export class SignupComponent implements OnInit {
     employement_Status: ['', Validators.required],
     zipcode: ['', Validators.compose([Validators.required, Validators.pattern(this.digitsOnly), Validators.minLength(5)])],
     gendeR: ['', Validators.required],
-    address:['', Validators.required],
+    address:['',  Validators.compose([Validators.required, Validators.pattern(this.usernameOnly)])],
     password2:['', [Validators.required]],
     eduCation: ['', Validators.required],
     ciTy: ['', Validators.required],
@@ -102,7 +102,7 @@ export class SignupComponent implements OnInit {
     
   });
   public change2(event: any): void {
-    var phn = this.registerUser.controls['phone'].value.split('_').join('').split('-').join('').split('+').join('').length
+    var phn = this.registerUser.controls['phoNe'].value.split('_').join('').split('-').join('').split('+').join('').length
     if (phn < 11) {
       this.isInvalid = true;
       // alert(2)
@@ -178,7 +178,8 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
 
     this.check=false;
-
+    this.isInvalid=false
+this.wrongPass= false;
     this.fB.logout();
     this.form = this.fb.group({
       uname: [null, Validators.compose([Validators.required])],
@@ -299,7 +300,7 @@ export class SignupComponent implements OnInit {
         this.username = data;
         
       // if(this.username.message==='False'){
-      //   this.check=false;
+        this.check=false;
       //   alert('h')
       // }
       },
@@ -468,7 +469,8 @@ export class SignupComponent implements OnInit {
   }
   showAllert(){
     if(this.model.password!= this.password2){
-      Swal('oops','Password did not match','error');
+    
+      // Swal('oops','Password did not match','error');
       this.wrongPass= false;
   }
   else {

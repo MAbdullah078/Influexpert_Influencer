@@ -24,7 +24,8 @@
                     
                       <!-- <mat-error *ngIf="registerUser.controls.firstName.hasError('required')"> FirstName is required
                       </mat-error> -->
-                    
+                      <mat-error *ngIf="registerUser.controls.firstName.hasError('pattern')"> Alphabets Only
+                        </mat-error>
                       <!-- <mat-error *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
                         <span *ngIf="f.fullName.errors.required">First Name is required</span>
                       </mat-error> -->
@@ -76,10 +77,11 @@
                           </mat-form-field>
                           <mat-form-field class="w-100 mb-4">
                               <input  type="text" matInput placeholder="Email" formControlName="eMail" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  [(ngModel)]="model.email" required>
-                              <mat-error *ngIf="submitted && f.eMail.errors" class="invalid-feedback">
-                                <span *ngIf="f.eMail.errors.required">Email is required</span>
-                              </mat-error>
-                            
+                              <mat-error *ngIf="registerUser.controls.eMail.touched && registerUser.controls.eMail.invalid">
+                                  <mat-error *ngIf="registerUser.controls.eMail.errors.required">Email cannot be empty </mat-error>
+                                </mat-error>
+                              <mat-error *ngIf="registerUser.controls.eMail.hasError('pattern')"> Invalid Email
+                                </mat-error>
                             </mat-form-field>
                          
                     
@@ -112,8 +114,17 @@
             <div class="col-md-4">
                 <mat-form-field class="w-100 mb-4">
                     <input  type="text" matInput placeholder="Last Name" formControlName="lastName"  [(ngModel)]="model.last_name" required>
-                    <mat-error *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-                      <span *ngIf="f.fullName.errors.required">Last Name is required</span>
+                    <mat-error *ngIf="registerUser.controls.lastName.touched && registerUser.controls.lastName.invalid">
+                        <mat-error *ngIf="registerUser.controls.lastName.errors.required">Last Name cannot be empty </mat-error>
+                    </mat-error>
+                    <mat-error *ngIf="registerUser.controls.lastName.hasError('pattern')"> Alphabets Only
+                      </mat-error>
+                    <!-- <mat-error *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                      <span *ngIf="f.fullName.errors.required">First Name is required</span>
+                    </mat-error> -->
+                    <mat-error *ngIf="registerUser.controls.lastName.hasError('minlength')"> Name should be between 2 to 60 characters
+                    </mat-error>
+                    <mat-error *ngIf="registerUser.controls.lastName.hasError('maxlength')"> Name should be between 2 to 60 characters
                     </mat-error>
                   </mat-form-field>
               
@@ -122,8 +133,8 @@
                  
 
 
-
-                  <mat-form-field class="w-100 select mb-4">
+                  <mat-form-field class="w-100 mb-4">
+                  
                       <!-- <mat-select placeholder="Select Country" formControlName="counTry" name="relationship" style="color: #000" [(ngModel)]="model.country" (ngModelChange)="onSelect($event)" >
                         <mat-option *ngFor="let data of getContriesData" [value]="data.name">{{ data.name }}</mat-option>
                       </mat-select> -->
@@ -134,15 +145,28 @@
                               <img class="country-img" src="{{item.image_path}}">
                             {{item.name }}
                           </mat-option>
+
                         </mat-select>
-                      
 
+                      <mat-error *ngIf="registerUser.controls.counTry.touched && registerUser.controls.counTry.invalid">
+                          <mat-error *ngIf="registerUser.controls.counTry.errors.required">Country cannot be empty </mat-error>
+                        </mat-error>
+                      </mat-form-field> 
+                       
 
+                       <!-- <input matInput class="sh-text-capt" type="text"  id="city" formControlName="counTry" [(ngModel)]="vin_Data.country"
+                       value="{{vin_Data.countryy}}" placeholder="Country" required />
+
+                    
                     
                       <mat-error *ngIf="registerUser.controls.counTry.touched && registerUser.controls.counTry.invalid">
                         <mat-error *ngIf="registerUser.controls.counTry.errors.required">Country cannot be empty </mat-error>
                       </mat-error>
-        </mat-form-field>
+        </mat-form-field> -->
+
+
+        
+              
 
 
       
@@ -211,9 +235,14 @@
         <mat-form-field class="w-100 mb-4">
             <input  type="text" matInput placeholder="Username" formControlName="userName" [(ngModel)]="model.username"   (ngModelChange)="usernamecheck(rt.value)"  #rt required>
             <!-- <p>{{ userchk}}</p> -->
-            <mat-error *ngIf="submitted && f.userName.errors" class="invalid-feedback">
-              <span *ngIf="f.userName.errors.required">Username is required</span>
+            <mat-error *ngIf="registerUser.controls.userName.touched && registerUser.controls.userName.invalid">
+                <mat-error *ngIf="registerUser.controls.userName.errors.required">Username cannot be empty </mat-error>
             </mat-error>
+            <mat-error *ngIf="registerUser.controls.userName.hasError('minlength')"> Username should be minimum 3  characters
+              </mat-error>
+              <mat-error *ngIf="registerUser.controls.userName.hasError('pattern')"> Not according to pattern
+                </mat-error>
+            <p *ngIf="check==true">Username already exists</p>
           </mat-form-field>
 
 
@@ -238,6 +267,10 @@
                       <mat-error *ngIf="registerUser.controls.address.touched && registerUser.controls.address.invalid">
                         <mat-error *ngIf="registerUser.controls.address.errors.required">Address cannot be empty </mat-error>
                       </mat-error>
+                      <mat-error *ngIf="registerUser.controls.address.hasError('minlength')"> Username should be minimum 3  characters
+                        </mat-error>
+                        <mat-error *ngIf="registerUser.controls.address.hasError('pattern')"> Not according to pattern
+                          </mat-error>
                     </mat-form-field>
 
                     
@@ -265,11 +298,22 @@
             </div>
             <div class="col-md-4">
                 <mat-form-field class="w-100 mb-4">
-                    <input  type="text"  matInput id="pho" matInput placeholder="Phone" formControlName="phoNe"  name="pass"   [(ngModel)]="model.phone"required>
-                    <mat-error *ngIf="submitted && f.phoNe.errors" class="invalid-feedback">
-                      <span *ngIf="f.phoNe.errors.required">Phone is required</span>
-                    </mat-error>
+                    <input  type="text"  matInput id="pho" matInput placeholder="Phone" formControlName="phoNe" (change)=change2($event)  name="pass"   [(ngModel)]="model.phone" [textMask]="{mask: phoneMask}" required>
+                     <mat-error *ngIf="registerUser.controls.phoNe.touched && registerUser.controls.phoNe.invalid">
+                        <mat-error *ngIf="registerUser.controls.phoNe.errors.required">Phone Number is required
+                        </mat-error>
+                    </mat-error> 
+                    <!-- <mat-error *ngIf="submitted && f.phoNe.errors" class="invalid-feedback"> -->
+                      <!-- <span *ngIf="f.phoNe.errors.required">Phone is required</span> -->
+                    <!-- </mat-error> -->
+                  
+                    <!-- <mat-error *ngIf="contactform.controls.phone.hasError('pattern')"> Numbers Only
+                    </mat-error> -->
+                    <!-- <mat-error *ngIf="isInvalid">please  enter the correct phone number  </mat-error> -->
+                    <div class="custom-error" *ngIf="isInvalid==true">please  enter the correct phone number</div>
+                
                   </mat-form-field>
+
                   <!-- <mat-form-field class="w-100 select mb-4">
                       <mat-select placeholder="Select City"  name="relationship" style="color: #000" id="pho" formControlName="ciTy" [(ngModel)]="model.city"  >
                         <mat-option *ngFor="let city of getCity"  [value]="city.name">{{ city.name }}</mat-option>
@@ -291,9 +335,10 @@
                       <input [type]="hide ? 'password' : 'text'"  matInput placeholder=" Confirm Password"  [(ngModel)]="password2" (focusout)="showAllert()"   type="password" name="pd" formControlName="password2"  required>
                       <i *ngIf= "hide" class="fa fa-eye eye-icon" title="Show Password" (click)="hide = !hide"></i>
                       <i *ngIf= "!hide" class="fa fa-eye-slash eye-icon" title="Hide Password" (click)="hide = !hide"></i>
-                      <mat-error *ngIf="submitted && f.password2.errors" class="invalid-feedback">
-                        <span *ngIf="f.password2.errors.required">confirm password is required</span>
-                      </mat-error>
+                      <mat-error *ngIf="registerUser.controls.password2.touched && registerUser.controls.password2.invalid">
+                          <mat-error *ngIf="registerUser.controls.password2.errors.required">Confirm password cannot be empty </mat-error>
+                        </mat-error>
+                      <div *ngIf="wrongPass==false">password donot match</div>
                     </mat-form-field> 
                
             </div>
