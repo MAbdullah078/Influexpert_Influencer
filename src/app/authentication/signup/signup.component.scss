@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  padding: 53px 0;
   background: url(../../../assets/images/LoginInflu.png)center/100% no-repeat;
 }
 .heading{
@@ -50,4 +50,10 @@
     font-size: 24px !important;
     text-transform: capitalize;
     margin: 5px 40px;
+}
+@media  (max-width: 1200px){
+  .signup-auth {
+    font-size: 13px;
+    margin: 5px 0 0 53px;
+}
 }
