@@ -14,9 +14,9 @@ import {MatSelectModule} from '@angular/material';
 import { EmploymentStatusComponent } from './employment-status/employment-status.component';
 import { AccoladesComponent } from './accolades/accolades.component';
 import { ConnectLinkedinComponent } from './connect-linkedin/connect-linkedin.component';
-
+import { TextMaskModule } from 'angular2-text-mask';
 @NgModule({
-  imports: [CommonModule,FormsModule,ReactiveFormsModule,MatCheckboxModule, MatSelectModule,
+  imports: [CommonModule,FormsModule,ReactiveFormsModule,MatCheckboxModule, MatSelectModule,TextMaskModule,
     LoaderModule, RouterModule.forChild(InfluencersProfileRoutes),
     NgbCarouselModule,MatButtonModule,MatDialogModule,MatFormFieldModule,
     MatInputModule,MatRadioModule,MatDatepickerModule,MatNativeDateModule ],

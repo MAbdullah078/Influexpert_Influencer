@@ -54,16 +54,18 @@
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
               <mat-form-field class="example-full-width" >
-                <input type="text" matInput placeholder="Phone No.*" [(ngModel)]="userdata[0]['phone']" [ngModelOptions]="{standalone: true}">
+                <input type="text" matInput placeholder="Phone No.*" [(ngModel)]="userdata[0]['phone']" [ngModelOptions]="{standalone: true}" [textMask]="{mask: phoneMask}" >
               </mat-form-field>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
                 <mat-form-field class="example-full-width" >
-                  <!-- <input type="text" matInput placeholder="Country*" [(ngModel)]="userdata[0]['country']" [ngModelOptions]="{standalone: true}" > -->
-                  <!--<mat-option *ngFor="let edu of EMS" value="edu.code" >{{edu.show}}</mat-option>-->
-               
-                  <mat-select [(ngModel)]="userdata[0]['country']"
-                          formControlName="country*" value="{{country}}" placeholder="Country">
+                  <!-- <input type="text" matInput placeholder="Country*" [(ngModel)]="userdata[0]['country']" [ngModelOptions]="{standalone: true}" >
+                  <mat-select >
+                  <mat-option *ngFor="let item of allcountry" [value]="item.name" ><img class="country-img" src="{{item.image_path}}">
+                                {{item.name }}</mat-option>
+                              </mat-select> -->
+                  <mat-select 
+                           [(ngModel)]="userdata[0]['country']" placeholder="Country*" [ngModelOptions]="{standalone: true}">
                               <mat-option *ngFor="let item of allcountry" [value]="item.name" >
                     
                                   <img class="country-img" src="{{item.image_path}}">

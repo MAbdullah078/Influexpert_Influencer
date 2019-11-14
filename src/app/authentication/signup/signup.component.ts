@@ -179,7 +179,7 @@ export class SignupComponent implements OnInit {
 
     this.check=false;
     this.isInvalid=false
-this.wrongPass= false;
+// this.wrongPass= false;
     this.fB.logout();
     this.form = this.fb.group({
       uname: [null, Validators.compose([Validators.required])],

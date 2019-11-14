@@ -351,7 +351,7 @@
                       By clicking on the "Register" button below, you understand and agree that the use of this Website, Mobile Apps,
                       AI and ALL other related Technology Platforms are subject to the INFLUENCER <a href="/terms" target="_blank">Terms of Use</a> and <a href="/privacy">Privacy Policy</a>.
                   </mat-slide-toggle>
-                <button type="submit"  class="btn btn-primary sign-in-button" >Sign Up</button>
+                <button type="submit"  class="btn btn-primary sign-in-button" [disabled]="!registerUser.valid" >Sign Up</button>
                 <p class="signup-auth ">Already have account. <a [routerLink]="['/authentication/signin']">Sign in</a></p>
             </div>
              
