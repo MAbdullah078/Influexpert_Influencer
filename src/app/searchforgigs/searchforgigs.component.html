@@ -10,7 +10,7 @@
 <p>title:{{notes.title}}</p>
 <p>urlofproduct:{{notes.urlofproduct}}</p>
 <img class="h-img" src="{{notes.pictures}}" alt="">
-<button (click)="view(notes.id)">view detail</button>
+<button  routerLink="/rfmdetail" [queryParams]="{ rid: notes.id}">view detail</button>
 
 
 </div>

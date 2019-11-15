@@ -63,6 +63,8 @@ import { from } from 'rxjs/observable/from';
 import { ShowcasedetailComponent } from './showcasedetail/showcasedetail.component';
 import { SearchforgigsComponent } from './searchforgigs/searchforgigs.component';
 import { PagerService } from './_guards/paginator.service';
+// import { ComponentNameComponent } from './component-name/component-name.component';
+import { RfmdetailComponent } from './rfmdetail/rfmdetail.component';
 
 // const config= new AuthServiceConfig([
 //   {
@@ -133,7 +135,9 @@ export function provideConfig() {
     
     MyshowcaseComponent,
     ShowcasedetailComponent,
-    SearchforgigsComponent
+    SearchforgigsComponent,
+    // ComponentNameComponent,
+    RfmdetailComponent
             // AccountSettingComponent,
 // SigninComponent
     // PostSignupComponent
