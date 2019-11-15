@@ -1,16 +1,15 @@
 #contact {
     width: 100%;
-    background: #e2edff;
 }
 
 #footerwrap h4 {
-    color: #273c61;
-    margin: 10px 0;
-    font-size: 26px;
+    font-size: 28px;
+    color: #fff;
+    margin: 16px 0;
 }
 
 #footerwrap p {
-    color: #273c61;
+    color: #999;
     margin-bottom: 10px;
     font-size: 15px;
     line-height: 18px;
@@ -20,14 +19,28 @@
 .footer-wrapper ul li a {
     line-height: 35px;
     font-size: 16px;
-    color: #273c61;
+    color: #777;
+    font-size: 19px;
+    text-transform: capitalize;
+    text-decoration: none;
     font-weight: 500;
-}
 
+}
+.footer-wrapper ul li a:hover{
+    color:#fff
+}
+.footer-social-icons img{
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+.title-category{
+    margin-left: 18%!important
+}
 ul.footer-social-icons li {
     display: block;
-    margin-bottom: 10px;
 }
+
 .footer-social-icons li a i {
     color: #ccc;
     font-size: 20px;
@@ -91,14 +104,13 @@ form input[type=text] {
     color: #c00 !important;
 }
 .footer-copyright {
-    border-top:1px solid #ccc;
     padding: 22px;
     width: 100%;
     display: block;
     height: auto;
-    background: #273c61;
+    background: #1d1d1d;
+    color: #ccc;
 }
-
 .footer-copyright a {
     color: #fff;   
     padding: 0 5px;
@@ -107,6 +119,7 @@ form input[type=text] {
     width: 100%;
     display: block;
     min-height: 403px;
+    background:#000
 }
 p.copyright-text {
     margin: 0;
@@ -244,17 +257,19 @@ button#btn-chat {
     margin-left: 90px;
 }
 .social-heading{
-    font-size: 14px;
+    font-size: 21px;
     font-weight: 400;
     margin: 8px 0 10px;
+    color:#fff
 }
 .socail-links img{
-    width: 80%;
-    margin-left: 11px;
+    width: 70%;
+    margin-left: 30px;
     height: 100%;
 }
 .socail-links{
     display: flex;
+    text-align: center;
 }
 @media  (max-width: 1024px){
     .footer-wrapper ul li a {

@@ -55,21 +55,16 @@
                       </mat-error>
                       </mat-form-field>
                         
-                    <mat-form-field class="w-100 mb-4">
-                        <input type="text" matInput  name="address" placeholder="Address" formControlName="address"  [(ngModel)]="model.address"required>
-                        <!-- <mat-error *ngIf="submitted && f.address.errors" class="invalid-feedback">
-                          <span *ngIf="f.address.errors.required">address is required</span>
-                        </mat-error> -->
-                        <mat-error *ngIf="registerUser.controls.address.touched && registerUser.controls.address.invalid">
-                          <mat-error *ngIf="registerUser.controls.address.errors.required">Address cannot be empty </mat-error>
-                        </mat-error>
-                        <mat-error *ngIf="registerUser.controls.address.hasError('minlength')"> Username should be minimum 3  characters
-                          </mat-error>
-                          <mat-error *ngIf="registerUser.controls.address.hasError('pattern')"> Not according to pattern
-                            </mat-error>
-                      </mat-form-field>
+                  
                      
-
+                      <mat-form-field class="w-100 mb-4">
+                        <input matInput class="text-uppercase"  type="text" id="state" [(ngModel)]="vin_Data.state" value="{{vin_Data.state}}"
+                          formControlName="staTe" placeholder="State / Province" required />
+                        <!-- <mat-error *ngIf="register.controls.state.value == ''">
+                          <strong>State cannot be empty</strong>
+                        </mat-error> -->
+        
+                      </mat-form-field>
                          
                     
             </div>
@@ -287,13 +282,18 @@
                           Only 5 Numbers.
                         </mat-error>
                       </mat-form-field>
-                    <mat-form-field class="w-100 mb-4">
-                        <input matInput class="text-uppercase"  type="text" id="state" [(ngModel)]="vin_Data.state" value="{{vin_Data.state}}"
-                          formControlName="staTe" placeholder="State / Province" required />
-                        <!-- <mat-error *ngIf="register.controls.state.value == ''">
-                          <strong>State cannot be empty</strong>
+                      <mat-form-field class="w-100 mb-4">
+                        <input type="text" matInput  name="address" placeholder="Address" formControlName="address"  [(ngModel)]="model.address"required>
+                        <!-- <mat-error *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                          <span *ngIf="f.address.errors.required">address is required</span>
                         </mat-error> -->
-        
+                        <mat-error *ngIf="registerUser.controls.address.touched && registerUser.controls.address.invalid">
+                          <mat-error *ngIf="registerUser.controls.address.errors.required">Address cannot be empty </mat-error>
+                        </mat-error>
+                        <mat-error *ngIf="registerUser.controls.address.hasError('minlength')"> Username should be minimum 3  characters
+                          </mat-error>
+                          <mat-error *ngIf="registerUser.controls.address.hasError('pattern')"> Not according to pattern
+                            </mat-error>
                       </mat-form-field>
                     
             </div>
@@ -340,7 +340,7 @@
                       </mat-error>
                       <mat-error *ngIf="registerUser.controls.userName.hasError('pattern')"> Not according to pattern
                         </mat-error>
-                    <p *ngIf="check==true">Username already exists</p>
+                    <p class="custom-error" *ngIf="check==true">Username already exists</p>
                   </mat-form-field>
                   <mat-form-field class="w-100 mb-4">
                       <input [type]="hide ? 'password' : 'text'"  matInput placeholder=" Confirm Password"  [(ngModel)]="password2" (focusout)="showAllert()"   type="password" name="pd" formControlName="password2"  required>
@@ -349,7 +349,7 @@
                       <mat-error *ngIf="registerUser.controls.password2.touched && registerUser.controls.password2.invalid">
                           <mat-error *ngIf="registerUser.controls.password2.errors.required">Confirm password cannot be empty </mat-error>
                         </mat-error>
-                      <div *ngIf="wrongPass==false">password donot match</div>
+                      <div class="custom-error" *ngIf="wrongPass==false">password donot match</div>
                     </mat-form-field> 
             </div>
             <div class="col-md-3 recaptcha-div">

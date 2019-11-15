@@ -17,19 +17,12 @@
 
     <!-- <div class="col-lg-1 col-md-1 col-sm-1"></div> -->
     <div class="col-lg-12 col-md-12 col-sm-12">
-      <h4 class="profile-heading"><img class="h-img" src="../../assets/images/my profile50px.png" alt=""> Edit Profile</h4></div>
+      <h4 class="profile-heading"><i _ngcontent-lsk-c16="" class="fa fa-user"></i> Edit Profile</h4></div>
     <!-- <div class="col-lg-1 col-md-1 col-sm-1"></div> -->
       
     <ng-container>
       <form class="profile-form text-center " >
-        <div class="w-100 d-inline-block">
-          <div class="position-relative mb-4 float-left">
-              <input type="file"  class="upload-input" (change)="onChange($event)" accept="image/*">
-              <i class="fa fa-camera camera-icon">  </i>
-              <img class="upload-image " src="https://storage.ogrespace.com/final/download_11.jpg">
-
-          </div>
-        </div>
+      
 
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
@@ -85,7 +78,7 @@
                     <input type="text" matInput placeholder="State/province*" [(ngModel)]="userdata[0]['state']" [ngModelOptions]="{standalone: true}" >
                   </mat-form-field>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
                     <mat-form-field class="example-full-width" >
                     <mat-select placeholder="Gender* " [(ngModel)]="userdata[0]['gender']" [ngModelOptions]="{standalone: true}" style="padding-top: 0!important; text-align:initial; width: 100%">
                       <mat-option *ngFor="let rel of genders"  [value]="rel.value">{{rel.show}}</mat-option>
@@ -131,6 +124,14 @@
                         </div> -->
           
           </div>
+          <div class="w-100 d-inline-block">
+              <div class="position-relative mb-4 float-left">
+                  <input type="file"  class="upload-input" (change)="onChange($event)" accept="image/*">
+                  <i class="fa fa-camera camera-icon">  </i>
+                  <img class="upload-image " src="https://storage.ogrespace.com/final/download_11.jpg">
+    
+              </div>
+            </div>
           
           <div class="col-lg-12 col-md-12 col-sm-12 text-center">
             <button type="submit" (click)="editProfile()" class="btn btn-primary">
@@ -138,7 +139,20 @@
             </button>
 
         </div>
-        </div>
+       
+      
+      
+      
+     
+     
+     
+     
+  
+     
+     
+     
+      </div>
+    
       </form>
     </ng-container>
   </div>
