@@ -63,7 +63,7 @@
                         <mat-error *ngIf="registerUser.controls.address.touched && registerUser.controls.address.invalid">
                           <mat-error *ngIf="registerUser.controls.address.errors.required">Address cannot be empty </mat-error>
                         </mat-error>
-                        <mat-error *ngIf="registerUser.controls.address.hasError('minlength')"> Username should be minimum 3  characters
+                        <mat-error *ngIf="registerUser.controls.address.hasError('minlength')"> Address should be minimum 3  characters
                           </mat-error>
                           <mat-error *ngIf="registerUser.controls.address.hasError('pattern')"> Not according to pattern
                             </mat-error>
@@ -361,7 +361,7 @@
                       By clicking on the "Register" button below, you understand and agree that the use of this Website, Mobile Apps,
                       AI and ALL other related Technology Platforms are subject to the INFLUENCER <a href="/terms" target="_blank">Terms of Use</a> and <a href="/privacy">Privacy Policy</a>.
                   </mat-slide-toggle>
-                <button type="submit"  class="btn btn-primary sign-in-button" [disabled]="!registerUser.valid" >Sign Up</button>
+                <button type="submit"  class="btn btn-primary sign-in-button"  >Sign Up</button>
                 <p class="signup-auth ">Already have account. <a [routerLink]="['/authentication/signin']">Sign in</a></p>
             </div>
              

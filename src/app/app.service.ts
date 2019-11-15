@@ -583,7 +583,16 @@ contact_Us(name, email, phone, message) {
    
     return this.http.get('https://apis.rfpgurus.com/zipcode/' + zip + '/').map((response: Response) => response.json());
   }
+  rfm(page){
+    return this.http.get(Config.api+'/rfm/?page=' + page + '').map((response: Response) => response.json());
+  }
   
+rfms(id){
+  return this.http.get(Config.api+'/getonerfm/?id='+id ).map((response: Response) => response.json());
+}
+
+
+
 }
 
 

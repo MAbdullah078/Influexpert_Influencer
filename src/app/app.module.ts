@@ -61,6 +61,8 @@ import { TextMaskModule } from 'angular2-text-mask';
 
 import { from } from 'rxjs/observable/from';
 import { ShowcasedetailComponent } from './showcasedetail/showcasedetail.component';
+import { SearchforgigsComponent } from './searchforgigs/searchforgigs.component';
+import { PagerService } from './_guards/paginator.service';
 
 // const config= new AuthServiceConfig([
 //   {
@@ -130,7 +132,8 @@ export function provideConfig() {
     WhatIsInfluexpaiComponent,
     
     MyshowcaseComponent,
-    ShowcasedetailComponent
+    ShowcasedetailComponent,
+    SearchforgigsComponent
             // AccountSettingComponent,
 // SigninComponent
     // PostSignupComponent
@@ -184,7 +187,7 @@ export function provideConfig() {
   providers: [
     AuthService,
     {provide: AuthServiceConfig,  useFactory: provideConfig},
-    AuthGuard, App_service],
+    AuthGuard, App_service,PagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

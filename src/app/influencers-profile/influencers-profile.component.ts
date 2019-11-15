@@ -207,6 +207,7 @@ this.loadprofilepic();
             // this.profile_image= observer.Message.path;
             this.profile_image= observer['message'];
             console.log('Result is ', this.profile_image);
+            alert(this.profile_image)
         })
     }
 
