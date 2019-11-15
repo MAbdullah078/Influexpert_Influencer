@@ -3,7 +3,7 @@ import {AdminLayoutComponent} from './layouts/admin/admin-layout.component';
 import {AuthLayoutComponent} from './layouts/auth/auth-layout.component';
 import {PostSignupComponent} from "./post-signup/post-signup.component";
 import {ShowcasedetailComponent} from "./showcasedetail/showcasedetail.component";
-
+import{SearchforgigsComponent} from "../app/searchforgigs/searchforgigs.component"
 import {
   BlogComponent,
   ContactComponent,
@@ -177,7 +177,11 @@ export const AppRoutes: Routes = [
   // loadChildren: './myshowcase/showcase.module#MyShowcaseModule' , canActivate: [AuthGuard]
   }
  , {path:'showcasedetail',component: ShowcasedetailComponent}
+,{
+  path:'searchforgigs',component: SearchforgigsComponent
+}
 ]
+
 },
  
 

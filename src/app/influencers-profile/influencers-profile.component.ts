@@ -43,7 +43,7 @@ export class InfluencersProfileComponent implements OnInit {
   userdata1: any = {};
   @ViewChild('username') userNameInputRef: ElementRef;
   profile_image: any;
-
+  public phoneMask = ['+', '1', '-', /[1-9]/, /\d/, /\d/, '-',  /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
   constructor(public dialog: MatDialog, public toastr: ToastsManager, vcr: ViewContainerRef,
               private el: ElementRef,private Http: HttpService,private src_obj: App_service) {
 
@@ -131,7 +131,7 @@ this.loadprofilepic();
       first_name: this.userdata[0]['first_name'],
       last_name:this.userdata[0]['last_name'],
       // education: this.userdata[0]['education'],
-      phone: this.userdata[0]['phone'],
+      phone: this.userdata[0]['phone'].split('_').join('').split('-').join('').split('+').join(''),
       gender: this.userdata[0]['gender'],
       city: this.userdata[0]['city'],
       state: this.userdata[0]['state'],
@@ -141,11 +141,11 @@ this.loadprofilepic();
       }),{headers:headers}
       ).map((response: Response) => response.json()).subscribe(
       data => {
-        this.toastr.success('Profile Updated');
+       swal('sucess',"Your profile is updated sucessfully")
 
       },
       error => {
-        this.toastr.warning('May be some Server Side Error')
+        swal('error',"Some server side issue")
 
       });
   }
@@ -207,6 +207,7 @@ this.loadprofilepic();
             // this.profile_image= observer.Message.path;
             this.profile_image= observer['message'];
             console.log('Result is ', this.profile_image);
+            alert(this.profile_image)
         })
     }
 
