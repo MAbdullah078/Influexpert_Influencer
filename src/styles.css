@@ -125,12 +125,9 @@ top: 25px;
   margin-bottom: .5rem;
   display: none!important;
 }
-
-
-
-
-
-
+.profile-form .mat-form-field-infix {
+  padding: 5px 0!important;
+}
 
 .sh-signup-form-fix.edit-profile .form-group {
   padding-bottom: 0!important;

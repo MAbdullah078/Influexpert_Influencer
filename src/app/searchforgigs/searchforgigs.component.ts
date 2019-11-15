@@ -48,7 +48,8 @@ console.log(id)
 this.serv.rfms(id).subscribe((data) => {
   this.rfmss= data;
   console.log(data)
-
+})
+}
 
 
 
