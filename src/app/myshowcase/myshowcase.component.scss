@@ -33,7 +33,7 @@
   color: #fff;
   background: #000;
   border-radius: 3px;
-  margin: -35px 8px 0;
+  margin: -15px 8px 0;
   padding: 15px;
   -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
@@ -54,17 +54,20 @@
 
 
 #myrfm{
-    padding: 60px 10px;
+    padding: 25px 10px;
     min-height: 90vh;
     .rfm-wrap{
-      width: 300px;
-      border: 1px solid #ccc;
       border-radius: 5px;
-      margin: 10px;
+      box-shadow: 1px 1px 7px 2px #ccc;
+      transition: .3s ease-out;
+      margin: 0 5px 15px;
+      overflow: hidden;
+      cursor: pointer;
+      display: block;
+      position: relative;
       .rfm_img{
         img{
-          border-radius: 5px 5px 0 0;
-          height: 168px;
+          height: 195px;
           object-fit: cover;
           width: 100%;
         }
@@ -92,6 +95,32 @@
     }
     .showcase-container{
       background: #fff;
+      min-height: 90vh;
     }
   }
-  
+  #myrfm .rfm-wrap:hover {
+    transform: scale(1.05);
+  }
+  .content{
+    padding: 10px;
+    font-size: 13px;
+    color: rgba(0,0,0,.54);
+  }
+  .bottom-border{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+  }
+  .delete-icon{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #fff;
+    width: 35px;
+    height: 36px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #000!important;
+  }
