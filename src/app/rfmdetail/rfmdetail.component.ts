@@ -17,10 +17,9 @@ export class RfmdetailComponent implements OnInit {
   registerUser = this.fb.group({
 
 
-    price:['', [Validators.required]],
-    description: ['', Validators.required],
+    price:['', Validators.required],
+    description: ['', Validators.compose([Validators.required, Validators.minLength(30)])]
   })
-
 
 
 
@@ -78,14 +77,18 @@ rfmss:any=[]
         }
     });
 }
+clear(){
+  this.registerUser.reset();
+  // this.registerUser['description'].value='';
+}
 submit(){
   console.log( this.registerUser.controls['price'].value,)
 
-
+ 
   this.serv.biding(this.registerUser.controls['price'].value,this.registerUser.controls['description'].value,this.Catid ).subscribe(Res => {
     Swal({
-      text: 'Please check your email for account activation instructions',
-      title: "CramFrenzy",
+      text: 'Your bid has been posted successfully',
+      title: "Influexpai",
       type: "success",
       showConfirmButton: false,
       confirmButtonColor: "#DD6B55",
@@ -93,9 +96,26 @@ submit(){
       width: '512px',
       timer: 2500
     });
-  });
+  },
+    error=>{
+      // alert('hi')
+    if(error.status==406){
+      
+      Swal({
+        text: 'Bid already made by you',
+        title: "Influexpai",
+        type: "error",
+        showConfirmButton: false,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "OK",
+        width: '512px',
+        timer: 2500
+      });
+    }
+  }
+)
 
-
+this.clear();
 
 
 

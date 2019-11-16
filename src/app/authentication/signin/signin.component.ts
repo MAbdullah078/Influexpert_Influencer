@@ -283,6 +283,15 @@ export class SigninComponent implements OnInit {
          
         
     }
+    else{
+      swal({
+        type: 'error',
+        title: 'Please confirm that you are not a robot',
+        showConfirmButton: false,
+        width: '512px',
+        timer: 2000
+      });
+    }
   }
 
 }
