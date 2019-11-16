@@ -1,0 +1,37 @@
+<div> 
+<p>Title:{{rfmss.title}}</p>
+<img class="h-img" src="{{rfmss.pictures[0]}}" alt="">
+<p>offer_to_influencer{{rfmss.offer_to_influencer}}</p>
+<button type="button" data-toggle="modal" data-target="#myModal">Send proposal</button>
+
+<p>Description: {{rfmss.description}}</p>
+<p>Q1:{{rfmss.question1}}</p>
+<p>Ans:{{rfmss.answer1}}</p>
+<p>Q2:{{rfmss.question2}}</p>
+<p>Ans:{{rfmss.answer2}}</p>
+<p *ngIf="rfmss.question3!='null'">Q3:{{rfmss.question3}}</p>
+<p *ngIf="rfmss.answer3!='null'">Ans:{{rfmss.answer3}}</p>
+<p (click)="goToLink(rfmss.urlofproduct)">{{rfmss.urlofproduct}}</p>
+<p>Related tags:{{rfmss.category[0]}}</p>
+</div>
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Send proposal</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="registerUser" >
+            <input  type="text" matInput placeholder="Price" formControlName="price"  required>
+            <input  type="text" matInput placeholder="Description" formControlName="description"   required>
+            
+            <div class="modal-footer">
+              <button type="submit"  class="btn btn-primary sign-in-button" (click)="submit()" >Send</button>            
+            </div>
+          </form>
+        </div>
+      
+      </div>
+    </div>
+  </div>
