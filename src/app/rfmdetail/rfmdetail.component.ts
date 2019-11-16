@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { App_service } from 'app/app.service';
 import {FormBuilder, FormGroup, Validators, FormControl, NgForm} from '@angular/forms';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Config } from '../config';
+
 import Swal from 'sweetalert2'
 @Component({
   selector: 'app-rfmdetail',
@@ -22,7 +25,7 @@ export class RfmdetailComponent implements OnInit {
 
 
 
-  constructor(private route: ActivatedRoute,public serv :App_service,private fb: FormBuilder
+  constructor(private route: ActivatedRoute,public serv :App_service,private fb: FormBuilder,private http: HttpClient
 
 
     ) { }
@@ -78,7 +81,29 @@ rfmss:any=[]
 submit(){
   console.log( this.registerUser.controls['price'].value,)
 
-}
 
+  this.serv.biding(this.registerUser.controls['price'].value,this.registerUser.controls['description'].value,this.Catid ).subscribe(Res => {
+    Swal({
+      text: 'Please check your email for account activation instructions',
+      title: "CramFrenzy",
+      type: "success",
+      showConfirmButton: false,
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "OK",
+      width: '512px',
+      timer: 2500
+    });
+  });
+
+
+
+
+
+
+
+
+
+
+}
 
 }
