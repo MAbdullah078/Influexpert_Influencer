@@ -591,7 +591,31 @@ rfms(id){
   return this.http.get(Config.api+'/getonerfm/?id='+id ).map((response: Response) => response.json());
 }
 
+biding(price,description,id){
+  this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+    return this.http.post(Config.api + '/bid_on_rfm/',{
 
+      'price':price,
+      'messageToBrand':description,
+      'bidPost':id,
+
+    },
+
+    {headers: headers}).map((response: Response) => {
+    });
+  
+
+
+
+
+
+
+
+
+
+
+}
 
 }
 

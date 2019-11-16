@@ -18,13 +18,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title">Send proposal</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
           <form [formGroup]="registerUser" >
             <input  type="text" matInput placeholder="Price" formControlName="price"  required>
             <input  type="text" matInput placeholder="Description" formControlName="description"   required>
+            
             <div class="modal-footer">
               <button type="submit"  class="btn btn-primary sign-in-button" (click)="submit()" >Send</button>            
             </div>
