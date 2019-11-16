@@ -4,15 +4,19 @@
   padding: 19px 10px;
   min-height: 90vh;
   .rfm-wrap{
-    max-width: 300px;
-    border: 1px solid #ccc;
+    background: #fff;
+    box-shadow: 1px 1px 7px 2px #ccc;
     border-radius: 5px;
-    margin: 10px;
+    overflow: hidden;
+    margin: 0 0 16px;
+    cursor: pointer;
+    transition: .3s ease-out;
     .rfm_img{
       img{
         border-radius: 5px 5px 0 0;
-        height: 168px;
+        height: 195px;
         object-fit: cover;
+        width:100%
       }
     }
     .box {
@@ -71,4 +75,23 @@
     color: #fff;
     padding: 8px;
   }
+}
+.list-card-type {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: rgba(0,0,0,.54);
+}
+.detail{
+  padding: 10px;
+  display: flow-root;
+}
+.search-divison{
+  padding: 15px 20px;
+}
+.rfm-wrap:hover{
+  transform: scale(1.05);
+}
+.rfm-wrap:focus{
+  outline: 0;
 }

@@ -5,32 +5,24 @@
     <div class="rfm-heading">
         <h2 class="text-center">Search For Work</h2>
 </div>
-<div class="d-flex flex-row flex-wrap justify-content-center">
-<div  class="rfm-wrap" *ngFor="let notes of rfms">
+<div class="search-divison">
+<div class="row">
+<div  class="col-md-4" *ngFor="let notes of rfms" >
+    <div class="rfm-wrap"  routerLink="/rfmdetail" [queryParams]="{ rid: notes.id}">
      <div class="rfm_img">
             <img src="{{notes.pictures}}" alt="Notes">
         </div>
-<div class="mt-4 p-2">
-        <h4 class="m-0"><b>Brand name: </b> {{notes.get_name}}</h4>
+<div class="detail">
+      <div class="list-card-type pull-left">{{notes.get_name}}</div>
 <!-- <p class="m-0"><b>Brand name:</b>{{notes.brand_name}}</p> -->
-<p class="m-0"><b>category:</b>{{notes.category[0]}}</p>
-<button  routerLink="/rfmdetail" [queryParams]="{ rid: notes.id}">view detail</button>
+<div class="list-card-type pull-right">{{notes.category[0]}}</div>
+<!-- <button  routerLink="/rfmdetail" [queryParams]="{ rid: notes.id}">view detail</button> -->
 </div>
 </div>
 </div>
-<!-- <div *ngFor="let notes of rfms">
-<p>Brand name:{{notes.brand_name}}</p>
-<p>category:{{notes.category[0]}}</p>
-<p>Description:{{notes.description}}</p>
-<p>id={{notes.id}}</p>
-<p>offer_to_influencer:{{notes.offer_to_influencer}}</p>
-<p><p>category:{{notes.category[0]}}</p>
-<p>title:{{notes.title}}</p>
-<p>urlofproduct:{{notes.urlofproduct}}</p>
-<img class="h-img" src="{{notes.pictures}}" alt="">
-
-
-</div> -->
+</div>
+</div>
+</div>
 <div class="row">
         <div class="col-md-12">
             <ul class="pagination justify-content-center">
@@ -87,6 +79,5 @@
               </li>
             </ul>
           </div> -->
-</div>
 
 </section>

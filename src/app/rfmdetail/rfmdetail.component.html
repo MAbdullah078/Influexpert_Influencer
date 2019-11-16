@@ -1,20 +1,81 @@
-<app-loader></app-loader>
-<div> 
-<p>Title:{{rfmss.title}}</p>
-<img class="h-img" src="{{rfmss.pictures[0]}}" alt="">
-<p>offer_to_influencer{{rfmss.offer_to_influencer}}</p>
-<button type="button" data-toggle="modal" data-target="#myModal">Send proposal</button>
+<section class="rfm-section">
+<div class="container card"> 
+  <div class="rfm-heading">
+    <h2>Rfm Heading</h2>
+  </div>
+  <div class=" row mt-3">
+    <div class="col-md-7">
 
-<p>Description: {{rfmss.description}}</p>
-<p>Q1:{{rfmss.question1}}</p>
+      <div class="col-md-12 p-title">{{rfmss.title}}
+      </div>
+      <div class="col-md-12"><img class="h-img" src="{{rfmss.pictures[0]}}" alt="">
+      </div>
+
+  </div>
+<div class="col-md-5">
+  <div class="side-box">
+    <p>offer_to_influencer{{rfmss.offer_to_influencer}}</p>
+    <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#myModal">Send proposal</button>
+</div>
+</div>
+<div class="col-md-12">
+    <div class="description-para ">
+        <label>Description:</label>
+        <p>{{rfmss.description}}</p>
+      </div>
+      <div class="accordion d-flex" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <span class="question"><i class="fa fa-question-circle"></i> N0 1 </span>{{rfmss.question1}}
+                </button>
+              </h2>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                  {{rfmss.answer1}}
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <span class="question"><i class="fa fa-question-circle"></i> N0 2: </span>  {{rfmss.question2}}
+                 
+                </button>
+         
+              </h2>
+          
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                  {{rfmss.answer2}}
+              </div>
+            </div>
+          </div>
+        
+        </div>
+<!-- <p>Q1:{{rfmss.question1}}</p>
 <p>Ans:{{rfmss.answer1}}</p>
 <p>Q2:{{rfmss.question2}}</p>
-<p>Ans:{{rfmss.answer2}}</p>
-<p *ngIf="rfmss.question3!='null'">Q3:{{rfmss.question3}}</p>
-<p *ngIf="rfmss.answer3!='null'">Ans:{{rfmss.answer3}}</p>
-<p (click)="goToLink(rfmss.urlofproduct)">{{rfmss.urlofproduct}}</p>
-<p>Related tags:{{rfmss.category[0]}}</p>
+<p>Ans:{{rfmss.answer2}}</p> -->
+<!-- <p *ngIf="rfmss.question3!='null'">Q3:{{rfmss.question3}}</p>
+<p *ngIf="rfmss.answer3!='null'">Ans:{{rfmss.answer3}}</p> -->
+<div class="link">
+<img src="../../assets/images/header-images/worldwide.png" (click)="goToLink(rfmss.urlofproduct)">{{rfmss.urlofproduct}}
 </div>
+<div class="realted-div">
+<h6>Tags</h6>
+<ul class="list-unstyled d-flex">
+ <li class="tags-li"><a>{{rfmss.category[0]}}</a></li>
+</ul>
+</div>
+</div>
+</div>
+
   <div class="modal fade" id="myModal">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -42,7 +103,8 @@
             </div>
           </form>
         </div>
-      
+      </div>
       </div>
     </div>
   </div>
+  </section>
