@@ -3,8 +3,9 @@
     <div class="rfm-heading">
         <h2 class="text-center">Search For Work</h2>
 </div>
-<div class="d-flex flex-row flex-wrap justify-content-center">
-<div  class="rfm-wrap" *ngFor="let notes of rfms">
+<div class="row">
+<div  class="col-md-4" *ngFor="let notes of rfms">
+    <div class="rfm-wrap">
      <div class="rfm_img">
             <img src="{{notes.pictures}}" alt="Notes">
         </div>
@@ -27,7 +28,7 @@
 </div>
 </div>
 </div>
-
+</div>
 </div>
 <div class="row">
         <div class="col-md-12">
