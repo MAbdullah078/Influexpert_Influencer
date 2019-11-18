@@ -5,6 +5,7 @@ import {PostSignupComponent} from "./post-signup/post-signup.component";
 import {ShowcasedetailComponent} from "./showcasedetail/showcasedetail.component";
 import{SearchforgigsComponent} from "../app/searchforgigs/searchforgigs.component"
 import{RfmdetailComponent} from "./rfmdetail/rfmdetail.component"
+import{LinkedprofileComponent} from "./linkedprofile/linkedprofile.component"
 import {
   BlogComponent,
   ContactComponent,
@@ -183,6 +184,9 @@ export const AppRoutes: Routes = [
 },
 {
   path:'rfmdetail',component: RfmdetailComponent
+},
+{
+  path:'Linkedprofile',component: LinkedprofileComponent
 }
 ]
 

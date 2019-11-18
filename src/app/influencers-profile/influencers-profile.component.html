@@ -128,9 +128,10 @@
           </div>
           <div class="w-100 d-inline-block">
               <div class="position-relative mb-4 float-left">
-                  <input type="file"  class="upload-input" (change)="onChange($event)" accept="image/*">
+                  <input type="file"  class="upload-input" (change)="onChange($event)"(change)="readUrl($event)"  accept="image/*">
                   <i class="fa fa-camera camera-icon">  </i>
-                  <img class="upload-image " src="../../assets/images/profile-png-icon-15.jpg">
+                  <img class="upload-image " src="{{profile_image}}"  onError="this.src=' ../../assets/images/profile-png-icon-15.jpg'">
+                  <!-- ../../assets/images/profile-png-icon-15.jpg -->
     
               </div>
             </div>
