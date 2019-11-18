@@ -434,7 +434,11 @@ padding: 10px;
   width: 130px;
   height: 130px;
   object-fit: cover;
+  border-radius: 50%;
 }
 ::-webkit-file-upload-button{
   cursor: pointer;
+}
+.update-button{
+  padding: 9px 63px;
 }

@@ -148,7 +148,7 @@ this.loadprofilepic();
       ).map((response: Response) => response.json()).subscribe(
       data => {
        swal('sucess',"Your profile is updated sucessfully")
-
+this.loadprofilepic();
       },
       error => {
         swal('error',"Some server side issue")
