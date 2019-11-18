@@ -7,9 +7,12 @@
     box-shadow: 0 4px 20px 0 rgba(0,0,0,.14),0 7px 10px -5px rgba(0,0,0,.4)!important;
 }
 .p-title{
-  font-size: 24px;
+  font-size:18px;
   font-weight: 500;
   margin: 10px 0;
+}
+.p-title span{
+  font-size: 14px;
 }
 .description-para{
   margin-top: 10px;
@@ -20,16 +23,15 @@
   font-weight: 500;
 }
 .side-box{
-  padding: 33px;
+  padding: 10px;
   margin: 0;
   border: 1px solid #999;
   outline: 0;
   width: 356px;
-  position: absolute;
-  top: 58px;
-  left: 38px;
   background-color: #fcf7f7d6;
   text-align: center;
+  border-radius: 3px;
+  margin: 0 auto;
 }
 .description-para p {
   margin: 0;
@@ -42,8 +44,9 @@
   letter-spacing: .3px;
 }
 .h-img{
-  width: 250px;
-  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 .rfm-section{
   margin-top: 2%;
@@ -74,7 +77,7 @@
     color: #e20074;
 }
 .question-button:focus{
-  outline: 0;
+  box-shadow: none;
 }
 .link{
   display: inline-block;
@@ -83,4 +86,28 @@
   padding: 5px;
   box-shadow: 0 2px 6px #ccc;
   cursor: pointer;
+}
+.purposal-heading{
+  position: relative;
+    color: #fff;
+    background: #000;
+    width: 92%;
+    margin: -20px auto auto;
+    border: none;
+    border-radius: 5px;
+}
+.purposal-heading .close{
+  color: #fff;
+  opacity: 1;
+  text-shadow: none;
+}
+.send-purposal-button{
+  padding: 11px 58px;
+}
+.offer-influencer{
+  text-align: initial;
+  font-size: 20px;
+}
+.inner-contant{
+  padding: 20px;
 }
