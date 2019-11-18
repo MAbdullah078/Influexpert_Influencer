@@ -65,6 +65,7 @@ import { SearchforgigsComponent } from './searchforgigs/searchforgigs.component'
 import { PagerService } from './serv/paginator.service';
 // import { ComponentNameComponent } from './component-name/component-name.component';
 import { RfmdetailComponent } from './rfmdetail/rfmdetail.component';
+import { LinkedprofileComponent } from './linkedprofile/linkedprofile.component';
 
 // const config= new AuthServiceConfig([
 //   {
@@ -137,7 +138,8 @@ export function provideConfig() {
     ShowcasedetailComponent,
     SearchforgigsComponent,
     // ComponentNameComponent,
-    RfmdetailComponent
+    RfmdetailComponent,
+    LinkedprofileComponent
             // AccountSettingComponent,
 // SigninComponent
     // PostSignupComponent
