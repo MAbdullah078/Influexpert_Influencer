@@ -265,7 +265,12 @@ export class SigninComponent implements OnInit {
         },
         error1 => {
           if(error1.status==400){
-            swal('Unable to log in with provided credentials.')
+            swal(
+              'Invalid',
+              'Username or Password',
+              'error'
+            )
+          
           }
           else   if(error1.status==500 || error1.status==502){
             swal('Please Wait we are working on it','','warning')
