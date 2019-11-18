@@ -232,7 +232,7 @@ export class CreateShowcaseComponent implements OnInit  {
 
         Swal('ShowCase successfully Created', '', 'success');
 
-          this.router.navigate(['/profile'])
+          this.router.navigate(['/myshowcase'])
 
       },
       error => {

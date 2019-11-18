@@ -113,6 +113,11 @@ checkuser(check){
     return response.json();
 });
 }
+checkemail(check){
+  return this.http.get(Config.api+ '/user_email_exist/'+check ).map((response: Response) => {
+    return response.json();
+});
+}
 get_profile_pic(){
   this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
   if ( this.currentUser != null ){

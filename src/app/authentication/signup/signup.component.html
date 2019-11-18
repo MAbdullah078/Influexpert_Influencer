@@ -305,12 +305,13 @@
             </div>
             <div class="col-md-6">
                 <mat-form-field class="w-100 mb-4">
-                    <input  type="text" matInput placeholder="Email" formControlName="eMail" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  [(ngModel)]="model.email" required>
+                    <input  type="text" matInput placeholder="Email" formControlName="eMail" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  [(ngModel)]="model.email" (ngModelChange)="emailcheck(em.value)"  #em required>
                     <mat-error *ngIf="registerUser.controls.eMail.touched && registerUser.controls.eMail.invalid">
                         <mat-error *ngIf="registerUser.controls.eMail.errors.required">Email cannot be empty </mat-error>
                       </mat-error>
                     <mat-error *ngIf="registerUser.controls.eMail.hasError('pattern')"> Invalid Email
                       </mat-error>
+                      <p class="custom-error" *ngIf="emails==true">Email already exists</p>
                   </mat-form-field>
                   <mat-form-field class="w-100 mb-4">
                       <input [type]="hide ? 'password' : 'text'"  matInput placeholder="Password" formControlName="passWord"   name="pass" [(ngModel)]="model.password"  required>
