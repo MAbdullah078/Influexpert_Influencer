@@ -62,7 +62,7 @@ import { TextMaskModule } from 'angular2-text-mask';
 import { from } from 'rxjs/observable/from';
 import { ShowcasedetailComponent } from './showcasedetail/showcasedetail.component';
 import { SearchforgigsComponent } from './searchforgigs/searchforgigs.component';
-import { PagerService } from './_guards/paginator.service';
+import { PagerService } from './serv/paginator.service';
 // import { ComponentNameComponent } from './component-name/component-name.component';
 import { RfmdetailComponent } from './rfmdetail/rfmdetail.component';
 

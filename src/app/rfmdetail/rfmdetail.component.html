@@ -6,12 +6,12 @@
   <div class=" row mt-3">
     <div class="col-md-7">
 
-    <div class="col-md-12 p-title">{{rfmss.title}}
+      <div class="col-md-12 p-title">{{rfmss.title}}
       </div>
       <div class="col-md-12"><img class="h-img" src="{{rfmss.pictures[0]}}" alt="">
       </div>
 
-</div>
+  </div>
 <div class="col-md-5">
   <div class="side-box">
     <p>offer_to_influencer{{rfmss.offer_to_influencer}}</p>
@@ -70,11 +70,12 @@
 <div class="realted-div">
 <h6>Tags</h6>
 <ul class="list-unstyled d-flex">
- <li class="tags-li"><a >{{rfmss.category[0]}}</a></li>
+ <li class="tags-li"><a>{{rfmss.category[0]}}</a></li>
 </ul>
 </div>
 </div>
 </div>
+
   <div class="modal fade" id="myModal">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -84,11 +85,21 @@
         </div>
         <div class="modal-body">
           <form [formGroup]="registerUser" >
-            <input  type="text" matInput placeholder="Price" formControlName="price"  required>
+              <mat-form-field>
+            <input  type="number" min="1" oninput="validity.valid||(value='');" matInput placeholder="Enter Bid amount (US $)" formControlName="price"  required>
+            <mat-error *ngIf="registerUser.controls.price.touched && registerUser.controls.price.invalid">
+              <mat-error *ngIf="registerUser.controls.price.errors.required">Price cannot be empty </mat-error>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
             <input  type="text" matInput placeholder="Description" formControlName="description"   required>
-            
+            <mat-error *ngIf="registerUser.controls.description.touched && registerUser.controls.description.invalid">
+              <mat-error *ngIf="registerUser.controls.description.errors.required">Description  cannot be empty </mat-error>
+          </mat-error>
+          <mat-error *ngIf="registerUser.controls.description.hasError('minlength')">Description  should be atleast 30 characters</mat-error>
+        </mat-form-field>
             <div class="modal-footer">
-              <button type="submit"  class="btn btn-primary sign-in-button" (click)="submit()" >Send</button>            
+              <button type="submit"  class="btn btn-primary sign-in-button" (click)="submit(f)" [disabled]="!registerUser.valid">Send</button>            
             </div>
           </form>
         </div>

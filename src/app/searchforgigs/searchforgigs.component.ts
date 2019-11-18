@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {App_service} from 'app/app.service'
-import { PagerService } from '../_guards/paginator.service';
+import { PagerService } from '../serv/paginator.service';
 
 import { id } from '@swimlane/ngx-charts/release/utils';
 @Component({
@@ -26,15 +26,15 @@ rfmss:any=[]
       this.rfms= data.results;
       // console.log(data.results[0]['id'])
       console.log(this.rfms)
-      this.pager = this.pagerService.getPager(this.rfms['totalItems'], page, 10);
+      this.pager = this.pagerService.getPager(this.rfms['totalPages'], page, 10);
     })
   }
 
-  setToprated(page: number) {
-    if (page < 1 || page > this.pager.totalPages) {
-      return;
-    }
-  }
+  // setToprated(page: number) {
+  //   if (page < 1 || page > this.pager.totalPages) {
+  //     return;
+  //   }
+  // }
     // setPagenotes(page: number) {
     //   if (page < 1 || page > this.pager.totalPages) {
     //     return;
