@@ -56,6 +56,21 @@
     text-transform: capitalize;
     margin: 5px 40px;
 }
+.country-img{
+  width:25px
+}
+.country-img span{
+  font-size: 13px;
+}
+.signup-auth a,
+.toggle-para a{
+  color: #337ab7
+}
+.signup-auth a:hover,
+.toggle-para a:hover{
+  color: #e20074!important;
+  text-decoration: underline;
+}
 @media  (max-width: 1200px){
   .signup-auth {
     font-size: 13px;

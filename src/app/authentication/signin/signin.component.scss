@@ -68,6 +68,21 @@
 .sign-in-button:hover{
   box-shadow: none!important
 }
+.sign-up,
+.privacy a{
+  color:#337ab7
+}
+.sign-up:hover,
+.privacy a:hover{
+  color: #e20074!important;
+  text-decoration: underline;
+}
+.signup-label{
+  margin: 8px 0;
+  font-size: 16px;
+  display: block;
+  font-weight: 600;
+}
 @media  (max-width: 992px){
   .form-content {
     width: 400px;

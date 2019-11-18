@@ -271,6 +271,13 @@ button#btn-chat {
     display: flex;
     text-align: center;
 }
+.text-center privacy a{
+
+}
+.pricing-ul img{
+    width: 20px;
+    height: 20px;
+}
 @media  (max-width: 1024px){
     .footer-wrapper ul li a {
         font-size: 14px;
