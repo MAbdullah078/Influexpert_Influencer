@@ -301,3 +301,18 @@ button#btn-chat {
         font-size: 12px;
     }
 }
+@media  (max-width: 1400px){
+    .social-heading {
+        font-size: 18px;
+    }
+}
+@media  (max-width: 1200px){
+    .social-heading {
+        font-size: 15px;
+    }
+}
+@media  (max-width: 1024px){
+    .footer-upper {
+        padding: 18px 18px;
+    }
+}

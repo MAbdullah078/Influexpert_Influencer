@@ -30,7 +30,7 @@
   margin: 0;
   border: 1px solid #999;
   outline: 0;
-  width: 356px;
+ max-width: 356px;
   background-color: #fcf7f7d6;
   text-align: center;
   border-radius: 3px;
@@ -113,4 +113,16 @@
 }
 .inner-contant{
   padding: 20px;
+}
+@media screen and (max-width: 1200px){
+  .side-box{
+    max-width: 356px;
+  }
+  .offer-influencer {
+    font-size: 17px;
+  }
+  .description-para p {
+    font-size: 12px;
+    line-height: 23px;
+}
 }
