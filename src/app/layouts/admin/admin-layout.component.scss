@@ -334,4 +334,12 @@ fieldset {
 }
 .header-dropdown  a{
   padding: 11px 34px 6px 15px!important;
+  background: #fff;
+  color: #000;
+}
+.nav-item{
+  border-left: 1px solid #000!important;
+}
+.nav-item:hover .header-dropdown{
+  display: block;
 }
