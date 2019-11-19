@@ -80,18 +80,21 @@
                 Email is required
               </div> -->
             <!-- </div> -->
-            <mat-form-field class="w-100 mb-4">
-            <input type="text"matInput name="subscription" formControlName="Email" placeholder="Email Address" required>
-            <mat-error *ngIf="registerUser.controls.Email.touched && registerUser.controls.Email.invalid">
+            <!-- <mat-form-field class="w-100 mb-4"> -->
+            <input type="text" name="subscription" formControlName="Email" placeholder="Email Address" required>
+            <!-- <mat-error *ngIf="registerUser.controls.Email.touched && registerUser.controls.Email.invalid">
               <mat-error *ngIf="registerUser.controls.Email.errors.required">Email cannot be empty </mat-error>
             </mat-error>
           <mat-error *ngIf="registerUser.controls.Email.hasError('pattern')"> Invalid Email
             </mat-error>
-          </mat-form-field>
+          </mat-form-field> -->
             <button class="btn btn-primary subscribe-btn" [disabled]="!registerUser.valid" (click)="sub()">
               <i _ngcontent-iap-c3="" aria-hidden="true" class="fa fa-arrow-up" ></i>
             </button>
-
+            <p *ngIf="Email.touched && !Email.valid">
+              <span *ngIf="registerUser.controls.Email.errors.pattern" class="alert alert-danger">
+                Invalid Email Address.
+              </span></p>
          
             <!-- <a href="https://play.google.com/store/apps/details?id=com.brainplow.influxexpai" target="_blank">
               <img src="../../assets/images/Adroid-Badge.png" style="width: 150px">
