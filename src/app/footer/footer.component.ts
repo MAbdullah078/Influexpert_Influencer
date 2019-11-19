@@ -41,9 +41,15 @@ sub() {
     email: this.registerUser.controls['Email'].value
    }).subscribe((response: Response) => {
                if(response.status==202){
-              swal('You will get alerts from our Newsletter')
-
-          }
+                swal({
+                  type: 'success',
+                  title: 'You have been subscribed successfully',
+                  showConfirmButton: false,
+                  width: '512px',
+                  timer: 2000
+                });
+              }
+              this.registerUser.reset();
    });
   }
 

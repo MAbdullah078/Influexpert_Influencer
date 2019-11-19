@@ -73,16 +73,23 @@
             Millions of Influencers. InfluExpert.AI is the most comprehensive source of Bloggers, Content Creaters, Social Media and Vetted Opt-In Influencers. Bleeding Edge Artificial Intelligence.
             <a class="footer-readmore" routerLink="/what-is-InfluExpAI">Read More</a>
           </p>
-          <form class="form-inline" style="position: relative">
+          <form class="form-inline" [formGroup]="registerUser" style="position: relative">
             <!-- <input type="text" name="subscription" placeholder="Email Address" #Email = "ngModel"  required pattern="^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$"> -->
             <!-- <div *ngIf="Email.invalid && (Email.dirty || Email.touched)"> -->
               <!-- <div *ngIf="Email.errors.required">
                 Email is required
               </div> -->
             <!-- </div> -->
-            <input type="text" name="subscription" placeholder="Email Address">
-            <button class="btn btn-primary subscribe-btn">
-              <i _ngcontent-iap-c3="" aria-hidden="true" class="fa fa-arrow-up"></i>
+            <mat-form-field class="w-100 mb-4">
+            <input type="text"matInput name="subscription" formControlName="Email" placeholder="Email Address" required>
+            <mat-error *ngIf="registerUser.controls.Email.touched && registerUser.controls.Email.invalid">
+              <mat-error *ngIf="registerUser.controls.Email.errors.required">Email cannot be empty </mat-error>
+            </mat-error>
+          <mat-error *ngIf="registerUser.controls.Email.hasError('pattern')"> Invalid Email
+            </mat-error>
+          </mat-form-field>
+            <button class="btn btn-primary subscribe-btn" [disabled]="!registerUser.valid" (click)="sub()">
+              <i _ngcontent-iap-c3="" aria-hidden="true" class="fa fa-arrow-up" ></i>
             </button>
 
          

@@ -173,10 +173,10 @@ export function provideConfig() {
     HttpClientModule,
     MatButtonModule, MatFormFieldModule, MatInputModule,
     RouterModule.forRoot(AppRoutes),
-    FormsModule,
+  
     CommonModule,
     HttpModule,
-    ReactiveFormsModule,
+    
     ToastModule.forRoot(),
     TranslateModule.forRoot({
       loader: {

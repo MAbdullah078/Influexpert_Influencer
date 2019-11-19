@@ -485,6 +485,7 @@ export class SignupComponent implements OnInit {
         timer: 2000
       });
     }
+    
   }
   showAllert(){
     if(this.model.password!= this.password2){
