@@ -87,6 +87,10 @@ form input[type=text] {
     font-weight: 700;
     height: auto!important;
     width: 100%;
+    box-shadow: none;
+}
+.form-inline input:focus{
+    outline:0
 }
 
 .subscribe-btn {
