@@ -337,9 +337,9 @@ fieldset {
   background: #fff;
   color: #000;
 }
-.nav-item{
-  border-left: 1px solid #000!important;
-}
 .nav-item:hover .header-dropdown{
   display: block;
+}
+.dropdown-item span:focus{
+  outline: 0;
 }

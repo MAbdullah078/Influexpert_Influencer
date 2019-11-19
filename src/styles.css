@@ -658,6 +658,24 @@ about-text {
   padding: 20px 15px!important;
   font-size: 18px;
 }
+.terms-container-fluid{
+  background: #fafafa
+}
+.inner-div{
+  background: #fff;
+  padding: 0 30px;
+  margin: 49px 0;
+}
+.inner-div hr{
+  width: 80px;
+  border-width: 2px;
+  margin: 0 auto;
+  border-color: #02b6ff;
+  padding-bottom: 10px;
+}
+.inner-div strong{
+  font-size:22px
+}
 
 /* End Setting page */
 /* Stat Social Page */
