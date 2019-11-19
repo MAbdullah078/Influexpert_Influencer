@@ -19,6 +19,7 @@
   padding: 5px;
   width: 50%;
   margin: 0 auto;
+  box-shadow: 0 3px 10px #ccc;
 }
 .inner-content img{
   width: 45px;
@@ -35,6 +36,9 @@
   display: flex;
   flex-direction: row;
   cursor: pointer;
+}
+.border-box:focus{
+  outline: 0;
 }
 .text-div{
   margin-left: 12px;

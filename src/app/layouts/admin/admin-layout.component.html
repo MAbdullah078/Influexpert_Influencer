@@ -47,10 +47,12 @@
             <img class="nav-img" src="../../../assets/images/side-menu/multiple-variable-bars-data-graphic.png">
             Linked Profile
           </button> -->
-          <a class="navigation-link" routerLink='/Linkedprofile'>
+          <li class="navigation-item" appAccordionLink >
+          <a class="navigation-link"  routerLinkactive="active-route" appAccordionToggle  routerLink='/Linkedprofile'>
             <img class="nav-img" src="../../../assets/images/my ogrspace.png">
             Linked Profile
           </a>
+        </li>
           <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <ul class="dropdown-ul">
               <li><a  [routerLink]="['/connect-facebook']"><img src="../../../assets/images/header-images/Fb@1x-.png">Facebook</a></li>
@@ -65,7 +67,7 @@
 
 
         <li class="navigation-item" appAccordionLink >
-          <a class="navigation-link" routerLinkactive="active-route" appAccordionToggle [routerLink]="['/create-showcase']" >
+          <a class="navigation-link" routerLinkactive="active-route" appAccordionToggle  appAccordionToggle  [routerLink]="['/create-showcase']" >
             <img class="nav-img" src="../../../assets/images/Property details.png">
             Create ShowCase
           </a>
@@ -78,7 +80,7 @@
         </li> 
         <li class="navigation-item" appAccordionLink >
           <a class="navigation-link" routerLinkactive="active-route" appAccordionToggle [routerLink]="['/searchforgigs']" >
-            <img class="nav-img" src="../../../assets/images/Property details.png">
+            <img class="nav-img" src="../../../assets/images/Icons/search for gig.png">
             SearchForGigs
           </a>
         </li>
@@ -197,7 +199,7 @@
       <span class="navbar-heading hidden-xs-down">{{options?.heading}}</span>
       <span class="mr-auto"></span>
       <ul class="navbar-nav">
-        <li class="nav-item" ngbDropdown>
+        <li class="nav-item show" ngbDropdown>
           <a href="javascript:;" class="nav-link hov-drop" ngbDropdownToggle>
             <img [src]="profile_image" class="navbar-avatar rounded-circle" onError="this.src=' ../../assets/images/profile-png-icon-15.jpg'" title="user">
             <!--<img src="{{currentUser.image_url}}"   class="navbar-avatar rounded-circle" alt="user" title="user">-->
@@ -210,12 +212,12 @@ My InfluExpAI <i class="fa fa-angle-down"></i>
           <!-- </a> -->
           <div class="dropdown-menu dropdown-menu-right header-dropdown">
 
-            <a class="dropdown-item" href="javascript:;">
+            <a class="dropdown-item" href="javascript:;"  [routerLink]="['/profile']">
               <img class="nav-img"  src="../../../assets/images/my profile50px.png">
-              <span routerLink='/profile'>Profile</span>
+              <span >Profile</span>
               
             </a>
-            <a class="dropdown-item" href="javascript:;" routerLink='/Linkedprofile'router id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="dropdown-item" href="javascript:;" routerLink='/Linkedprofile' router id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img class="nav-img" src="../../../assets/images/my ogrspace.png">
                 Linked Profile
               </a>
@@ -231,23 +233,23 @@ My InfluExpAI <i class="fa fa-angle-down"></i>
               </div> -->
             
 
-            <a class="dropdown-item" href="javascript:;">
+            <a class="dropdown-item" href="javascript:;" [routerLink]="['/create-showcase']">
                 <img class="nav-img" src="../../../assets/images/Property details.png">
                 <span routerLink='/create-showcase'>Create ShowCase</span>
              
 
               </a>
-              <a class="dropdown-item" href="javascript:;">
+              <a class="dropdown-item" href="javascript:;" [routerLink]="['/myshowcase']">
                   <img class="nav-img" src="../../../assets/images/how it works@25px.png">
                   <span routerLink='/myshowcase'>My ShowCase</span>
                   
                 </a>
-                <a class="dropdown-item" href="javascript:;">
-                    <img class="nav-img" src="../../../assets/images/Property details.png">
+                <a class="dropdown-item" href="javascript:;"  [routerLink]="['/searchforgigs']">
+                    <img class="nav-img" src="../../../assets/images/Icons/search for gig.png">
                     <span routerLink='/myshowcase'>SearchForGigs</span>
                     
                   </a>
-                  <a class="dropdown-item" href="javascript:;">
+                  <a class="dropdown-item" href="javascript:;"  [routerLink]="['/settings']" >
                       <img class="nav-img" src="../../../assets/images/ogrespace as service@25px.png">
                       <span routerLink='/myshowcase'>Setting</span>
                       
@@ -277,7 +279,7 @@ My InfluExpAI <i class="fa fa-angle-down"></i>
               <img class="nav-img" src="../../../assets/images/bell.png">
               <span>Notifications</span>
             </a>
-            <a class="dropdown-item" href="javascript:;">
+            <a class="dropdown-item" href="javascript:;" (click)="signout()"[routerLink]="['/authentication/signin']" >
               <img class="nav-img" src="../../../assets/images/signout50px.png">
               <span (click)="signout()">Signout</span>
             </a>
