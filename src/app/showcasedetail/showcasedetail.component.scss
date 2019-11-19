@@ -1,15 +1,16 @@
 .rfm-details{
     .header_rfm{
-      margin-top: -55px;
+      margin-top: -45px;
       background:#000;
       border-radius: 5px;
       box-shadow: 0 4px 5px #Ccc;
       margin-bottom: 20px;
     }
-    margin: 100px auto;
+    margin: 38px auto;
     max-width: 900px;
     box-shadow: 0 0 5px #ccc;
     padding: 20px;
+    background: #fff;
       .mat-form-field{
         width: 100%;
         input{
@@ -45,5 +46,8 @@
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+.update-showprofile{
+  padding: 7px 56px;
 }
 

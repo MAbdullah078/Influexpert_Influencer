@@ -495,6 +495,7 @@ pts-right{
   zoom: 2;
   color: #fff;
 }
+
 .social li:hover i{
   color: #cc0000;
 }
@@ -676,7 +677,9 @@ about-text {
 .inner-div strong{
   font-size:22px
 }
-
+.mat-input-element:disabled {
+  color: rgba(0,0,0,.38)!important;
+}
 /* End Setting page */
 /* Stat Social Page */
 .cannot-upload{
@@ -808,7 +811,7 @@ about-text {
   display: none;
 }
 .mat-step-header .mat-step-label{
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   color: rgba(0,0,0,.54)!important;
 }
@@ -918,6 +921,11 @@ about-text {
   }
   .social li{
     margin: 0 2px;
+  }
+}
+@media (max-width:1200){
+  .mat-step-header .mat-step-label{
+    font-size: 12px;
   }
 }
 

@@ -30,7 +30,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
-  min-width: 255px;
+  width: 36%;
   margin-bottom: 20px;
   margin-left: 15px;
   display: flex;
@@ -46,4 +46,27 @@
 }
 .link-div{
   justify-content: center;
+}
+@media (max-width: 1400px){
+  border-box{
+    width: 40%;
+
+  }
+}
+@media (max-width: 1200px){
+  .link-profile-container {
+    background: #fff;
+    padding: 5px;
+    width: 60%;
+}
+.border-box{
+  width: 46%;
+
+}
+
+}
+@media (max-width: 1024px){
+.text-div {
+  margin-left: 5px;
+}
 }

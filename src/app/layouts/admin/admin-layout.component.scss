@@ -85,7 +85,12 @@
   display: block;
   margin: 0 auto;
 }
-
+.profile_image-header{
+  width: 25px;
+}
+.nav-item span{
+  font-weight: 500;
+}
 .avatar-preview.avatar-preview-100 {
   width: 100px;
   height: 100px;
@@ -333,7 +338,7 @@ fieldset {
   margin-right: 10px;
 }
 .header-dropdown  a{
-  padding: 11px 34px 6px 15px!important;
+  padding: 11px 20px 6px 8px !important;
   background: #fff;
   color: #000;
 }
