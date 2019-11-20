@@ -68,9 +68,10 @@ export class ShowcasedetailComponent implements OnInit {
     });
   }
 
-  updateshowcase(title ,url,cat,des){
+  updateshowcase(title ,url,cat,des,ck){
       // console.log(title ,url,cat,des)
         // alert('sadas')
+        console.log(ck)
     this.app_Service.editshowcase(this.Catid, title ,url,cat,des).subscribe(data=> {
   
     })
