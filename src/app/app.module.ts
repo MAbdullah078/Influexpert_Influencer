@@ -15,7 +15,7 @@ import {SlimLoadingBarModule} from "ng2-slim-loading-bar";
 import { SocialLoginModule,AuthService } from 'angular5-social-login';
 // import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from 'angular5-social-login';
 import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
-
+import { CKEditorModule } from 'ng2-ckeditor';
 import {NgTemplateOutlet} from '@angular/common';
 import {OutletContext} from '@angular/router';
 // import { FooterComponent } from './footer/footer.component';
@@ -164,8 +164,8 @@ export function provideConfig() {
     RouterModule.forRoot(AppRoutes),
     HttpClientModule,
     // JwSocialButtonsModule,
-
-
+ 
+    CKEditorModule,
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
