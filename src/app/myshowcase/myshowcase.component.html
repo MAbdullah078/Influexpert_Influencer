@@ -42,7 +42,9 @@
             </p>
             <p class="d-inline-block w-100 m-0">
                 <span class="float-left">{{message.urls}}</span>
-                <span class="float-right">{{message.status}}</span>
+                <span class="float-right" *ngIf="message.status=='P'">Pending</span>
+                <span class="float-right" *ngIf="message.status=='A'">Accepted</span>
+                <span class="float-right" *ngIf="message.status=='R'">Rejected</span>
             </p>
       </div>
         <!-- <div class="text-center">

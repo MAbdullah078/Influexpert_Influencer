@@ -151,9 +151,11 @@ contact_Us(name, email, phone, message) {
             // let username = localStorage.getItem('username');
             // let username = localStorage.getItem('currentUser');
             this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+    headers.append('Content-Type', 'application/json');
   if ( this.currentUser != null ){
   let username =  this.currentUser.username;
-            return this.Http.get(Config.api + '/influencer_profile_get_edit/' + username).map((response: Response) => response.json());
+            return this.Http.get(Config.api + '/influencer_profile_get_edit/' + username ,{headers: headers}).map((response: Response) => response.json());
           }
         }
 
