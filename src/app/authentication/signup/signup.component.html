@@ -131,7 +131,7 @@
                           <mat-option *ngFor="let item of allcountry  " [value]="item.name" >
                 
                               <img class="country-img" src="{{item.image_path}}">
-                            {{item.name }}
+                           <span> {{item.name }}</span>
                           </mat-option>
 
                         </mat-select>
@@ -305,12 +305,13 @@
             </div>
             <div class="col-md-6">
                 <mat-form-field class="w-100 mb-4">
-                    <input  type="text" matInput placeholder="Email" formControlName="eMail" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  [(ngModel)]="model.email" required>
+                    <input  type="text" matInput placeholder="Email" formControlName="eMail" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  [(ngModel)]="model.email" (ngModelChange)="emailcheck(em.value)"  #em required>
                     <mat-error *ngIf="registerUser.controls.eMail.touched && registerUser.controls.eMail.invalid">
                         <mat-error *ngIf="registerUser.controls.eMail.errors.required">Email cannot be empty </mat-error>
                       </mat-error>
                     <mat-error *ngIf="registerUser.controls.eMail.hasError('pattern')"> Invalid Email
                       </mat-error>
+                      <p class="custom-error" *ngIf="emails==true">Email already exists</p>
                   </mat-form-field>
                   <mat-form-field class="w-100 mb-4">
                       <input [type]="hide ? 'password' : 'text'"  matInput placeholder="Password" formControlName="passWord"   name="pass" [(ngModel)]="model.password"  required>
@@ -365,7 +366,7 @@
             <div class="col-md-9">
                   <mat-slide-toggle class="toggle-para">
                       By clicking on the "Register" button below, you understand and agree that the use of this Website, Mobile Apps,
-                      AI and ALL other related Technology Platforms are subject to the INFLUENCER <a href="/terms" target="_blank">Terms of Use</a> and <a href="/privacy">Privacy Policy</a>.
+                      AI and ALL other related Technology Platforms are subject to the INFLUENCER <a href="/terms" target="_blank">Terms of Use</a> and <a href="/privacy" target="_blank">Privacy Policy</a>.
                   </mat-slide-toggle>
                 <button type="submit"  class="btn btn-primary sign-in-button"  >Sign Up</button>
                 <p class="signup-auth ">Already have account. <a [routerLink]="['/authentication/signin']">Sign in</a></p>

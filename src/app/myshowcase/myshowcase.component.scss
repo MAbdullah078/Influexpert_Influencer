@@ -67,8 +67,7 @@
       position: relative;
       .rfm_img{
         img{
-          height: 195px;
-          object-fit: cover;
+          height: 180px;
           width: 100%;
         }
       }
@@ -96,6 +95,7 @@
     .showcase-container{
       background: #fff;
       min-height: 90vh;
+      box-shadow:0 3px 10px #ccc
     }
   }
   #myrfm .rfm-wrap:hover {

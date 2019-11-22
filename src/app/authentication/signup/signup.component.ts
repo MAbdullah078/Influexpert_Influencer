@@ -74,6 +74,7 @@ export class SignupComponent implements OnInit {
   // registerUser: FormGroup;
   submitted = false;
   check:boolean;
+  emails:boolean;
   digitsOnly = '^[0-9,-]+$';
   public phoneMask = ['+', '1', '-', /[1-9]/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
   email = '^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$';
@@ -178,6 +179,7 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
 
     this.check=false;
+    this.emails=false
     this.isInvalid=false
 // this.wrongPass= false;
     this.fB.logout();
@@ -293,33 +295,44 @@ export class SignupComponent implements OnInit {
 
 
     usernamecheck(val){
-      // alert(val)
-      // this.check=false;
-     
+    
       this.srvc_obj.checkuser(val).subscribe((data) => {
         this.username = data;
         
-      // if(this.username.message==='False'){
         this.check=false;
-      //   alert('h')
-      // }
+    
       },
       error=>{
         if(error.status==400){
           this.check=true;
-          // alert('o')
+       
         }
-// alert(this.check)
+
       }
-// else {
-  
-//   alert('o')
-//   Swal({
-//     type: 'error',
-//     title: 'Oops...',
-//     text: 'Username already exist',
+
     
       )  
+    }
+    emailcheck(val){
+      console.log(val)
+      this.srvc_obj.checkemail(val).subscribe((data) => {
+        this.username = data;
+        
+        this.emails=false;
+    
+      },
+      error=>{
+        if(error.status==400){
+          this.emails=true;
+    
+        }
+
+      }
+
+
+    
+      )  
+      
     }
 
 
@@ -411,7 +424,7 @@ export class SignupComponent implements OnInit {
     this.registerUser.controls['ciTy'].value,
     this.registerUser.controls['gendeR'].value)
     if ( this.recapcha.check()){
-    if ( this.check==false && this.wrongPass== true &&
+    if ( this.check==false && this.wrongPass== true &&this.emails==false&&
     this.registerUser.controls.firstName.valid ||this.registerUser.controls.lastName.valid ||this.registerUser.controls.eMail.valid||this.registerUser.controls.passWord.valid
       &&this.registerUser.controls.passWord.valid
       &&this.registerUser.controls.counTry.valid
@@ -464,8 +477,15 @@ export class SignupComponent implements OnInit {
       Swal('oops','please provide the information and then click on sign up button','error');
     }
     else{
-      Swal('please confirm you are not rebot','error');
+      swal({
+        type: 'error',
+        title: 'Please confirm that you are not a robot',
+        showConfirmButton: false,
+        width: '512px',
+        timer: 2000
+      });
     }
+    
   }
   showAllert(){
     if(this.model.password!= this.password2){

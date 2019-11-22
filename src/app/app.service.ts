@@ -113,6 +113,11 @@ checkuser(check){
     return response.json();
 });
 }
+checkemail(check){
+  return this.http.get(Config.api+ '/user_email_exist/'+check ).map((response: Response) => {
+    return response.json();
+});
+}
 get_profile_pic(){
   this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
   if ( this.currentUser != null ){
@@ -146,9 +151,11 @@ contact_Us(name, email, phone, message) {
             // let username = localStorage.getItem('username');
             // let username = localStorage.getItem('currentUser');
             this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+    headers.append('Content-Type', 'application/json');
   if ( this.currentUser != null ){
   let username =  this.currentUser.username;
-            return this.Http.get(Config.api + '/influencer_profile_get_edit/' + username).map((response: Response) => response.json());
+            return this.Http.get(Config.api + '/influencer_profile_get_edit/' + username ,{headers: headers}).map((response: Response) => response.json());
           }
         }
 
@@ -591,7 +598,31 @@ rfms(id){
   return this.http.get(Config.api+'/getonerfm/?id='+id ).map((response: Response) => response.json());
 }
 
+biding(price,description,id){
+  this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
+    return this.http.post(Config.api + '/bid_on_rfm/',{
 
+      'price':price,
+      'messageToBrand':description,
+      'bidPost':id,
+
+    },
+
+    {headers: headers}).map((response: Response) => {
+    });
+  
+
+
+
+
+
+
+
+
+
+
+}
 
 }
 
