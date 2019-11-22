@@ -63,14 +63,15 @@
   width: 90%;
     font-size: 24px!important;
     font-weight: 600!important;
-  box-shadow: 0 14px 26px -12px rgba(0,0,0,.42),0 4px 23px 0 rgba(0,0,0,.12),0 8px 10px -5px rgba(0,0,0,.2)!important;
+    box-shadow: 0 5px 5px #ccc!important;
 }
 .sign-in-button:hover{
   box-shadow: none!important
 }
 .sign-up,
 .privacy a{
-  color:#337ab7
+  color:#337ab7;
+  font-weight: 500;
 }
 .sign-up:hover,
 .privacy a:hover{

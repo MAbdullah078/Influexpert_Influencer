@@ -429,6 +429,10 @@ pts-right{
 #logo img, img {
   max-width: 100%;
 }
+.mat-option:hover {
+  background: #e20074!important;
+  color: #fff!important;
+}
 .true{
   color: #01b301;
       font-size: 13px;

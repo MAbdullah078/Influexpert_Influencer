@@ -122,7 +122,6 @@ form input[type=text] {
 #footerwrap{
     width: 100%;
     display: block;
-    min-height: 403px;
     background:#000
 }
 p.copyright-text {
@@ -248,7 +247,6 @@ button#btn-chat {
 
 .footer-upper {
     padding: 18px 50px;
-    min-height: 402px;
     float: left;
 }
 .footer-stores-img h2 {
@@ -275,13 +273,8 @@ button#btn-chat {
     display: flex;
     text-align: center;
 }
-.text-center privacy a{
 
-}
-.pricing-ul img{
-    width: 20px;
-    height: 20px;
-}
+
 @media  (max-width: 1024px){
     .footer-wrapper ul li a {
         font-size: 14px;
@@ -303,7 +296,7 @@ button#btn-chat {
 }
 @media  (max-width: 1400px){
     .social-heading {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 @media  (max-width: 1200px){
