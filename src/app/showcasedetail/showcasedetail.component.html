@@ -1,3 +1,4 @@
+<app-loader></app-loader>
 <section>
 <div class="rfm-details">
     <div class="header_rfm">
@@ -34,7 +35,7 @@
     </div>
     <div class="col-md-4 mb-4">
       <mat-form-field class="example-full-width">
-          <input type="text" matInput placeholder="Status"  #stat  readonly="readonly" value="{{showcase['status']}}">
+          <input type="text" disabled matInput placeholder="Status"  #stat  readonly="readonly" value="{{showcase['status']}}">
         </mat-form-field>
         </div>
         <div class="col-sm-12  mb-4">
@@ -50,11 +51,19 @@
       </div>
       </div>
       </div>
+      <div class="input-group">
+        <ckeditor #ck >
+          <ckbutton [name]="'saveButton'" [command]="'saveCmd'" [icon]="'save.png'" [label]="'Save Document'" 
+            [toolbar]="'clipboard,1'">
+          </ckbutton>
+        </ckeditor>
 
+      </div>
     <div class="col-lg-6 col-md-6 col-sm-12 text-right">
-      <button type="submit" (click)="updateshowcase(title.value,url.value,cat.value,des.value)" class="btn btn-primary">
+      <button type="submit" (click)="updateshowcase(title.value,url.value,cat.value,des.value,ck.value)" class="btn btn-primary update-showprofile">
         Update
       </button>
+    
   </div>
   <!-- <div class="col-lg-6 col-md-6 col-sm-12 text-right">
       <button type="submit" (click)="updaterequirement(req1.value)" class="btn btn-rounded">

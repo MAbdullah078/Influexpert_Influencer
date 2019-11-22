@@ -119,6 +119,7 @@ padding: 10px;
   border-radius:3px;
   margin-bottom: 0px !important;
   margin-top: 25px;
+  box-shadow: 0 3px 10px #ccc;
 }
 .manage-link{
   color: #cc0000;
@@ -390,6 +391,12 @@ padding: 10px;
 .img-area{
   position: relative;
 }
+.country-img{
+  width:25px
+}
+.country-img span{
+  font-size: 13px;
+}
 .custom-file-input{
   overflow: hidden;
     position: relative;
@@ -397,7 +404,7 @@ padding: 10px;
 }
 .upload-input {
   position: absolute;
-  left: 117px;
+  left: 89px;
   top: 26px;
   width: 25px;
   height:25px;
@@ -406,7 +413,7 @@ padding: 10px;
 }
 .camera-icon {
   position: absolute;
-  left: 117px;
+  left: 89px;
   top: 26px;
   width: 25px;
   height:25px;
@@ -425,10 +432,14 @@ padding: 10px;
   object-fit: cover;
 }
 .upload-image {
-  width: 175px;
-  height: 175px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
+  border-radius: 50%;
 }
 ::-webkit-file-upload-button{
   cursor: pointer;
+}
+.update-button{
+  padding: 9px 63px;
 }

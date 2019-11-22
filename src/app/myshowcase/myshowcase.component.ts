@@ -58,9 +58,9 @@ this.mysc();
     this.app_Service.myshowcase().subscribe(showcase => {
       // console.log(showcase)
       this.showcase = showcase.message;
-      for(let abc of this.showcase){
+      // for(let abc of this.showcase){
         // console.log(abc)
-      }
+      // }
       this.showshowcase = showcase
     });
   }
@@ -68,8 +68,25 @@ deletemyshowcase(id){
     this.app_Service.deleteshowcase(id).subscribe(rfm =>{
       // console.log('delete')
       // alert('deleted')
+      swal({
+        type: 'success',
+        title: 'Deleted sucessfully',
+        showConfirmButton: true,
+        width: '512px',
+        timer: 2000
+      });
       this.mysc()
-    })
+    },
+error=>{
+  swal({
+    type: 'error',
+    title: 'Something went wrong',
+    showConfirmButton: false,
+    timer: 2500
+  })
+   
+
   }
 
+    )};
 }

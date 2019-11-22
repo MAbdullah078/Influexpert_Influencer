@@ -6,9 +6,9 @@
           <h4>Who Are We?</h4>
           
           <ul class="footer-social-icons">
-            <li><a routerLink="/How-It-Works"><img src="../../assets/images/header-images/how it works@25px.png"> How it Works?</a> </li>
-            <li><a routerLink="/what-is-InfluExpAI"><img src="../../assets/images/header-images/what is ogrespace@25px.png"> What is InfluExpert.AI?</a> </li>
-            <li><a routerLink="/contact"><img src="../../assets/images/header-images/contact us50px.png"> Establish Contact</a> </li>
+            <li><a href="/How-It-Works"><img src="../../assets/images/header-images/how it works@25px.png"> How it Works?</a> </li>
+            <li><a href="/what-is-InfluExpAI"><img src="../../assets/images/header-images/what is ogrespace@25px.png"> What is InfluExpert.AI?</a> </li>
+            <li><a href="/contact"><img src="../../assets/images/header-images/contact us50px.png"> Establish Contact</a> </li>
 
           </ul>
           <h4>Stalk Us</h4>
@@ -29,12 +29,12 @@
             <h4 class="title-category col-sm-12">My InfluExpert.AI</h4> 
           <div class="col-md-6 col-sm-6">
               <div class="ml-5">
-            <ul>
-                <li><a routerLink="#"><i class="fa fa-chevron-right"></i> ML/AI</a> </li>
+            <ul >
+                <li><a routerLink="#" class="pricing-ul"><img src="../../assets/images/Icons/ML AI ICON.png"> ML/AI</a> </li>
                 <!-- <li><a href="https://www.influexpai.com/pricing"><i class="fa fa-chevron-right"></i> Pricing</a> </li> -->
-                <li><a routerLink="/pricing"><i class="fa fa-chevron-right"></i> Pricing</a> </li>
+                <!-- <li><a class="pricing-ul" href="/pricing"><img src="../../assets/images/Footer icon/pricing@25px.png"> Pricing</a> </li> -->
                 <!-- <li><a routerLink="/blog"><i class="fa fa-chevron-right"></i> Blog</a> </li> -->
-                <li><a href="https://meetings.hubspot.com/amjad1pak?_ga=2.231961375.1891010832.1548166411-1961289000.1536910881" target="_blank"><i class="fa fa-chevron-right"></i> Demo</a> </li>    
+                <li><a class="pricing-ul" href="https://meetings.hubspot.com/amjad1pak?_ga=2.231961375.1891010832.1548166411-1961289000.1536910881" target="_blank"><img src="../../assets/images/Footer icon/For Demo@25px.png"> Demo</a> </li>    
                 <!-- <li><a href="/authentication/signin"><i class="fa fa-chevron-right"></i> Signin</a> </li> -->
                 <!-- <li><a routerLink="/authentication/Signup"><i class="fa fa-chevron-right"></i> Signin</a> </li> -->
               
@@ -47,9 +47,9 @@
           </div>
           <div class="col-md-6 col-sm-6">
             <ul>
-              <li><a routerLink="/brand"><i class="fa fa-chevron-right"></i> For Brand</a> </li>
-              <li><a routerLink="/influencers"><i class="fa fa-chevron-right"></i> For Influencers</a> </li>
-              <li><a routerLink="/agencies"><i class="fa fa-chevron-right"></i> For Agencies</a> </li>
+              <li><a href="/brand"><img src="../../assets/images/Footer icon/For brand@25px.png" >For Brand</a> </li>
+              <li><a href="/influencers"><img src="../../assets/images/Footer icon/for influencers@25px.png"> For Influencers</a> </li>
+              <li><a href="/agencies"><img src="../../assets/images/Footer icon/For angency@25px.png"> For Agencies</a> </li>
             </ul>
         
           </div>
@@ -73,12 +73,28 @@
             Millions of Influencers. InfluExpert.AI is the most comprehensive source of Bloggers, Content Creaters, Social Media and Vetted Opt-In Influencers. Bleeding Edge Artificial Intelligence.
             <a class="footer-readmore" routerLink="/what-is-InfluExpAI">Read More</a>
           </p>
-          <form class="form-inline" style="position: relative">
-            <input type="text" name="subscription" placeholder="Email Address">
-            <button class="btn btn-primary subscribe-btn">
-              <i _ngcontent-iap-c3="" aria-hidden="true" class="fa fa-arrow-up"></i>
+          <form class="form-inline" [formGroup]="registerUser" style="position: relative">
+            <!-- <input type="text" name="subscription" placeholder="Email Address" #Email = "ngModel"  required pattern="^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$"> -->
+            <!-- <div *ngIf="Email.invalid && (Email.dirty || Email.touched)"> -->
+              <!-- <div *ngIf="Email.errors.required">
+                Email is required
+              </div> -->
+            <!-- </div> -->
+            <!-- <mat-form-field class="w-100 mb-4"> -->
+            <input type="text" name="subscription" formControlName="Email" placeholder="Email Address" required>
+            <!-- <mat-error *ngIf="registerUser.controls.Email.touched && registerUser.controls.Email.invalid">
+              <mat-error *ngIf="registerUser.controls.Email.errors.required">Email cannot be empty </mat-error>
+            </mat-error>
+          <mat-error *ngIf="registerUser.controls.Email.hasError('pattern')"> Invalid Email
+            </mat-error>
+          </mat-form-field> -->
+            <button class="btn btn-primary subscribe-btn" [disabled]="!registerUser.valid" (click)="sub()">
+              <i _ngcontent-iap-c3="" aria-hidden="true" class="fa fa-arrow-up" ></i>
             </button>
-
+            <p *ngIf="Email.touched && !Email.valid">
+              <span *ngIf="registerUser.controls.Email.errors.pattern" class="alert alert-danger">
+                Invalid Email Address.
+              </span></p>
          
             <!-- <a href="https://play.google.com/store/apps/details?id=com.brainplow.influxexpai" target="_blank">
               <img src="../../assets/images/Adroid-Badge.png" style="width: 150px">
@@ -100,10 +116,10 @@
         <span class="pull-right">
           <!-- <a href="https://www.influexpai.com/Terms-and-Conditions" class="footer-link-border">Terms of Use</a> -->
           <!-- <a href="https://www.influexpai.com/Terms-and-Conditions" class="footer-link-border">Terms of Use</a> -->
-          <!-- <a href="https://www.influexpai.com/privacy_policy">   Privacy Policy</a> -->
-          <!-- <a href="https://www.influexpai.com/privacy_policy">   Privacy Policy</a> -->
-          <a routerLink="/terms" class="footer-link-border">Terms of Use</a>
-          <a routerLink="/privacy">   Privacy Policy</a>
+          <a href="/terms" target="_blank">Terms of use|</a>
+          <a href="/privacy" target="_blank">Privacy Policy</a>
+          <!-- <a routerLink="/terms" target="_blank" class="footer-link-border">Terms of Use</a>
+          <a routerLink="/privacy" target="_blank" >   Privacy Policy</a> -->
 
         </span>
       </p>

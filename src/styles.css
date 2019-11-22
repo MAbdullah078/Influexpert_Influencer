@@ -63,6 +63,9 @@ top: 25px;
   transform: translateY(-27px) scale(.75) perspective(100px) translateZ(.001px);
 
 }
+.form-content .mat-form-field-can-float .mat-form-field-autofill-control:-webkit-autofill+.mat-form-field-label-wrapper .mat-form-field-label{
+  transform: translateY(-24px) scale(.75) perspective(100px) translateZ(.00101px);
+}
 /* end mat toggle button */
 /*Start From custome */
 .mat-form-field-label {
@@ -161,14 +164,14 @@ top: 25px;
 }
 
 .app ng-sidebar > .sidebar-panel.ng-sidebar .menu{
-  padding: 68px 0 110px !important;
+  padding: 62px 0 110px !important;
 }
 /* .app ng-sidebar > .sidebar-panel.ng-sidebar .menu .navigation-item {
   border-bottom: 1px solid #CCCCCC!important;
   transition: .5s;
 } */
 .app ng-sidebar > .sidebar-panel.ng-sidebar .menu .navigation-link{
-  padding-left: 40px;
+  padding: 15px 20px;
   position: relative;
 }
 /* .app ng-sidebar > .sidebar-panel.ng-sidebar .menu .navigation-item:active {
@@ -492,6 +495,7 @@ pts-right{
   zoom: 2;
   color: #fff;
 }
+
 .social li:hover i{
   color: #cc0000;
 }
@@ -525,12 +529,7 @@ pts-right{
 .login-background .card-content{
   padding: 0 25px;
 }
-.signup-label{
-  margin: 7px;
-  font-size: 16px;
-  display: block;
-  font-weight: 600;
-}
+
 /* End login page */
 
 
@@ -648,7 +647,7 @@ about-text {
 }
 .setting-bar{
   width: 100%;
-  padding: 10px 20px 0;
+  padding: 20px 20px ;
 }
 .setting-bar h5{
   font-size: 16px;
@@ -660,7 +659,27 @@ about-text {
   padding: 20px 15px!important;
   font-size: 18px;
 }
-
+.terms-container-fluid{
+  background: #fafafa
+}
+.inner-div{
+  background: #fff;
+  padding: 0 30px;
+  margin: 49px 0;
+}
+.inner-div hr{
+  width: 80px;
+  border-width: 2px;
+  margin: 0 auto;
+  border-color: #02b6ff;
+  padding-bottom: 10px;
+}
+.inner-div strong{
+  font-size:22px
+}
+.mat-input-element:disabled {
+  color: rgba(0,0,0,.38)!important;
+}
 /* End Setting page */
 /* Stat Social Page */
 .cannot-upload{
@@ -792,7 +811,7 @@ about-text {
   display: none;
 }
 .mat-step-header .mat-step-label{
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   color: rgba(0,0,0,.54)!important;
 }
@@ -902,6 +921,11 @@ about-text {
   }
   .social li{
     margin: 0 2px;
+  }
+}
+@media (max-width:1200){
+  .mat-step-header .mat-step-label{
+    font-size: 12px;
   }
 }
 

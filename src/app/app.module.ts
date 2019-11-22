@@ -15,7 +15,7 @@ import {SlimLoadingBarModule} from "ng2-slim-loading-bar";
 import { SocialLoginModule,AuthService } from 'angular5-social-login';
 // import { AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from 'angular5-social-login';
 import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
-
+import { CKEditorModule } from 'ng2-ckeditor';
 import {NgTemplateOutlet} from '@angular/common';
 import {OutletContext} from '@angular/router';
 // import { FooterComponent } from './footer/footer.component';
@@ -62,7 +62,10 @@ import { TextMaskModule } from 'angular2-text-mask';
 import { from } from 'rxjs/observable/from';
 import { ShowcasedetailComponent } from './showcasedetail/showcasedetail.component';
 import { SearchforgigsComponent } from './searchforgigs/searchforgigs.component';
-import { PagerService } from './_guards/paginator.service';
+import { PagerService } from './serv/paginator.service';
+// import { ComponentNameComponent } from './component-name/component-name.component';
+import { RfmdetailComponent } from './rfmdetail/rfmdetail.component';
+import { LinkedprofileComponent } from './linkedprofile/linkedprofile.component';
 
 // const config= new AuthServiceConfig([
 //   {
@@ -133,7 +136,10 @@ export function provideConfig() {
     
     MyshowcaseComponent,
     ShowcasedetailComponent,
-    SearchforgigsComponent
+    SearchforgigsComponent,
+    // ComponentNameComponent,
+    RfmdetailComponent,
+    LinkedprofileComponent
             // AccountSettingComponent,
 // SigninComponent
     // PostSignupComponent
@@ -158,8 +164,8 @@ export function provideConfig() {
     RouterModule.forRoot(AppRoutes),
     HttpClientModule,
     // JwSocialButtonsModule,
-
-
+ 
+    CKEditorModule,
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
@@ -167,10 +173,10 @@ export function provideConfig() {
     HttpClientModule,
     MatButtonModule, MatFormFieldModule, MatInputModule,
     RouterModule.forRoot(AppRoutes),
-    FormsModule,
+  
     CommonModule,
     HttpModule,
-    ReactiveFormsModule,
+    
     ToastModule.forRoot(),
     TranslateModule.forRoot({
       loader: {

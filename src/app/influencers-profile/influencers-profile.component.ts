@@ -14,6 +14,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {FormControl} from '@angular/forms';
 import {ToastsManager} from 'ng2-toastr';
 import swal from 'sweetalert2';
+// import { HttpClient } from 'selenium-webdriver/http';
+import {HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-influencers-profile',
@@ -36,6 +38,8 @@ export class InfluencersProfileComponent implements OnInit {
   NE;
   username;
   image :File
+  pictures:any
+  url: any = 'JPG, GIF, PNG';
   // phone;first_name;last_name;
   phone;first_name;last_name;address;
   currentUser: any;
@@ -44,7 +48,7 @@ export class InfluencersProfileComponent implements OnInit {
   @ViewChild('username') userNameInputRef: ElementRef;
   profile_image: any;
   public phoneMask = ['+', '1', '-', /[1-9]/, /\d/, /\d/, '-',  /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
-  constructor(public dialog: MatDialog, public toastr: ToastsManager, vcr: ViewContainerRef,
+  constructor(public dialog: MatDialog, public toastr: ToastsManager, vcr: ViewContainerRef, private https:HttpClient,
               private el: ElementRef,private Http: HttpService,private src_obj: App_service) {
 
     this.toastr.setRootViewContainerRef(vcr);
@@ -123,6 +127,7 @@ this.loadprofilepic();
 
   
   editProfile(){
+    console.log(this.pictures)
     let currentUser = JSON.parse(localStorage.getItem('currentUser'));
     const headers = new Headers();
       headers.append('Content-Type', 'application/json');
@@ -137,12 +142,13 @@ this.loadprofilepic();
       state: this.userdata[0]['state'],
       country: this.userdata[0]['country'],
       address: this.userdata[0]['address'],
+      'image_path':this.pictures,
       // employment_status: this.userdata[0]['employment_status']
       }),{headers:headers}
       ).map((response: Response) => response.json()).subscribe(
       data => {
        swal('sucess',"Your profile is updated sucessfully")
-
+this.loadprofilepic();
       },
       error => {
         swal('error',"Some server side issue")
@@ -176,30 +182,69 @@ this.loadprofilepic();
   }  
   
   
-  onChange($event) {
-    this.image= $event.target.files[0];
-    //
-    // console.log('Event on OnChange',$event.target.files[0]);
-    console.log('Event on OnChange',this.image);
-    this.src_obj.onUpload(this.image).subscribe((response) => {
-            // console.log('set any success actions...');
-            this.loadprofilepic();
-            swal({
-                type: 'success',
-                title: 'Profile PIcture Updated.\n' +
-                '\n',
-                // text: 'Please check your username or password',
-                showConfirmButton: false,
-                width: '512px',
-                timer: 2000
+  // onChange($event) {
+  //   this.image= $event.target.files[0];
+  //   //
+  //   // console.log('Event on OnChange',$event.target.files[0]);
+  //   console.log('Event on OnChange',this.image);
+  //   this.src_obj.onUpload(this.image).subscribe((response) => {
+  //           // console.log('set any success actions...');
+  //           this.loadprofilepic();
+  //           swal({
+  //               type: 'success',
+  //               title: 'Profile PIcture Updated.\n' +
+  //               '\n',
+  //               // text: 'Please check your username or password',
+  //               showConfirmButton: false,
+  //               width: '512px',
+  //               timer: 2000
           
-              }); 
+  //             }); 
 
-        },
-        (error) => {
-          console.log('set any error actions...');
-      })
+  //       },
+  //       (error) => {
+  //         console.log('set any error actions...');
+  //     })
 
+  //     }
+  onChange(event: EventTarget) {
+    // alert(2)
+    this.pictures = new FormData();
+    const eventObj: MSInputMethodContext = <MSInputMethodContext>event;
+    const target: HTMLInputElement = <HTMLInputElement>eventObj.target;
+    this.pictures.append('fileToUpload', target.files[0]);
+    // console.log(this.pictures);
+    console.log('Name is :',  this.pictures)
+    // //alert(this.pictures);
+  }
+      readUrl(event: any) {
+        // alert(1)
+        if (event.target.files && event.target.files[0]) {
+          const reader = new FileReader();
+      
+          reader.onload = (e: any) => {
+            this.url = e.target.result;
+            console.log(this.url);
+          };
+        
+          reader.readAsDataURL(event.target.files[0]);
+        }
+        this.upload()
+      }
+      upload() {
+        this.https.post(
+          Config.Imageurlupload,
+          this.pictures, { responseType: 'text' }).subscribe(data => {
+            if (data === "Sorry, not a valid Image.Sorry, only JPG, JPEG, PNG & GIF files are allowed.Sorry, your file was not uploaded.") {
+            }
+            else {     
+              console.log(data);
+              // //alert(data);
+              this.pictures = data;
+              // this.onSubmit();
+              // //alert('ok')
+            }
+          });
       }
       loadprofilepic(){
         this.src_obj.get_profile_pic().subscribe(observer=>{
@@ -207,7 +252,7 @@ this.loadprofilepic();
             // this.profile_image= observer.Message.path;
             this.profile_image= observer['message'];
             console.log('Result is ', this.profile_image);
-            alert(this.profile_image)
+            // alert(this.profile_image)
         })
     }
 
