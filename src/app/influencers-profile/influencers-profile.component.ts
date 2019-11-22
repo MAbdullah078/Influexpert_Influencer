@@ -40,9 +40,8 @@ export class InfluencersProfileComponent implements OnInit {
   image :File
   pictures:any
   url: any = 'JPG, GIF, PNG';
-  // phone;first_name;last_name
-  phone;
-  public first_name;last_name;address;
+  // phone;first_name;last_name;
+  phone;first_name;last_name;address;
   currentUser: any;
   userdata: any =[];
   userdata1: any = {};
