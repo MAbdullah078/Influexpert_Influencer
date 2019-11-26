@@ -110,7 +110,7 @@ form input[type=text] {
 .footer-copyright {
     padding: 22px;
     width: 100%;
-    display: block;
+    display: inline-block;
     height: auto;
     background: #1d1d1d;
     color: #ccc;
@@ -128,7 +128,7 @@ p.copyright-text {
     margin: 0;
     font-size: 14px;
     color: #fff;
-    font-weight: 400!important;
+    font-weight: 300;
 }
 
 .footer-link-border {
@@ -244,10 +244,22 @@ button#btn-chat {
     display: block;
     color: #6991c5;
 }
-
+.footer-readmore:hover{
+    color: #e20074;
+}
 .footer-upper {
     padding: 18px 50px;
     float: left;
+    background: #000;
+}
+.copyright-text span{
+    margin-right: 80px;
+}
+.copyright-text span a:hover{
+    text-decoration: underline;
+}
+.border-right{
+    border-right: 2px solid #ccc;
 }
 .footer-stores-img h2 {
     color: #273c61;
