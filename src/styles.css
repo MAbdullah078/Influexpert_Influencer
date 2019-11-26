@@ -6,7 +6,7 @@ body{
   background: #f1f1f1;
   /* overflow: hidden */
 }
-button, input, optgroup, select, textarea {
+button, input, optgroup, select, textarea, .btn {
   font-family: 'Roboto', sans-serif;
 }
 ::-webkit-scrollbar {
@@ -38,13 +38,13 @@ button, input, optgroup, select, textarea {
 }
 .mat-slide-toggle-content{
   color: #000;
-  font-weight: 600;
-  font-size: 17px;
+  font-weight: 500;
+  font-size: 15px;
 }
 .toggle-para .mat-slide-toggle-content {
   color: #000;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 300;
 }
 .mat-slide-toggle,
 .mat-slide-toggle-content {
@@ -68,13 +68,6 @@ top: 25px;
 }
 /* end mat toggle button */
 /*Start From custome */
-.mat-form-field-label {
-  font-size: 16px !important;
-  font-weight: 700!important;
-  color: rgba(0,0,0,.54)!important;
-  margin: 0;
-  top: 13px;
-}
 
 .mat-form-field-subscript-wrapper {
   margin-top: 5px;
@@ -129,9 +122,25 @@ top: 25px;
   display: none!important;
 }
 .profile-form .mat-form-field-infix {
-  padding: 5px 0!important;
+  padding: 10px 0 6px!important;
 }
-
+.mat-form-field-label {
+  font-size: 16px!important;
+  font-weight: 500!important;
+  color: rgba(0,0,0,.54)!important;
+  top: 18px;
+}
+.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-18px) scale(.75) perspective(100px) translateZ(.00101px);
+}
+.mat-input-element{
+  font-size: 16px!important;
+  font-weight: 500!important;
+}
+.mat-select-value-text {
+  font-size: 16px;
+  font-weight: 500;
+}
 .sh-signup-form-fix.edit-profile .form-group {
   padding-bottom: 0!important;
   margin: 0!important
@@ -153,8 +162,8 @@ top: 25px;
 
 
 
-.profile-form  .mat-form-field-label{
-  top: 21px;
+.profile-form .mat-form-field-label{
+  top: 24px;
 }
 .mat-focused, .mat-focused .mat-form-field-label {
   color: #000!important;
@@ -171,7 +180,7 @@ top: 25px;
   transition: .5s;
 } */
 .app ng-sidebar > .sidebar-panel.ng-sidebar .menu .navigation-link{
-  padding: 15px 20px;
+  padding: 12px 0 12px 46px;
   position: relative;
 }
 /* .app ng-sidebar > .sidebar-panel.ng-sidebar .menu .navigation-item:active {
@@ -202,10 +211,6 @@ top: 25px;
 }
 .create-stepper .mat-horizontal-stepper-header .mat-step-icon{
   display: none;
-}
-.create-stepper input.mat-input-element {
-  font-size: 16px;
-  font-weight: 500;
 }
 .create-showcase .mat-form-field-label {
   top: 25px;
@@ -326,9 +331,6 @@ pts-right{
     margin: 10px 0;
 }
 .stepper-case .mat-form-field-label {
-  font-size: 16px !important;
-  font-weight: 500!important;
-  color: rgba(0,0,0,.54);
   margin: 0;
   top: 18px;
 }
@@ -651,7 +653,7 @@ about-text {
 }
 .setting-bar{
   width: 100%;
-  padding: 20px 20px ;
+  padding: 10px 20px ;
 }
 .setting-bar h5{
   font-size: 16px;
@@ -794,7 +796,7 @@ about-text {
 }
 .btn-primary {
   font-size: 16px!important;
-  font-weight: 400!important;
+  font-weight: 500!important;
   background: #000!important;
   color:#fff!important;
   text-transform: capitalize;
@@ -808,7 +810,7 @@ about-text {
   background:#e20074!important;
 }
 .profile-form  .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
-  transform: translateY(-19px) scale(.75) perspective(100px) translateZ(.001px);
+  transform: translateY(-20px) scale(.75) perspective(100px) translateZ(.001px);
 }
 .mat-horizontal-stepper-header .mat-step-icon,
 .mat-horizontal-stepper-header .mat-step-icon-not-touched{
@@ -905,11 +907,24 @@ about-text {
 }
 
 .mat-checkbox-checked.mat-accent .mat-checkbox-background{
-
   background-color: #000;
 }
-
-
+::-webkit-scrollbar{
+  width:10px;
+  height:10px
+}
+::-webkit-scrollbar-track{
+  background:#f1f1f1;
+  border-radius:10px;
+  box-shadow:inset 0 0 5px grey
+}
+::-webkit-scrollbar-thumb{
+  background:#888;
+  border-radius:10px
+}
+::-webkit-scrollbar-thumb:hover{
+  background:#000
+}
 /* .place-color::placeholder{
   font-size: 18px !important;
   color: GREY!important;

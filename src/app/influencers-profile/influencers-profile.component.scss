@@ -13,33 +13,6 @@
   box-shadow: 1px 1px 19px 2px #ccc;
   box-shadow: none;
 }
-
-.mat-input-element {
-  //font: 18px;
-  background: 0 0;
-  /* color: currentColor; */
-  color: black;
-  font-weight: 600;
-  border: none;
-  outline: 0;
-  padding: 0;
-  margin: 3px 0;
-  width: 100%;
-  max-width: 100%;
-  vertical-align: bottom;
-}
-
-.mat-input-element::placeholder {
-  
-  // opacity: 1;
-  font-weight: bolder;
-  
-}
-
-
-
-
-
 .name{
 //width: 100%;
 height: 55px;
@@ -65,16 +38,6 @@ padding: 10px;
   justify-content: space-around;
  
 }
-.float-left{
-    padding-top: 17px;
-    padding-left: 40px;
-    font-size: 23px;
-}
-.float-right{
-    padding-top: 17px;
-    padding-right: 40px;
-}
-
 .example-container {
   display: flex;
   flex-direction: column;
@@ -102,18 +65,6 @@ padding: 10px;
   background-color: #999;
   position: relative;
 }
-.mat-select{
-  text-align: left;
-  height: 21px;
-}
-
-
-
-
-
-
-
-
 .info-box{
   background: #fff;
   border-radius:3px;
@@ -192,7 +143,6 @@ padding: 10px;
     margin: -35px 8px 0;
     padding: 15px;
     box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(0,0,0,.4);
-    display:inline-block
 }
 .h-img{
   width: 30px;
@@ -404,8 +354,8 @@ padding: 10px;
 }
 .upload-input {
   position: absolute;
-  left: 89px;
-  top: 26px;
+  left: 48px;
+  top: 5px;
   width: 25px;
   height:25px;
   opacity: 0;
@@ -413,8 +363,8 @@ padding: 10px;
 }
 .camera-icon {
   position: absolute;
-  left: 89px;
-  top: 26px;
+  left: 48px;
+  top: 5px;
   width: 25px;
   height:25px;
   display: flex;
@@ -439,7 +389,4 @@ padding: 10px;
 }
 ::-webkit-file-upload-button{
   cursor: pointer;
-}
-.update-button{
-  padding: 9px 63px;
 }

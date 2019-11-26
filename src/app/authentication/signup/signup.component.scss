@@ -2,23 +2,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 53px 0;
+  padding: 40px 0;
   background: url(../../../assets/images/LoginInflu.png)center/100% no-repeat;
 }
 .heading{
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 500;
   text-align: center;
   background: #000!important;
   color: #fff;
   border-radius: 3px;
-    padding: 15px;
-    margin: -35px 15px 0;
+  padding: 15px;
+  margin: -35px 0 0;
+  box-shadow: 0 7px 15px #a5a5a5;
 }
 .form-content{
   width: 100%;
   padding: 10px 20px 20px;
-  border-radius: 20px;
+  border-radius: 5px;
   background: #fff;
   box-shadow: 0 3px 10px #ccc;
 }
@@ -37,8 +38,10 @@
 }
 .eye-icon{
   position: absolute;
-    top: 14px;
-    right: 5px;
+  top: 10px;
+  right: 0;
+  font-size: 18px;
+  cursor: pointer;
 }
 .custom-error{
   color: #f44336;
@@ -47,14 +50,18 @@
 }
 .signup-auth{
   font-size: 16px;
-  font-weight: 600;
-  margin: 5px 0 0 78px;
+    font-weight: 500;
+    margin: 5px 0 0 45px;
 }
 .sign-in-button{
   width: 40%;
     font-size: 24px !important;
     text-transform: capitalize;
     margin: 5px 40px;
+    box-shadow: 0 14px 26px -12px rgba(0,0,0,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2)!important;
+}
+.sign-in-button:hover{
+  box-shadow: none!important;
 }
 .country-img{
   width:25px

@@ -167,7 +167,7 @@ export class CreateShowcaseComponent implements OnInit  {
           
             swal({
                 type: 'success',
-                title: 'PIcture Uploaded.\n' +
+                title: 'Picture Uploaded.\n' +
                 '\n',
                 // text: 'Please check your username or password',
                 showConfirmButton: false,
