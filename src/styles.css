@@ -84,9 +84,6 @@ top: 25px;
   border-top: none!important;
   padding: 6px 0!important;
 }
-.signin-signup .select .mat-form-field-infix {
-  padding: 4px 0 5px!important;
-}
 .sh-signup-form-fix .mat-input-underline {
   bottom: 18px
 }
@@ -140,6 +137,10 @@ top: 25px;
 .mat-select-value-text {
   font-size: 16px;
   font-weight: 500;
+}
+.signin-signup .mat-input-element,
+.signin-signup .mat-select-value-text{
+  font-size: 24px!important;
 }
 .sh-signup-form-fix.edit-profile .form-group {
   padding-bottom: 0!important;
