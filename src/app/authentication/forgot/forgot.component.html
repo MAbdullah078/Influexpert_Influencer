@@ -1,11 +1,15 @@
 <app-loader></app-loader>
-<div class="d-flex align-items-stretch min-height-100 h-100">
+<!-- <div class="d-flex align-items-stretch min-height-100 h-100">
   <div class="bg-cover bg-3 hidden-sm-down col-md-6 col-lg-8"></div>
   <div class="card card-block mb-0 rounded-0 p-5 col-sm-12 col-md-6 col-lg-4">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="contanier card">
+        <div class="forget-password-heading">
+            <p class="ff-headers text-uppercase" style="font-weight: bold">Recover your password</p>
+          </div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="mt-4">
       <div class="mb-3">
         <img src="assets/images/logo.png" class="avatar-xs mb-1" alt="">
-        <p class="ff-headers text-uppercase" style="font-weight: bold">Recover your password</p>
+       
       </div>
       <fieldset class="form-group" [ngClass]="{'has-danger': form.controls['uname'].hasError('required') && form.controls['uname'].touched}">
         <label for="username" class="form-control-label">
@@ -18,4 +22,62 @@
       <button class="btn btn-primary" type="submit" [disabled]="!form.valid" >Reset Password</button>
     </form>
   </div>
+  </div>
+
+</div> -->
+<!-- <section class="background-image">
+<div class="forget-password-divison">
+  <form class="flexy forget-passord">
+      <div class="forget-password-heading">
+          <p class="ff-headers ">Recover your password</p>
+        </div>
+        <div class="forget-password-inputs mt-4">
+
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Enter Email Here">
+          </mat-form-field>
+          <div>
+              <button class="btn btn-primary reset-button" type="submit" [disabled]="!form.valid" >Reset Password</button>
+          </div>
+        </div>
+</form>
 </div>
+</section> -->
+<!-- <section class="margin-top">
+  <div class=" link-profile-container">
+    <div class="div-heading">
+<h3>Receover Password</h3>
+    </div>
+    <div class="inner-content">
+        <mat-form-field class="w-100">
+            <input matInput placeholder="Enter Email Here">
+          </mat-form-field>
+          <div class="reset-password-button text-center
+          ">
+            <button class="btn btn-primary reset-button" type="submit" [disabled]="!form.valid" >Reset Password</button>
+          </div>
+    </div>
+  </div>
+</section> -->
+<div class="ForgotPassForm">
+    <div class="Form">
+      <div class="Lock">
+        <img alt="" src="../../../assets/images/forgotpassword.png">
+        <span class="forgot">Forgot Password?</span>
+        <span class="text-center">Enter your email address below to receive an verification to reset
+          password.</span>
+      </div>
+          <form class="form" [formGroup]="form" #f="ngForm">
+              <span class="icon-box" id="basic-addon1">
+                  <i class="fa fa-envelope"></i>
+                </span>
+            <mat-form-field class="mat-inputt">
+              <input matInput aria-label="Username" class="ng-pristine ng-invalid ng-touched"  [(ngModel)]="this.email" [formControl]="form.controls['uname']" [ngClass]="{'form-control-danger': form.controls['uname'].hasError('required') && form.controls['uname'].touched}"
+                placeholder="Email Address" required >
+              </mat-form-field>
+              <button class="btn btn-rose" type="submit" [disabled]="!form.valid">Send Verification
+                Code</button>
+          </form>
+    </div>
+    </div>
+    <app-footer></app-footer>

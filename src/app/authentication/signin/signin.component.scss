@@ -24,14 +24,18 @@
 
 .privacy {
   color: #337ab7!important;
-  font-size: 12px;
+  font-size: 13px;
   transition: none;
 }
 .forgot{
   color: #337ab7!important;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   transition: none;
+}
+.forgot:hover{
+  color: #e20074!important;
+  text-decoration: underline!important;
 }
 .mat-form-field input{
   font-size: 24px;
