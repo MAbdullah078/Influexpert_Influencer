@@ -226,9 +226,6 @@ top: 25px;
 .mat-step-header .mat-step-optional {
   color: #ffffff;
 }
-.mat-horizontal-content-container {
-  padding: 10px !important;
-}
 .stepper-style{
   width: 100%;
   margin: 10px 0 0 0;
