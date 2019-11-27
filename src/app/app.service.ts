@@ -285,7 +285,7 @@ contact_Us(name, email, phone, message) {
       let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
       headers.append('Content-Type', 'application/json');
 
-      return this.Http.post(Config.api + '/showcase/add-showcase/', {
+      return this.Http.post(Config.api + '/showcase/add-showcase2/', {
         'image1': image1,
         // 'catagory': catagory,
         'catagory_id': catagory,

@@ -37,17 +37,17 @@
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
             <mat-form-field class="example-full-width">
-              <input type="text" matInput placeholder="First Name*" name="first_name"  [(ngModel)]="userdata[0]['first_name']" [ngModelOptions]="{standalone: true}">
+              <input type="text" matInput placeholder="First Name *" name="first_name"  [(ngModel)]="userdata[0]['first_name']" [ngModelOptions]="{standalone: true}">
             </mat-form-field>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
             <mat-form-field class="example-full-width">
-              <input type="text" matInput placeholder="Last Name*"  [(ngModel)]="userdata[0]['last_name']" [ngModelOptions]="{standalone: true}">
+              <input type="text" matInput placeholder="Last Name *"  [(ngModel)]="userdata[0]['last_name']" [ngModelOptions]="{standalone: true}">
             </mat-form-field>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
               <mat-form-field class="example-full-width" >
-                <input type="text" matInput placeholder="Phone No.*" [(ngModel)]="userdata[0]['phone']" [ngModelOptions]="{standalone: true}" [textMask]="{mask: phoneMask}" >
+                <input type="text" matInput placeholder="Phone No. *" [(ngModel)]="userdata[0]['phone']" [ngModelOptions]="{standalone: true}" [textMask]="{mask: phoneMask}" >
               </mat-form-field>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
@@ -58,7 +58,7 @@
                                 {{item.name }}</mat-option>
                               </mat-select> -->
                   <mat-select 
-                           [(ngModel)]="userdata[0]['country']" placeholder="Country*" [ngModelOptions]="{standalone: true}">
+                           [(ngModel)]="userdata[0]['country']" placeholder="Country *" [ngModelOptions]="{standalone: true}">
                               <mat-option *ngFor="let item of allcountry" [value]="item.name" >
                     
                                   <img class="country-img" src="{{item.image_path}}">
@@ -72,24 +72,24 @@
 
               <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
                 <mat-form-field class="example-full-width" >
-                  <input type="text" matInput placeholder="City*" [(ngModel)]="userdata[0]['city']" [ngModelOptions]="{standalone: true}" >
+                  <input type="text" matInput placeholder="City *" [(ngModel)]="userdata[0]['city']" [ngModelOptions]="{standalone: true}" >
                 </mat-form-field>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
                   <mat-form-field class="example-full-width">
-                    <input type="text" matInput placeholder="State/province*" [(ngModel)]="userdata[0]['state']" [ngModelOptions]="{standalone: true}" >
+                    <input type="text" matInput placeholder="State/province *" [(ngModel)]="userdata[0]['state']" [ngModelOptions]="{standalone: true}" >
                   </mat-form-field>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
                     <mat-form-field class="example-full-width" >
-                    <mat-select placeholder="Gender* " [(ngModel)]="userdata[0]['gender']" [ngModelOptions]="{standalone: true}" style="padding-top: 0!important; text-align:initial; width: 100%">
+                    <mat-select placeholder="Gender * " [(ngModel)]="userdata[0]['gender']" [ngModelOptions]="{standalone: true}" style="padding-top: 0!important; text-align:initial; width: 100%">
                       <mat-option *ngFor="let rel of genders"  [value]="rel.value">{{rel.show}}</mat-option>
                     </mat-select>
                     </mat-form-field>
                   </div>
                   <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
                       <mat-form-field class="example-full-width">
-                        <input type="text" matInput placeholder="Address*"  [(ngModel)]="userdata[0]['address']" [ngModelOptions]="{standalone: true}">
+                        <input type="text" matInput placeholder="Address *"  [(ngModel)]="userdata[0]['address']" [ngModelOptions]="{standalone: true}">
                         <!-- <input type="text" matInput placeholder="Address"  [(ngModel)]="userdata[0]['address']" [ngModelOptions]="{standalone: true}"> -->
           
                       </mat-form-field>

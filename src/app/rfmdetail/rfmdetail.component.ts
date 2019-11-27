@@ -18,7 +18,7 @@ export class RfmdetailComponent implements OnInit {
 
 
     price:['', Validators.required],
-    description: ['', Validators.compose([Validators.required, Validators.minLength(30)])]
+    description: ['', Validators.compose([Validators.required])]
   })
 
 

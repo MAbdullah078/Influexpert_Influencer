@@ -83,12 +83,12 @@
             SearchForGigs
           </a>
         </li>
-        <li class="navigation-item" appAccordionLink >
+        <!-- <li class="navigation-item" appAccordionLink >
           <a class="navigation-link" routerLinkactive="active-route" appAccordionToggle [routerLink]="['/settings']" >
             <img class="nav-img sidebar-imgwa" src="../../../assets/images/ogrespace as service@25px.png">
             Settings
           </a>
-        </li>
+        </li> -->
         <!-- <li class="navigation-item" appAccordionLink >
           <a class="navigation-link" routerLinkactive="active-route" appAccordionToggle [routerLink]="['/searchforgigs']" >
             <img class="nav-img sidebar-imgwa" src="../../../assets/images/Property details.png">
@@ -247,11 +247,11 @@
                     <span routerLink='/myshowcase'>SearchForGigs</span>
                     
                   </a>
-                  <a class="dropdown-item" href="javascript:;"  [routerLink]="['/settings']" >
+                  <!-- <a class="dropdown-item" href="javascript:;"  [routerLink]="['/settings']" >
                       <img class="nav-img" src="../../../assets/images/ogrespace as service@25px.png">
                       <span routerLink='/myshowcase'>Setting</span>
                       
-                    </a>
+                    </a> -->
             <!-- <a class="dropdown-item" href="javascript:;">
                 <i class="icon icon-basic-postcard mr-3"></i>
                 <span routerLink='/profile'>Profile</span>
@@ -273,10 +273,10 @@
               Settings
             </a> -->
 
-            <a class="dropdown-item" href="javascript:;">
+            <!-- <a class="dropdown-item" href="javascript:;">
               <img class="nav-img" src="../../../assets/images/bell.png">
               <span>Notifications</span>
-            </a>
+            </a> -->
             <a class="dropdown-item" href="javascript:;" (click)="signout()"[routerLink]="['/authentication/signin']" >
               <img class="nav-img" src="../../../assets/images/signout50px.png">
               <span (click)="signout()">Signout</span>
