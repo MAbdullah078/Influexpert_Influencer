@@ -54,7 +54,7 @@ export class CreateShowcaseComponent implements OnInit  {
   title;
   public urls;
   requirement1;
-  requirement2;
+  // requirement2;
 
   constructor(private _formBuilder: FormBuilder, private http: HttpClient ,
                private router: Router, private loader: HttpService, private app_Service: App_service) {}
@@ -75,7 +75,7 @@ export class CreateShowcaseComponent implements OnInit  {
 
     this.fourthFromGroup = this._formBuilder.group({
       fifthCtrl: ['', Validators.required],
-      sixthCtrl: ['', Validators.required],
+      // sixthCtrl: ['', Validators.required],
     });
 
 
@@ -152,6 +152,49 @@ export class CreateShowcaseComponent implements OnInit  {
   //   console.log('Event is.............',<File>event.srcElement.files[0].name);
 
   // }
+array = [];
+lengthes;
+lengthplus;
+imglength;
+  onChange2(event) {
+    if (event.target.files && event.target.files[0]) {
+      this.array.push(event.target.files)
+      var filesAmount = event.target.files.length;
+      for (let i = 0; i < filesAmount; i++) {
+        var reader = new FileReader();
+
+    reader.onload = (event: any) => {
+      this.urls.push(event.target.result);
+    }
+
+    reader.readAsDataURL(event.target.files[i]);
+  }
+  for (let i = 0; i < this.array.length; i++) {
+    this.lengthes = this.array[i].length
+  }
+  // this.lengthplus.push(this.lengthes)
+  this.imglength = this.lengthplus.reduce((a, b) => a + b, 0)
+}
+  }
+  one_pic;
+  getimagesString;
+
+  uploadfiles(index, index1) {
+    this.input = new FormData();
+    this.input.append('fileToUpload', this.array[index][index1]);
+    this.http.post('https://storage.influexpai.com/test_hamza.php', this.input, { responseType: 'text' }).subscribe(data => {
+      if (data === 'Sorry, not a valid Image.Sorry, only JPG, JPEG, PNG & GIF files are allowed.Sorry, your file was not uploaded.') {
+      }
+      else {
+        this.one_pic = data;
+        this.getimagesString.push(this.one_pic);
+        if (this.getimagesString.length == this.imglength) {
+         
+        }
+      }
+    })
+  }
+
   onChange($event) {
     this.image= $event.target.files[0];
     this.image= <File>$event.target.files[0];

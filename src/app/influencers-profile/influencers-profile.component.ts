@@ -53,13 +53,13 @@ export class InfluencersProfileComponent implements OnInit {
 
     this.toastr.setRootViewContainerRef(vcr);
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    console.log('', this.currentUser);
+    // console.log('', this.currentUser.token);
 
   }
 
   show(username: HTMLInputElement){
     this.NE = this.userNameInputRef.nativeElement.value;
-    console.log('Native Element is ', this.NE)
+    // console.log('Native Element is ', this.NE)
   }
 
   RElATIONSHIPS = [
@@ -127,10 +127,10 @@ this.loadprofilepic();
 
   
   editProfile(){
-    console.log(this.pictures)
-    let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    const headers = new Headers();
-      headers.append('Content-Type', 'application/json');
+    // console.log(this.pictures)
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');     
+    headers.append('Authorization', 'JWT ' + JSON.parse(localStorage.getItem('currentUser')).token);
     this.Http.put(Config.api + '/influencer_profile_update/'+this.currentUser.username, JSON.stringify({
       // relationship: this.userdata[0]['relationship'],
       first_name: this.userdata[0]['first_name'],
@@ -163,17 +163,17 @@ this.loadprofilepic();
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      console.log(result);
+      // console.log('The dialog was closed');
+      // console.log(result);
       if (result) {
         if (result['demoghrapic_result']) {
           // alert('hogaya')
-          this.toastr.success('Demographic Information Successfully saved!', 'Success');
+          this.toastr.success('Demographic Information Successfully saved', 'Success');
 
         }
         else {
 
-          this.toastr.error('Demographic Information Not saved!', 'Error');
+          this.toastr.error('Demographic Information Not saved', 'Error');
 
         }
 
@@ -214,7 +214,7 @@ this.loadprofilepic();
     const target: HTMLInputElement = <HTMLInputElement>eventObj.target;
     this.pictures.append('fileToUpload', target.files[0]);
     // console.log(this.pictures);
-    console.log('Name is :',  this.pictures)
+    // console.log('Name is :',  this.pictures)
     // //alert(this.pictures);
   }
       readUrl(event: any) {
@@ -224,7 +224,7 @@ this.loadprofilepic();
       
           reader.onload = (e: any) => {
             this.url = e.target.result;
-            console.log(this.url);
+            // console.log(this.url);
           };
         
           reader.readAsDataURL(event.target.files[0]);
@@ -238,7 +238,7 @@ this.loadprofilepic();
             if (data === "Sorry, not a valid Image.Sorry, only JPG, JPEG, PNG & GIF files are allowed.Sorry, your file was not uploaded.") {
             }
             else {     
-              console.log(data);
+              // console.log(data);
               // //alert(data);
               this.pictures = data;
               // this.onSubmit();
@@ -251,7 +251,7 @@ this.loadprofilepic();
     
             // this.profile_image= observer.Message.path;
             this.profile_image= observer['message'];
-            console.log('Result is ', this.profile_image);
+            // console.log('Result is ', this.profile_image);
             // alert(this.profile_image)
         })
     }
@@ -263,7 +263,7 @@ this.loadprofilepic();
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      // console.log('The dialog was closed');
       this.animal = result;
     });
   }
@@ -272,10 +272,10 @@ this.loadprofilepic();
   this.src_obj.getcounty().subscribe( data =>{
     // console.log(data.countries, 'Mahad')
     this.allcountry = data.countries;
-    console.log(this.allcountry);
+    // console.log(this.allcountry);
   },
   error=>{
-    console.log(error, 'Mahad')
+    // console.log(error, 'Mahad')
   })
   }
 
@@ -286,7 +286,7 @@ this.loadprofilepic();
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      // console.log('The dialog was closed');
       this.animal = result;
     });
   }
@@ -297,7 +297,7 @@ this.loadprofilepic();
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      // console.log('The dialog was closed');
       this.animal = result;
     });
   }

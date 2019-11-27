@@ -1,6 +1,3 @@
-
-
-
 <section class="rfm-section">
 <div class="container card"> 
   <div class="rfm-heading">
@@ -118,7 +115,7 @@
             <mat-error *ngIf="registerUser.controls.description.touched && registerUser.controls.description.invalid">
               <mat-error *ngIf="registerUser.controls.description.errors.required">Description  cannot be empty </mat-error>
           </mat-error>
-          <mat-error *ngIf="registerUser.controls.description.hasError('minlength')">Description  should be atleast 30 characters</mat-error>
+          <!-- <mat-error *ngIf="registerUser.controls.description.hasError('minlength')">Description  should be atleast 30 characters</mat-error> -->
         </mat-form-field>
       </div>
       <div class="col-md-12">

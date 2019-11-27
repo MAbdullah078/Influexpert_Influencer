@@ -29,9 +29,9 @@
                    <!--accept=".jpg, .jpeg, .png"  name="file"  multiple  />-->
             <!--<img class="camera-img"  src="../../assets/data/icons/addimage_512.png" style="max-width: 100px; cursor: pointer; max-height: 50px" alt="Add Image"/>-->
           <!--</label>-->
-          <label *ngIf="FuncCheckNumberOfImages()" class="upload-image left add-img">
+          <label  class="upload-image left add-img">
             Add Images
-            <input class="file" style="display: none" (change)="  onChange($event)"
+            <input class="file" style="display: none" (change)="onChange2($event)"
                    type="file" data-preview-file-type="text" formControlName="firstCtrl" required id="file1"
                    accept=".jpg, .jpeg, .png"  name="file"  multiple  />
             <img class="camera-img"  src="../../assets/data/icons/addimage_512.png" alt="Add Image"/>
@@ -136,8 +136,8 @@
   </div>
   <div class="col-lg-9 mb-4">
   <mat-form-field style="width: 100%">
-  <input matInput placeholder="Requirement" [(ngModel)]="model.requirement1" name="req1" formControlName="fifthCtrl" required>
-
+  <textarea matInput placeholder="Requirement" [(ngModel)]="model.requirement1" name="req1" formControlName="fifthCtrl" required>
+</textarea>
   </mat-form-field>
   </div>
 
@@ -145,7 +145,7 @@
 
 
 
-  <div class="row">
+  <!-- <div class="row">
   <div class="col-lg-3 mb-4 label-division ">
   <label >Requirement 2</label>
   </div>
@@ -155,10 +155,10 @@
   </mat-form-field>
   </div>
 
-  </div>
+  </div> -->
 
 
-  <div class="row">
+  <!-- <div class="row">
   <div class="col-lg-3 mb-3 label-division" >
   <label >Requirement 3</label>
   </div>
@@ -168,7 +168,7 @@
   </mat-form-field>
   </div>
 
-  </div>
+  </div> -->
 
   <div class="d-inline-block w-100 mb-2">
   <button mat-raised-button matStepperNext class="next-btn float-right">Next</button>
