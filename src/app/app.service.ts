@@ -280,7 +280,7 @@ contact_Us(name, email, phone, message) {
 
   }
 
-    uploadShowCase(image1, catagory, title, description, urls, requirement1, requirement2) {
+    uploadShowCase(image1, catagory, title, description, urls, requirements, ) {
       this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
       let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
       headers.append('Content-Type', 'application/json');
@@ -292,8 +292,8 @@ contact_Us(name, email, phone, message) {
         'title': title,
         'description': description,
         'urls': urls,
-        'requirement1': requirement1,
-        'requirement2': requirement2
+        'requirements': requirements,
+       
       }, {headers: headers}).map((response: Response) => {
         response.json();
         console.log('response during map', response.json());
@@ -545,7 +545,7 @@ contact_Us(name, email, phone, message) {
   }
 
 
-  editshowcase(id,ti,url,ca,des){
+  editshowcase(id,ti,url,ca,des, requirements){
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     let headers = new Headers({'Authorization': 'JWT ' + this.currentUser.token});
         return this.http.put(Config.api+'/showcase/edit-showcase/' + id,
@@ -554,6 +554,8 @@ contact_Us(name, email, phone, message) {
         'category' :[ca],
         'description': des,
         'urls': url,
+        'requirements' : requirements
+        
        },
        {headers: headers}).map((response: Response) => {
         if(response.status==202){
@@ -591,7 +593,7 @@ contact_Us(name, email, phone, message) {
     return this.http.get('https://apis.rfpgurus.com/zipcode/' + zip + '/').map((response: Response) => response.json());
   }
   rfm(page){
-    return this.http.get(Config.api+'/rfm/?page=' + page + '').map((response: Response) => response.json());
+    return this.http.get(Config.api+'/rfm/' + '?page=' + page + '').map((response: Response) => response.json());
   }
   
 rfms(id){

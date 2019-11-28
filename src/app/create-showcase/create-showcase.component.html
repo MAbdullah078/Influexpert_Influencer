@@ -31,7 +31,7 @@
           <!--</label>-->
           <label  class="upload-image left add-img">
             Add Images
-            <input class="file" style="display: none" (change)="onChange2($event)"
+            <input class="file" style="display: none" (change)="onChange($event)"
                    type="file" data-preview-file-type="text" formControlName="firstCtrl" required id="file1"
                    accept=".jpg, .jpeg, .png"  name="file"  multiple  />
             <img class="camera-img"  src="../../assets/data/icons/addimage_512.png" alt="Add Image"/>
@@ -63,6 +63,9 @@
       <mat-select placeholder="{{'Select Category'}}"  (change)="selectCat($event.value)" required [(ngModel)]="model.catID" ngDefaultControl [ngModelOptions]="{standalone: true}"  style="width: 100%">
       <mat-option *ngFor="let option of options "  [value]="option.id" >{{ option.name }}</mat-option>
       </mat-select>
+      <!-- <mat-error *ngIf="option == ''">
+fhfhfhrfuh
+      </mat-error> -->
         </mat-form-field>
       </div>
 
@@ -75,7 +78,7 @@
       <div class="col-lg-9  mb-4">
       <mat-form-field style="width: 100%">
       <input matInput placeholder="Write Title of Showcase" [(ngModel)]="model.title" name="til" formControlName="secondCtrl" required  />
-
+<mat-error *ngIf="secondCtrl != ''">Title of Showcase is required</mat-error>
       </mat-form-field>
       </div>
 
@@ -88,7 +91,8 @@
       <div class="col-lg-9 mb-4">
       <mat-form-field style="width: 100%" >
       <input matInput placeholder="Link your SM Profiles here" [(ngModel)]="model.urls" name="link" formControlName="thirdCtrl" required>
-
+      <mat-error *ngIf="thirdCtrl != ''">SM Profile is required</mat-error>
+    
       </mat-form-field>
       </div>
 
@@ -114,7 +118,8 @@
   </div>
   <div class="col-lg-9">
   <mat-form-field class="mt-4 width100">
-  <textarea matInput placeholder="Write Description" [(ngModel)]="model.description" name="des" formControlName="fourthCtrl"  required></textarea>
+  <textarea matInput placeholder="Write Description" [(ngModel)]="model.description" name="des" formControlName="fourthCtrl" minlength="50" required></textarea>
+  <mat-error *ngIf="fourthCtrl != ''">Description should be at least 50 characters </mat-error>
   </mat-form-field>
   </div>
 
@@ -136,8 +141,9 @@
   </div>
   <div class="col-lg-9  mt-4  mb-4 ">
   <mat-form-field style="width: 100%">
-  <textarea matInput placeholder="Requirement" [(ngModel)]="model.requirement1" name="req1" formControlName="fifthCtrl" required>
+  <textarea matInput placeholder="Requirement" [(ngModel)]="model.requirements" name="req1" formControlName="requirements" required>
 </textarea>
+<mat-error *ngIf="requirements != ''">Requirement is required </mat-error>
   </mat-form-field>
   </div>
 

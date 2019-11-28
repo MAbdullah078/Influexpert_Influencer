@@ -67,12 +67,12 @@ export class ShowcasedetailComponent implements OnInit {
       this.showshowcase = res
     });
   }
-
+  editshowcase;
   updateshowcase(title ,url,cat,des,ck){
       // console.log(title ,url,cat,des)
         // alert('sadas')
         console.log(ck)
-    this.app_Service.editshowcase(this.Catid, title ,url,cat,des).subscribe(data=> {
+    this.app_Service.editshowcase(this.Catid, title ,url,cat,des , this.editshowcase).subscribe(data=> {
   
     })
   }

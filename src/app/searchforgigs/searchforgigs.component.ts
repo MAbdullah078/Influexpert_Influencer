@@ -12,7 +12,8 @@ export class SearchforgigsComponent implements OnInit {
 rfms:any=[]
 pager: any = {};
 rfmss:any=[]
-
+items;
+pageSize = '8';
   constructor(public serv :App_service ,private pagerService: PagerService) { }
 
   ngOnInit() {
@@ -22,12 +23,28 @@ rfmss:any=[]
     if (page < 1 || page > this.pager.totalPages) {
       return;
     }
-    this.serv.rfm(page).subscribe((data) => {
+    this.serv.rfm(this.pageSize).subscribe((data) => {
       this.rfms= data.results;
       // console.log(data.results[0]['id'])
-      console.log(this.rfms)
+      // console.log(this.rfms)
+      this.items = data.totalItems;
+      console.log(this.items);
       this.pager = this.pagerService.getPager(this.rfms['totalPages'], page, 10);
     })
+  }
+  page(pageSize) {
+    if (pageSize) {
+      this.pageSize = pageSize;
+      // if (localStorage.getItem('latestpage')) {
+      //   var page_num: number = Number(localStorage.getItem('latestpage'));
+      //   this.setPage(page_num);
+      // } else {
+        this.rfm(1);
+      // }
+    }
+    else {
+      delete this.pageSize;
+    }
   }
 
   // setToprated(page: number) {
@@ -44,10 +61,10 @@ rfmss:any=[]
 
 view(id)
 {
-console.log(id)
+// console.log(id)
 this.serv.rfms(id).subscribe((data) => {
   this.rfmss= data;
-  console.log(data)
+  // console.log(data)
 
 })
 }

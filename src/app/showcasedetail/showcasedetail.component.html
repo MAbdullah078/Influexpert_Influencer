@@ -52,15 +52,18 @@
       </div>
       </div>
       <div class="input-group">
-        <ckeditor #ck >
+        <ckeditor #ck  value="{{showcase.requirements}}" #des name="requirements">
           <ckbutton [name]="'saveButton'" [command]="'saveCmd'" [icon]="'save.png'" [label]="'Save Document'" 
             [toolbar]="'clipboard,1'">
           </ckbutton>
         </ckeditor>
 
+
+        
+
       </div>
     <div class="col-lg-6 col-md-6 col-sm-12 text-right">
-      <button type="submit" (click)="updateshowcase(title.value,url.value,cat.value,des.value,ck.value)" class="btn btn-primary update-showprofile">
+      <button type="submit" (click)="updateshowcase(title.value,url.value,cat.value,des.value,des.value)" class="btn btn-primary update-showprofile">
         Update
       </button>
     

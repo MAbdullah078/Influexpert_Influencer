@@ -74,7 +74,7 @@ export class CreateShowcaseComponent implements OnInit  {
     });
 
     this.fourthFromGroup = this._formBuilder.group({
-      fifthCtrl: ['', Validators.required],
+      requirements: ['', Validators.required],
       // sixthCtrl: ['', Validators.required],
     });
 
@@ -267,8 +267,8 @@ imglength;
       this.model.title,
       this.model.description,
       this.model.urls,
-      this.model.requirement1,
-      this.model.requirement2
+      this.model.requirements,
+      
     ).subscribe(
 
       data => {
