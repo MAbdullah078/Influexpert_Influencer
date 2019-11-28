@@ -51,14 +51,14 @@
     <form [formGroup]="secondFormGroup" class="create-stepper">
 
       <ng-template matStepLabel><img class="stepper-img"  src="../../assets/images/overview.png" alt="">Overview</ng-template>
-      <div class="whole ">
+      <div class="whole mt-3">
 
 
       <div class="row">
-      <div class="col-lg-3 mt-4  mb-4 label-division" >
+      <div class="col-lg-3 mb-4 label-division">
       <label>Select Category</label>
       </div>
-      <div class="col-lg-9  mt-4 mb-4">
+      <div class="col-lg-9 mb-4">
         <mat-form-field style="width: 100%;">
       <mat-select placeholder="{{'Select Category'}}"  (change)="selectCat($event.value)" required [(ngModel)]="model.catID" ngDefaultControl [ngModelOptions]="{standalone: true}"  style="width: 100%">
       <mat-option *ngFor="let option of options "  [value]="option.id" >{{ option.name }}</mat-option>
@@ -113,7 +113,7 @@ fhfhfhrfuh
   <form [formGroup]="thirdFromGroup" class="create-stepper">
   <ng-template matStepLabel><img class="stepper-img"  src="../../assets/images/header-images/description.png" alt="">Showcase Description</ng-template>
   <div class="row">
-  <div class="col-lg-3 mt-4 ">
+  <div class="col-lg-3 mt-4 text-left">
   <label >Write Description</label>
   </div>
   <div class="col-lg-9">
@@ -133,13 +133,13 @@ fhfhfhrfuh
 
 
   <mat-step [stepControl]="fourthFromGroup">
-  <form [formGroup]="fourthFromGroup"  class="create-stepper">
+  <form [formGroup]="fourthFromGroup"  class="create-stepper mt-3">
   <ng-template matStepLabel> <img class="stepper-img"  src="../../assets/images/header-images/FAQ ICON.png" alt=""> Requirements</ng-template>
   <div class="row">
-  <div class="col-lg-3  mt-4  mb-4 label-division" >
-  <label >Requirement </label>
+  <div class="col-lg-3 mb-4 label-division">
+  <label >Requirement 1</label>
   </div>
-  <div class="col-lg-9  mt-4  mb-4 ">
+  <div class="col-lg-9 mb-4">
   <mat-form-field style="width: 100%">
   <textarea matInput placeholder="Requirement" [(ngModel)]="model.requirements" name="req1" formControlName="requirements" required>
 </textarea>
