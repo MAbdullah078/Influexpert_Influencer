@@ -41,7 +41,7 @@
     "bootstrap": "4.0.0-alpha.6",
     "classlist.js": "^1.1.20150312",
     "core-js": "2.4.1",
-    "d3": "^4.8.0",
+    "d3": "^7.6.1",
     "dragula": "3.7.2",
     "font-awesome": "^4.7.0",
     "intl": "^1.2.5",
